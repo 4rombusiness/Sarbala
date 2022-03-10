@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>هوش فضایی</title>
+    <link rel = "icon" href="https://cdn.glitch.com/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b%2F%E2%9C%94%EF%B8%8Flogo%20recreated%20with%20inkscape%20512%20without%20shadow.png?v=1619981242271"
+        type = "image/x-icon"> 
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Vibes&display=swap" rel="stylesheet"> 
+    <style>
+      /* styles */
+      /* dev */
+      .container{
+        position:absolute;
+        left: 10px;
+        top: 10px;
+}
+
+/* .sun, .moon{
+    font-size: 10rem;
+    width: fit-content;
+    height: fit-content;
+} */
+.moon{
+    position: absolute;
+    inset: 0;
+}
+.moon-logo{
+    opacity: 0;
+    transform: translateY(20%) rotateZ(50deg);
+    transition: all 1s ease-out;
+}
+.sun-logo{
+    opacity: 1;
+    fill: white;
+    transform: translateY(0) rotateZ(0deg);
+    transition: all 1s ease-out;
+}
+.animate-sun{
+    opacity: 0;
+    transform: translateY(20%) rotateZ(100deg);
+}
+.animate-moon{
+    opacity: 1;
+    transform: translateY(0%) rotateZ(0deg);
+}
+.animate-moon path{
+  fill: white;
+}
+.animate-sun path{
+  fill: white;
+}
+
+
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        border: 0;
+        padding: 0;
+      }
+      :root {
+      --bg1: #ee7752;
+      --bg2: #e73c7e;
+      --bg3: #23a6d5;
+      --bg4: #23d5ab;
+      --linear1:rgba(255, 255, 255, 0.522)15%;
+      --linear2:#ffffff 59%;
+      --text-color:rgba(40, 40, 43, 0.4);
+      --shadow:rgba(0, 0, 0, 0.18);
+          }
+      body {
+        background: linear-gradient(-45deg, var(--bg1),var(--bg2),var(--bg3),var(--bg4)); 
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+
+        height: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5em;
+        }
+      [data-theme="dark"] {
+        --bg1: #500303;
+        --bg2: #025237;
+        --bg3: #100385;
+        --bg4: #94037c;
+        --linear1:rgba(255, 255, 255, 0.522)15%;
+        --linear2:rgba(72, 58, 151, 0.747);
+        --text-color:rgb(255, 255, 255);
+        --shadow:rgba(255, 255, 255, 0.527);
+
+        }
+
+      #page {
+        font-size: 0.55em;
+        width: 29em;
+        padding: 3em 2.375em;
+        background-image: linear-gradient(
+          30deg,
+          var(--linear1),
+          var(--linear2)
+        );
+        border-radius: 0.5em;
+        box-shadow: 0em 1.25em 2.625em 0.375em var(--shadow);
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: auto;
+        grid-gap: 0.625em;
+        text-align: center;
+        animation: appear;
+        animation-duration: 1.125s;
+        animation-timing-function: ease;
+      }
+      .image > img {
+        width: 7em;
+        border-radius: 50%;
+        animation: rotation 8s infinite linear;
+      }
+      .heading {
+        color:var(--text-color);
+        font-family: "Vibes", cursive;
+        font-size: 2.5em;
+        font-weight: 200;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+      .paragraph {
+        color: var(--text-color);
+        font-family: "Changa", sans-serif;
+        font-size: 1em;
+        font-weight: 200;
+        line-height: 1.5;
+        letter-spacing: 0em;
+      }
+      .divider {
+        width: 100%;
+        margin: 1.125em auto;
+        border-top: solid 1px rgba(40, 40, 43, 0.149);
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+.buttons {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 0.7em;
+      }
+      .buttons li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0.25em;
+      }
+      .buttons li a {
+        border-radius: 100%;
+        width: 2.5em;
+        height: 2.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #c8cccf00;
+        transition: color 0.25s ease, background-color 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .buttons li a svg {
+        width: 50%;
+        height: auto;
+        fill: #ff008c;
+        transition: fill 0.25s ease;
+      }
+      .buttons li a:hover {
+        border-color: #7482ee;
+      }
+      .buttons li a:hover svg {
+        fill: #7482ee;
+      }
+      /* animations */
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
+      @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        /* transform: rotate(); */
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+        /* transform: rotate(360deg); */
+    }
+    }
+      /* breakpoints */
+      @media screen and (min-width: 20em) {
+        #page {
+          font-size: 0.625em;
+        }
+      }
+      @media screen and (min-width: 22em) {
+        #page {
+          font-size: 0.65em;
+        }
+      }
+      @media screen and (min-width: 23.25em) {
+        #page {
+          font-size: 0.7em;
+        }
+      }
+      @media screen and (min-width: 25.5em) {
+        #page {
+          font-size: 0.775em;
+        }
+      }
+      @media screen and (min-width: 48em) {
+        #page {
+          font-size: 1.125em;
+        }
+      }
+
+    #theme-switcher{
+      display: none;
+    }
+    </style>
+  </head>
+
+  <script src = "f1.js"></script>
+  <div class="container">
+    <div class="sun sun-logo">
+      <svg viewbox="0 0 512 512" width="30" title="sun">
+      <path d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z" />
+      </svg>
+    </div>
+    <div class="moon moon-logo">
+      <svg viewbox="0 0 512 512" width="30" title="moon">
+      <path d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z" />
+      </svg>
+    </div>
+  </div>
+  <body>
+    <button id="theme-switcher">Switch themes!</button>
+
+        <main id="page">
+          <div class="image">
+            <img src="https://cdn.glitch.com/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b%2F%E2%9C%94%EF%B8%8Flogo%20recreated%20with%20inkscape%20512%20without%20shadow.png?v=1619981242271" alt="image" />
+          </div>
+          <h1 class="heading">هوش فضایی</h1>
+          <p class="paragraph">اگر خارج از جعبه فکر کنی</p>
+          <hr class="divider" />
+
+            <a href="https://myket.ir/app/org.godotengine.Geometry">
+              <img
+                src="https://myket.ir/core/images/logo/logo-fa.png"
+                style="width:110px;height:44px;"
+              />
+            </a>
+            <a href="https://cafebazaar.ir/app/org.godotengine.Geometry">
+              <img
+                src="https://cdn.glitch.com/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b%2Fbf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b-badge-new.png?v=1621857641719"
+                style="width:85px;height:28px;"
+              />
+            </a>
+        <ul class="buttons">
+            <li>
+              <a href="https://sarbala.studio">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                </svg>
+              
+              </a>
+            </li>
+              <li>
+                <a href="https://www.instagram.com/sarbala.studio/?hl=en">
+                  <svg
+                    id="Bold"
+                    enable-background="new 0 0 24 24"
+                    height="512"
+                    viewBox="0 0 24 24"
+                    width="512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.758 6.158 6.158 6.158 3.403 0 6.158-2.758 6.158-6.158 0-3.403-2.758-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.789-3.997 3.997-3.997 3.997 1.789 3.997 3.997c.001 2.208-1.788 3.997-3.997 3.997z"
+                    />
+                    <path
+                      d="m16.948.076c-2.208-.103-7.677-.098-9.887 0-1.942.091-3.655.56-5.036 1.941-2.308 2.308-2.013 5.418-2.013 9.979 0 4.668-.26 7.706 2.013 9.979 2.317 2.316 5.472 2.013 9.979 2.013 4.624 0 6.22.003 7.855-.63 2.223-.863 3.901-2.85 4.065-6.419.104-2.209.098-7.677 0-9.887-.198-4.213-2.459-6.768-6.976-6.976zm3.495 20.372c-1.513 1.513-3.612 1.378-8.468 1.378-5 0-7.005.074-8.468-1.393-1.685-1.677-1.38-4.37-1.38-8.453 0-5.525-.567-9.504 4.978-9.788 1.274-.045 1.649-.06 4.856-.06l.045.03c5.329 0 9.51-.558 9.761 4.986.057 1.265.07 1.645.07 4.847-.001 4.942.093 6.959-1.394 8.453z"
+                    />
+                    <circle cx="18.406" cy="5.595" r="1.439" />
+                  </svg>
+                </a>
+            </ul>
+        </main>
+
+
+
+  </body>
+</html>
+

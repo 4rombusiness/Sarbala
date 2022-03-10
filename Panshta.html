@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پنشتا</title>
+    <link rel = "icon" href ="web_hi_res_512.png" 
+        type = "image/x-icon"> 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@200&display=swap" rel="stylesheet"> 
+    <style>
+      /* styles */
+
+ * {
+          /* height: 100%; */
+        
+        overflow: hidden;
+        box-sizing: border-box;
+        margin: 0;
+        border: 0;
+        padding: 0;
+      }
+      body {
+        
+        background-attachment: scroll;
+        background-position: 0% 0%, center;
+        background-repeat: repeat, no-repeat;
+        background-size: cover, cover;
+        background-color: #ffffff;
+      }
+      #root {
+       background: linear-gradient(132deg, #f9bdfb, #c6c1fc, #bae9d3);
+ 	background-size: 400% 400%;
+	animation: Gradient 15s ease infinite;
+	position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      }
+      #page {
+        font-size: 0.55em;
+        width: 23em;
+        padding: 3.125em 2.5em;
+        border-radius: 0.375em;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: auto;
+        grid-gap: 1em;
+        text-align: center;
+        animation: appear;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+      }
+      .image > img {
+        width: 7em;
+        border-radius: 10%;
+      }
+      .heading {
+        text-transform: uppercase;
+        color: #b8ffcb;
+        font-family: 'Noto Sans Arabic', sans-serif;
+        font-size: 2.5em;
+        font-weight: 800;
+        line-height: 1.5;
+
+      }
+      .paragraph {
+        color: #32a852;
+        font-family: 'Noto Sans Arabic', sans-serif;
+        font-size: 1.5em;
+        font-weight: 400;
+        line-height: 1.875;
+        transition: all .2s ease-in-out;
+        /* letter-spacing: 0.3em; */
+      }
+      .paragraph:hover {
+        color: #7482ee;
+      }
+      .divider {
+        width: 19%;
+        margin: 0.25em auto;
+        border-top: solid 1px #c8cccf;
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+      .buttons {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size:  0.7em;
+      }
+      .buttons li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0.25em;
+      }
+      .buttons li a {
+        border-radius: 100%;
+        width: 2.5em;
+        height: 2.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #c8cccf;
+        transition: color 0.25s ease, background-color 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .buttons li a svg {
+        width: 50%;
+        height: auto;
+        fill: #32a852;
+        transition: fill 0.25s ease;
+      }
+      .buttons li a:hover {
+        border-color: #7482ee;
+      }
+      .buttons li a:hover svg {
+        fill: #7482ee;
+      }
+      .myketdl{
+        transition: all .2s ease-in-out; 
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+      }
+      .myketdl:hover{
+        transform: scale(1.54);
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+      }
+
+
+
+.cube {
+  position: absolute;
+  -webkit-clip-path:polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  border: solid 1px #D7D4E4;
+  transform-origin: top left;
+
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #FFF ;
+}
+.cube:nth-child(2) {
+  animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+.cube:nth-child(7) {
+  animation-delay: 5s;
+  left: 10vw;
+  top: 14vh;
+}
+.cube:nth-child(8) {
+  animation-delay: 1s;
+  left: 5vw;
+  top: 100vh;
+}
+.cube:nth-child(9) {
+  animation-delay: 1.5s;
+  left: 100vw;
+  top: 100vh;
+}
+.cube:nth-child(10) {
+  animation-delay: 3s;
+  left: 80vw;
+  top: 40vh;
+}
+  
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(100) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: perspective(60em) rotateX(45deg);
+          transform-origin: center;
+        }
+        to {
+          opacity: 1;
+          transform: perspective(0em) rotateX(0deg);
+          transform-origin: center;
+        }
+      }
+
+      /* breakpoints */
+      @media screen and (min-width: 20em) {
+        #page {
+          font-size: 0.625em;
+        }
+      }
+      @media screen and (min-width: 22em) {
+        #page {
+          font-size: 0.65em;
+        }
+      }
+      @media screen and (min-width: 23.25em) {
+        #page {
+          font-size: 0.7em;
+        }
+      }
+      @media screen and (min-width: 25.5em) {
+        #page {
+          font-size: 0.775em;
+        }
+      }
+      @media screen and (min-width: 48em) {
+        #page {
+          font-size: 1.125em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="root">
+	<div class="cube"></div>
+	<div class="cube"></div>
+	<div class="cube"></div>
+	<div class="cube"></div>
+	<div class="cube"></div>
+
+	<div class="cube"></div>
+	<div class="cube"></div>
+	<div class="cube"></div>
+	<div class="cube"></div>
+      <main id="page">
+        <div class="image">
+          <img src="https://cdn.glitch.global/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b/pan.webp?v=1646829015221" alt="image" />
+        </div>
+        <h1 class="heading">پنشتا</h1>
+        <p class="paragraph">وقتشه یکم ببازی</p>
+        <hr class="divider" />
+        <a href="https://myket.ir/app/studio.sarbala.Panshta" class="myketdl">
+            <img
+                src="logo-myket.png"
+                style="width:110px;height:44px;"
+            />
+        </a>
+        <ul class="buttons">
+
+        <li>
+          <a href="https://sarbala.studio">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+              <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+            </svg>
+          
+          </a>
+        </li>
+          <li>
+            <a href="https://www.instagram.com/sarbala.studio/?hl=en">
+              <svg
+                id="Bold"
+                enable-background="new 0 0 24 24"
+                height="512"
+                viewBox="0 0 24 24"
+                width="512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.758 6.158 6.158 6.158 3.403 0 6.158-2.758 6.158-6.158 0-3.403-2.758-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.789-3.997 3.997-3.997 3.997 1.789 3.997 3.997c.001 2.208-1.788 3.997-3.997 3.997z"
+                />
+                <path
+                  d="m16.948.076c-2.208-.103-7.677-.098-9.887 0-1.942.091-3.655.56-5.036 1.941-2.308 2.308-2.013 5.418-2.013 9.979 0 4.668-.26 7.706 2.013 9.979 2.317 2.316 5.472 2.013 9.979 2.013 4.624 0 6.22.003 7.855-.63 2.223-.863 3.901-2.85 4.065-6.419.104-2.209.098-7.677 0-9.887-.198-4.213-2.459-6.768-6.976-6.976zm3.495 20.372c-1.513 1.513-3.612 1.378-8.468 1.378-5 0-7.005.074-8.468-1.393-1.685-1.677-1.38-4.37-1.38-8.453 0-5.525-.567-9.504 4.978-9.788 1.274-.045 1.649-.06 4.856-.06l.045.03c5.329 0 9.51-.558 9.761 4.986.057 1.265.07 1.645.07 4.847-.001 4.942.093 6.959-1.394 8.453z"
+                />
+                <circle cx="18.406" cy="5.595" r="1.439" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>

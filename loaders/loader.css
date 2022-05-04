@@ -1,0 +1,87 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.pentagon-loader {
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+}
+.pentagon-loader polygon {
+    stroke-width: 0;
+    fill: none;
+}
+.pentagon-loader svg {
+    width: 100%;
+    height: 100%;
+}
+.pentagon-loader svg.center-pentagon {
+    position: absolute;
+    transform-origin: 50% 54.69%;
+    animation: inside-rotate 2.25s ease-out infinite;
+}
+.pentagon-loader svg.center-pentagon polygon {
+    fill: red;
+}
+.pentagon-loader .center {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: square;
+    stroke: black;
+    stroke-dasharray: 6 11.32;
+    stroke-dashoffset: 20.32;
+    animation: outline-rotate 2.25s ease-out infinite;
+}
+/*outside moving 0-20 outside moving 50-70*/
+@keyframes inside-rotate {
+    0% {
+        transform: scale(0.9) rotate(0);
+   }
+    15% {
+        transform: scale(0.5) rotate(28.8deg);
+        filter: blur(5px);
+        opacity: 0.6;
+   }
+    50% {
+        transform: scale(0.9) rotate(72deg);
+        filter: blur(0px);
+        opacity: 0.8;
+   }
+    65% {
+        transform: scale(0.5) rotate(100.8deg);
+        filter: blur(5px);
+        opacity: 0.6;
+   }
+    99.999% {
+        transform: scale(0.9) rotate(144deg);
+   }
+    100% {
+        transform: scale(0.9);
+   }
+}
+@keyframes outline-rotate {
+   /* Corner */
+   /* segment */
+    0% {
+        stroke-dasharray: 6 11.32;
+        stroke-dashoffset: 3;
+   }
+    0% {
+        stroke-dasharray: 6 11.32;
+        stroke-dashoffset: 20.32;
+   }
+    15%, 50% {
+        stroke-dasharray: 5.32 12;
+        stroke-dashoffset: 11.32;
+   }
+    65%, 100% {
+        stroke-dasharray: 6 11.32;
+        stroke-dashoffset: 3;
+   }
+}

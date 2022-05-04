@@ -41,7 +41,7 @@
 
       }
       #page {
-        box-shadow: 0em 1.25em 2.625em 0.375em #867a87;
+        /* box-shadow: 0em 1.25em 2.625em 0.375em #867a87; */
         font-size: 0.55em;
         width: 23em;
         padding: 3.125em 2.5em;
@@ -247,12 +247,112 @@
           font-size: 1.125em;
         }
       }
+
+.pentagon-loader {
+    position: absolute;
+    height: 40vh;
+    overflow: hidden;
+    transform: scale(2);
+    filter: blur(1px);
+}
+.pentagon-loader polygon {
+    stroke-width: 0;
+    fill: none;
+}
+.pentagon-loader svg {
+    width: 100%;
+    height: 100%;
+}
+.pentagon-loader svg.center-pentagon {
+    position: absolute;
+    transform-origin: 50% 54.69%;
+    animation: inside-rotate 4s infinite;
+}
+.pentagon-loader svg.center-pentagon polygon {
+    fill: #c6c1fc;
+}
+.pentagon-loader .center {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: square;
+    stroke: #f9bdfb;
+    stroke-dasharray: 6 11.32;
+    stroke-dashoffset: 20.32;
+    animation: outline-rotate 4s infinite;
+}
+/*outside moving 0-20 outside moving 50-70*/
+@keyframes inside-rotate {
+    0% {
+        transform:  rotate(0);
+   }
+    15% {
+        transform:  rotate(28.8deg);
+        filter: blur(5px);
+        opacity: 0.6;
+   }
+    50% {
+        transform:  rotate(72deg);
+        filter: blur(0px);
+        opacity: 0.8;
+   }
+    65% {
+        transform:  rotate(100.8deg);
+        filter: blur(5px);
+        opacity: 0.6;
+   }
+    99.999% {
+        transform:  rotate(144deg);
+   }
+    100% {
+        
+   }
+}
+@keyframes outline-rotate {
+   /* Corner */
+   /* segment */
+    0% {
+        stroke-dasharray: 6 11.32;
+        stroke-dashoffset: 3;
+   }
+    0% {
+        stroke-dasharray: 6 11.32;
+        stroke-dashoffset: 20.32;
+   }
+    15%, 50% {
+        stroke-dasharray: 5.32 12;
+        stroke-dashoffset: 11.32;
+   }
+    65%, 100% {
+        stroke-dasharray: 6 11.32;
+        stroke-dashoffset: 3;
+   }
+}
+
     </style>
   </head>
   <body>
 
     <div id="root">
-	<div class="cube"></div>
+      <div class="pentagon-loader">
+        <svg class="center-pentagon" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <polygon points="16 4.75410206 3.76335576 13.6445445 8.43733795 28.0295826 23.5626621 28.0295826 28.2366442 13.6445445"></polygon>
+        </svg>  
+          
+        <svg class ="paths" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <filter id="blur">
+            <feGaussianBlur  in="SourceGraphic" stdDeviation="3" />
+          </filter>
+          
+          <filter id="no-blur">
+            <feGaussianBlur  in="SourceGraphic" stdDeviation="0" />
+          </filter>  
+        
+          <polygon class="center" points="16 2.9000001 30 13.0715955 24.6524758 29.5295826 7.34752416 29.5295826 2 13.0715955"></polygon>
+          <polygon class="outside" points="31.7633558 12.4986465 25.7422896 31.0295826 6.25771037 31.0295826 0.236644243 12.4986465 16 1.04589813"></polygon>
+          <polygon class="inside" points="16 4.75410206 3.76335576 13.6445445 8.43733795 28.0295826 23.5626621 28.0295826 28.2366442 13.6445445"></polygon>
+        </svg>
+        </div>
+  <!-- <div class="cube"></div>
 	<div class="cube"></div>
 	<div class="cube"></div>
 	<div class="cube"></div>
@@ -261,7 +361,7 @@
 	<div class="cube"></div>
 	<div class="cube"></div>
 	<div class="cube"></div>
-	<div class="cube"></div>
+	<div class="cube"></div> -->
       <main id="page">
         <div class="image">
           <img src="https://cdn.glitch.global/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b/pan.webp?v=1646829015221" alt="image" />

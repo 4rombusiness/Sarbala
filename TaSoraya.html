@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تا ثریا</title>
+    <link rel = "icon" href="images/soraya initial.svg"
+        type = "image/x-icon"> 
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Vibes&display=swap" rel="stylesheet"> 
+    <style>
+      /* styles */
+      /* dev */
+      .container{
+        position:absolute;
+        left: 10px;
+        top: 10px;
+}
+
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        border: 0;
+        padding: 0;
+      }
+      :root {
+      --bg1: #ee7752;
+      --bg2: #e73c7e;
+      --bg3: #23a6d5;
+      --bg4: #23d5ab;
+      --linear1:rgba(255, 255, 255, 0.522)15%;
+      --linear2:#ffffff 59%;
+      --text-color:rgba(40, 40, 43, 0.4);
+      --shadow:rgba(0, 0, 0, 0.18);
+          }
+      body {
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+
+        height: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5em;
+        }
+      [data-theme="dark"] {
+        --bg1: #500303;
+        --bg2: #025237;
+        --bg3: #100385;
+        --bg4: #94037c;
+        --linear1:rgba(255, 255, 255, 0.522)15%;
+        --linear2:rgba(72, 58, 151, 0.747);
+        --text-color:rgb(255, 255, 255);
+        --shadow:rgba(255, 255, 255, 0.527);
+
+        }
+
+      #page {
+        font-size: 0.55em;
+        width: 29em;
+        padding: 3em 2.375em;
+        background-image: linear-gradient(
+          30deg,
+          var(--linear1),
+          var(--linear2)
+        );
+        border-radius: 0.5em;
+        box-shadow: 0em 1.25em 2.625em 0.375em var(--shadow);
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: auto;
+        grid-gap: 0.625em;
+        text-align: center;
+        animation: appear;
+        animation-duration: 1.125s;
+        animation-timing-function: ease;
+      }
+      .image > img {
+        width: 7em;
+        border-radius: 50%;
+      }
+      .heading {
+        color:var(--text-color);
+        font-family: "Vibes", cursive;
+        font-size: 2.5em;
+        font-weight: 200;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+      .paragraph {
+        color: var(--text-color);
+        font-family: "Changa", sans-serif;
+        font-size: 1em;
+        font-weight: 200;
+        line-height: 1.5;
+        letter-spacing: 0em;
+      }
+      .divider {
+        width: 100%;
+        margin: 1.125em auto;
+        border-top: solid 1px rgba(40, 40, 43, 0.149);
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+.buttons {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 0.7em;
+      }
+      .buttons li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0.25em;
+      }
+      .buttons li a {
+        border-radius: 100%;
+        width: 2.5em;
+        height: 2.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #c8cccf00;
+        transition: color 0.25s ease, background-color 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .buttons li a svg {
+        width: 50%;
+        height: auto;
+        fill: #86415A;
+        transition: fill 0.25s ease;
+      }
+      .buttons li a:hover {
+        border-color: #7482ee;
+      }
+      .buttons li a:hover svg {
+        fill: #7482ee;
+      }
+      /* animations */
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* breakpoints */
+      @media screen and (min-width: 20em) {
+        #page {
+          font-size: 0.625em;
+        }
+      }
+      @media screen and (min-width: 22em) {
+        #page {
+          font-size: 0.65em;
+        }
+      }
+      @media screen and (min-width: 23.25em) {
+        #page {
+          font-size: 0.7em;
+        }
+      }
+      @media screen and (min-width: 25.5em) {
+        #page {
+          font-size: 0.775em;
+        }
+      }
+      @media screen and (min-width: 48em) {
+        #page {
+          font-size: 1.125em;
+        }
+      }
+
+    #Clouds {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 30%;
+  overflow: hidden;
+  -webkit-animation: FadeIn 3.1s ease-out;
+          animation: FadeIn 3.1s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@-webkit-keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Cloud {
+  position: absolute;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 70px;
+  -webkit-animation-duration: 120s;
+          animation-duration: 120s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: Float, FadeFloat;
+          animation-name: Float, FadeFloat;
+  z-index: 1;
+}
+.Cloud.Foreground {
+  height: 10%;
+  min-height: 20px;
+  z-index: 3;
+}
+.Cloud.Background {
+  height: 9.09090909%;
+  min-height: 8px;
+  -webkit-animation-duration: 210s;
+          animation-duration: 210s;
+}
+@-webkit-keyframes Float {
+  from {
+    transform: translateX(100%) translateZ(0);
+  }
+  to {
+    transform: translateX(-15%) translateZ(0);
+  }
+}
+@keyframes Float {
+  from {
+    transform: translateX(100%) translateZ(0);
+  }
+  to {
+    transform: translateX(-15%) translateZ(0);
+  }
+}
+@-webkit-keyframes FadeFloat {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  5%,
+  90% {
+    opacity: 1;
+  }
+}
+@keyframes FadeFloat {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  5%,
+  90% {
+    opacity: 1;
+  }
+}
+.Cloud:nth-child(10) {
+  -webkit-animation-delay: -184.61538462s;
+          animation-delay: -184.61538462s;
+  top: 60%;
+}
+.Cloud.Foreground:nth-child(10) {
+  -webkit-animation-duration: 80s;
+          animation-duration: 80s;
+  height: 35%;
+}
+.Cloud.Background:nth-child(10) {
+  -webkit-animation-duration: 110s;
+          animation-duration: 110s;
+  height: -3.40909091%;
+}
+.Cloud:nth-child(9) {
+  -webkit-animation-delay: -166.15384615s;
+          animation-delay: -166.15384615s;
+  top: 54%;
+}
+.Cloud.Foreground:nth-child(9) {
+  -webkit-animation-duration: 84s;
+          animation-duration: 84s;
+  height: 32.5%;
+}
+.Cloud.Background:nth-child(9) {
+  -webkit-animation-duration: 114s;
+          animation-duration: 114s;
+  height: -2.15909091%;
+}
+.Cloud:nth-child(8) {
+  -webkit-animation-delay: -147.69230769s;
+          animation-delay: -147.69230769s;
+  top: 48%;
+}
+.Cloud.Foreground:nth-child(8) {
+  -webkit-animation-duration: 88s;
+          animation-duration: 88s;
+  height: 30%;
+}
+.Cloud.Background:nth-child(8) {
+  -webkit-animation-duration: 118s;
+          animation-duration: 118s;
+  height: -0.90909091%;
+}
+.Cloud:nth-child(7) {
+  -webkit-animation-delay: -129.23076923s;
+          animation-delay: -129.23076923s;
+  top: 42%;
+}
+.Cloud.Foreground:nth-child(7) {
+  -webkit-animation-duration: 92s;
+          animation-duration: 92s;
+  height: 27.5%;
+}
+.Cloud.Background:nth-child(7) {
+  -webkit-animation-duration: 122s;
+          animation-duration: 122s;
+  height: 0.34090909%;
+}
+.Cloud:nth-child(6) {
+  -webkit-animation-delay: -110.76923077s;
+          animation-delay: -110.76923077s;
+  top: 36%;
+}
+.Cloud.Foreground:nth-child(6) {
+  -webkit-animation-duration: 96s;
+          animation-duration: 96s;
+  height: 25%;
+}
+.Cloud.Background:nth-child(6) {
+  -webkit-animation-duration: 126s;
+          animation-duration: 126s;
+  height: 1.59090909%;
+}
+.Cloud:nth-child(5) {
+  -webkit-animation-delay: -92.30769231s;
+          animation-delay: -92.30769231s;
+  top: 30%;
+}
+.Cloud.Foreground:nth-child(5) {
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  height: 22.5%;
+}
+.Cloud.Background:nth-child(5) {
+  -webkit-animation-duration: 130s;
+          animation-duration: 130s;
+  height: 2.84090909%;
+}
+.Cloud:nth-child(4) {
+  -webkit-animation-delay: -73.84615385s;
+          animation-delay: -73.84615385s;
+  top: 24%;
+}
+.Cloud.Foreground:nth-child(4) {
+  -webkit-animation-duration: 104s;
+          animation-duration: 104s;
+  height: 20%;
+}
+.Cloud.Background:nth-child(4) {
+  -webkit-animation-duration: 134s;
+          animation-duration: 134s;
+  height: 4.09090909%;
+}
+.Cloud:nth-child(3) {
+  -webkit-animation-delay: -55.38461538s;
+          animation-delay: -55.38461538s;
+  top: 18%;
+}
+.Cloud.Foreground:nth-child(3) {
+  -webkit-animation-duration: 108s;
+          animation-duration: 108s;
+  height: 17.5%;
+}
+.Cloud.Background:nth-child(3) {
+  -webkit-animation-duration: 138s;
+          animation-duration: 138s;
+  height: 5.34090909%;
+}
+.Cloud:nth-child(2) {
+  -webkit-animation-delay: -36.92307692s;
+          animation-delay: -36.92307692s;
+  top: 12%;
+}
+.Cloud.Foreground:nth-child(2) {
+  -webkit-animation-duration: 112s;
+          animation-duration: 112s;
+  height: 15%;
+}
+.Cloud.Background:nth-child(2) {
+  -webkit-animation-duration: 142s;
+          animation-duration: 142s;
+  height: 6.59090909%;
+}
+.Cloud:nth-child(1) {
+  -webkit-animation-delay: -18.46153846s;
+          animation-delay: -18.46153846s;
+  top: 6%;
+}
+.Cloud.Foreground:nth-child(1) {
+  -webkit-animation-duration: 116s;
+          animation-duration: 116s;
+  height: 12.5%;
+}
+.Cloud.Background:nth-child(1) {
+  -webkit-animation-duration: 146s;
+          animation-duration: 146s;
+  height: 7.84090909%;
+}
+.Cloud {
+  background-image: url("images/cloudsvg.svg");
+}
+.Cloud.Background {
+  background-image: url("images/cloudsvg.svg");
+
+
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+body {
+  color: #FFF;
+  background-color: #f0a6ff;
+  background-image: radial-gradient(circle, rgba(134,65,90,0.3),rgba(134,65,90,0.5),rgba(134,65,90,1));
+}
+
+
+
+
+
+    
+    </style>
+  </head>
+
+  <div id="Clouds">
+    <div class="Cloud Foreground"></div>
+    <div class="Cloud Background"></div>
+    <div class="Cloud Foreground"></div>
+    <div class="Cloud Background"></div>
+    <div class="Cloud Foreground"></div>
+    <div class="Cloud Background"></div>
+    <div class="Cloud Background"></div>
+    <div class="Cloud Foreground"></div>
+    <div class="Cloud Background"></div>
+    <div class="Cloud Background"></div>
+  </div>
+
+  <body>
+
+        <main id="page">
+          <div class="image">
+            <img src="images/soraya initial.svg" alt="image" />
+          </div>
+          <h1 class="heading">تا ثریا</h1>
+          <p class="paragraph">می‌رود دیوار کج</p>
+          <hr class="divider" />
+
+            <a href="https://myket.ir/app/studio.sarbala.TaSoraya?utm_source=search-ads-gift&utm_medium=cpc">
+              <img
+                src="https://myket.ir/core/images/logo/logo-fa.svg"
+                style="width:110px;height:44px;"
+              />
+            </a>
+            <a href="https://cafebazaar.ir/app/studio.sarbala.TaSoraya">
+              <img
+                src="https://cdn.glitch.com/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b%2Fbf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b-badge-new.png?v=1621857641719"
+                style="width:85px;height:28px;"
+              />
+            </a>
+        <ul class="buttons">
+            <li>
+              <a href="https://sarbala.studio">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                </svg>
+              
+              </a>
+            </li>
+              <li>
+                <a href="https://www.instagram.com/sarbala.studio/?hl=en">
+                  <svg
+                    id="Bold"
+                    enable-background="new 0 0 24 24"
+                    height="512"
+                    viewBox="0 0 24 24"
+                    width="512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.758 6.158 6.158 6.158 3.403 0 6.158-2.758 6.158-6.158 0-3.403-2.758-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.789-3.997 3.997-3.997 3.997 1.789 3.997 3.997c.001 2.208-1.788 3.997-3.997 3.997z"
+                    />
+                    <path
+                      d="m16.948.076c-2.208-.103-7.677-.098-9.887 0-1.942.091-3.655.56-5.036 1.941-2.308 2.308-2.013 5.418-2.013 9.979 0 4.668-.26 7.706 2.013 9.979 2.317 2.316 5.472 2.013 9.979 2.013 4.624 0 6.22.003 7.855-.63 2.223-.863 3.901-2.85 4.065-6.419.104-2.209.098-7.677 0-9.887-.198-4.213-2.459-6.768-6.976-6.976zm3.495 20.372c-1.513 1.513-3.612 1.378-8.468 1.378-5 0-7.005.074-8.468-1.393-1.685-1.677-1.38-4.37-1.38-8.453 0-5.525-.567-9.504 4.978-9.788 1.274-.045 1.649-.06 4.856-.06l.045.03c5.329 0 9.51-.558 9.761 4.986.057 1.265.07 1.645.07 4.847-.001 4.942.093 6.959-1.394 8.453z"
+                    />
+                    <circle cx="18.406" cy="5.595" r="1.439" />
+                  </svg>
+                </a>
+            </ul>
+        </main>
+
+
+
+  </body>
+</html>
+

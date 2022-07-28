@@ -65,17 +65,17 @@
         animation-fill-mode: forwards;
       }
       .image {
-        /* margin-top: -3.5em; */
-        /* margin-left: -2.5em; */
-        /* width: calc(100% + 5em); */
+
       }
       .image > img {
         width: 100vw;
         max-width: 100%;
         justify-content: center;
+        border-radius: 100%;
+        overflow: hidden;
       }
 
-  
+      
       .paragraph {
         color: rgb(87, 90, 94);
         font-family: 'Noto Sans Arabic', sans-serif;
@@ -85,6 +85,11 @@
       }
       ul{
         list-style-type: none;
+      }
+      li{
+        border-right: solid #000000;
+        margin-bottom: .3em;
+        margin-left: .3em;
       }
       #rights a{
             font-family: 'Noto Sans Arabic', sans-serif;
@@ -96,16 +101,13 @@
             font-family: 'Noto Sans Arabic', sans-serif;
             color:black;
             background-color: rgba(182, 182, 182, 0);
-            border-right: solid #000000;
             width: 9em;
-            margin-top: .5em;
-            line-height: 3em;
             text-align: right;
             text-decoration: none;
             display:inline-flex;
 
 
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
+            /* clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%); */
         }
 
         #root a:hover, a:active {
@@ -174,14 +176,15 @@
     <div id="root">
       <main id="page">
         <div class="image">
-          <img src="https://cdn.glitch.me/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b%2Fsarbala_logo_edited_zoomed.png?v=1634646512968" alt="image" />
+          <img src="images/sarbala.png" alt="image" />
         </div>
 
         <p class="paragraph">
-          سربالا، یه کارگاه بازی سازی مستقل که در حال حاضر سه بازی ناب برای اندروید داره:
+          سربالا، یه کارگاه بازی سازی مستقل که در حال حاضر چهار بازی ناب برای اندروید داره:
         </p>
         <ul>
-            <li><a href="https://sarbala.studio/Panshta.html">پنشتا(جدید)</a></li>
+            <li><a href="https://sarbala.studio/TaSoraya.html"> تا ثریا (جدید)</a></li>
+            <li><a href="https://sarbala.studio/Panshta.html"> پنشتا</a></li>
             <li><a href="https://sarbala.studio/DooDol.html">دودُل؟</a></li>
             <li><a href="https://sarbala.studio/fazaei.html">هوش فضایی</a></li>
         </ul>

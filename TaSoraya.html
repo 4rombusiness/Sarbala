@@ -24,10 +24,6 @@
         padding: 0;
       }
       :root {
-      --bg1: #ee7752;
-      --bg2: #e73c7e;
-      --bg3: #23a6d5;
-      --bg4: #23d5ab;
       --linear1:rgba(255, 255, 255, 0.522)15%;
       --linear2:#ffffff 59%;
       --text-color:rgba(40, 40, 43, 0.4);
@@ -45,33 +41,19 @@
         align-items: center;
         padding: 2.5em;
         }
-      [data-theme="dark"] {
-        --bg1: #500303;
-        --bg2: #025237;
-        --bg3: #100385;
-        --bg4: #94037c;
-        --linear1:rgba(255, 255, 255, 0.522)15%;
-        --linear2:rgba(72, 58, 151, 0.747);
-        --text-color:rgb(255, 255, 255);
-        --shadow:rgba(255, 255, 255, 0.527);
 
-        }
 
       #page {
         font-size: 0.55em;
         width: 29em;
         padding: 3em 2.375em;
-        background-image: linear-gradient(
-          30deg,
-          var(--linear1),
-          var(--linear2)
-        );
         border-radius: 0.5em;
         box-shadow: 0em 1.25em 2.625em 0.375em var(--shadow);
         display: grid;
         grid-auto-flow: row;
         grid-auto-rows: auto;
         grid-gap: 0.625em;
+        background-color: #000000a8;
         text-align: center;
         animation: appear;
         animation-duration: 1.125s;
@@ -82,7 +64,7 @@
         border-radius: 50%;
       }
       .heading {
-        color:var(--text-color);
+        color: #ffffff;
         font-family: "Vibes", cursive;
         font-size: 2.5em;
         font-weight: 200;
@@ -90,7 +72,7 @@
         letter-spacing: 0;
       }
       .paragraph {
-        color: var(--text-color);
+        color: #ffffff;
         font-family: "Changa", sans-serif;
         font-size: 1em;
         font-weight: 200;
@@ -131,7 +113,7 @@
       .buttons li a svg {
         width: 50%;
         height: auto;
-        fill: #86415A;
+        fill: #ffffff;
         transition: fill 0.25s ease;
       }
       .buttons li a:hover {
@@ -446,9 +428,10 @@ body {
   min-height: 100%;
 }
 body {
-  color: #FFF;
-  background-color: #f0a6ff;
-  background-image: radial-gradient(circle, rgba(134,65,90,0.3),rgba(134,65,90,0.5),rgba(134,65,90,1));
+  background: url("images/buildings.svg");
+  backdrop-filter: blur(500px);
+  background-size: cover;
+  /* background-image: radial-gradient(circle, rgba(134,65,90,0.3),rgba(134,65,90,0.5),rgba(134,65,90,1)); */
 }
 
 

@@ -1,207 +1,476 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="en">
   <head>
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="b4e9287f-2a4a-4beb-b8e8-8ea2ef23c060";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sarbala Studio</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/mini_icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/mini_icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/mini_icons/favicon-16x16.png">
-    <link rel="manifest" href="/mini_icons/site.webmanifest">
-<!--     <link rel = "icon" href="https://cdn.glitch.me/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b%2Fsarbala_logo_edited_zoomed.png?v=1634646512968" type = "image/x-icon">  -->
+    <title>Sarbala.Studio</title>
+
+    <!-- Favicon -->
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="images/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- End: Favicon -->
+
+    <!-- Required Social Preview MetaTags -->
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="HeyU Landing Page — #2 PSD To HTML Coversion" />
+    <meta
+      name="description"
+      content="HeyU is an open source single page App Landing page website PSD to HTML template. This is my #2 PSD To HTML Conversion. Best of Luck To Me ☻"
+    />
+    <!-- End of Required Social Preview MetaTags -->
+
+    <!-- LATO — Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
-    <style>
-      /* styles */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        border: 0;
-        padding: 0;
-      }
-      body {
-        background-color: #e6e5e5;
-      }
-      #root {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2.5em;
-      }
-      #rights{
-        font-size: 0.3em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0.5em;
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">  
 
-        -webkit-user-select: none; /* Safari */
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* IE10+/Edge */
-        user-select: none; /* Standard */
-      }
-      #rights:hover {
-        transform: scale(2);
-        transition: all 0.3s ease-in-out 0.1s;
-        }
-      #page {
-        font-size: 0.6em;
-        width: 25em;
-        padding: 3.5em 2.5em;
-        background-color: #ffffff;
-        box-shadow: 0em 0.875em 1.5em 0em rgba(0, 0, 0, 0.059);
-        display: grid;
-        grid-auto-flow: row;
-        grid-auto-rows: auto;
-        grid-gap: 1.75em;
-        animation: appear;
-        animation-duration: 3.25s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-      }
-      .image {
+    <!-- End: LATO — Google Font -->
 
-      }
-      .image > img {
-        width: 100vw;
-        max-width: 100%;
-        justify-content: center;
-        border-radius: 100%;
-        overflow: hidden;
-      }
-
-      
-      .paragraph {
-        color: rgb(87, 90, 94);
-        font-family: 'Noto Sans Arabic', sans-serif;
-        font-size: 1em;
-        font-weight: 400;
-        line-height: 1.75;
-      }
-      ul{
-        list-style-type: none;
-      }
-      li{
-        border-right: solid #000000;
-        margin-bottom: .3em;
-        margin-left: .3em;
-      }
-      #rights a{
-            font-family: 'Noto Sans Arabic', sans-serif;
-            color:black;
-            text-decoration: none;
-
-      }
-        #root a:link, a:visited {
-            font-family: 'Noto Sans Arabic', sans-serif;
-            color:black;
-            background-color: rgba(182, 182, 182, 0);
-            width: 9em;
-            text-align: right;
-            text-decoration: none;
-            display:inline-flex;
-
-
-            /* clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%); */
-        }
-
-        #root a:hover, a:active {
-            background-color:rgb(171, 165, 165);
-        }
-        #loading {
-          position: fixed;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          opacity: 0.7;
-          background-color: #fff;
-          z-index: 99;
-        }
-
-        #loading-image {
-          z-index: 100;
-        }
-        
-      /* animations */
-      @keyframes appear {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      /* breakpoints */
-      @media screen and (min-width: 20em) {
-        #page {
-          font-size: 0.65em;
-        }
-      }
-      @media screen and (min-width: 22em) {
-        #page {
-          font-size: 0.7em;
-        }
-      }
-      @media screen and (min-width: 23.25em) {
-        #page {
-          font-size: 0.75em;
-        }
-      }
-      @media screen and (min-width: 25.5em) {
-        #page {
-          font-size: 0.8em;
-        }
-      }
-      @media screen and (min-width: 48em) {
-        #page {
-          font-size: 1.05em;
-        }
-      }
-    </style>
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <!-- End: Main CSS File -->
   </head>
   <body>
-    <div id="loading"><img id="loading-image" src="loaders/loader.svg" alt="Loading..." /></div>
-    <script async src="//static.getclicky.com/101364363.js"></script>
-    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101364363ns.gif" /></p></noscript>
-    <div id="root">
-      <main id="page">
-        <div class="image">
-          <img src="images/sarbala.png" alt="image" />
-        </div>
-
-        <p class="paragraph">
-          سربالا، یه کارگاه بازی سازی مستقل که در حال حاضر چهار بازی ناب برای اندروید داره:
-        </p>
-        <ul>
-            <li><a href="https://sarbala.studio/TaSoraya.html"> تا ثریا (جدید)</a></li>
-            <li><a href="https://sarbala.studio/Panshta.html"> پنشتا</a></li>
-            <li><a href="https://sarbala.studio/DooDol.html">دودُل؟</a></li>
-            <li><a href="https://sarbala.studio/fazaei.html">هوش فضایی</a></li>
-        </ul>
-      </main>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader"></div>
     </div>
-    <script>
-      window.onload = function(){ document.getElementById("loading").style.display = "none" };
-    </script>
-  </body>
-  <footer>
-    <div id="rights">
-      <p class="paragraph">
-          ۱۴۰۱ © کارگاه بازی‌سازی سربالا – تمامی حقوق محفوظ است
-        </p>
-      <a class="unstyled" href="mailto:info@sarbala.studio"> info@sarbala.studio </a>
-      
-  </div>
+    <!-- Preloader End -->
+    <!-- Header Section -->
+    <header id="home">
+      <nav>
+        <div class="navbar-logo">
+          <a href="#" class="logo lang lang-fa">سربالا</a>
+          <a href="#" class="logo lang lang-en">Sarbala</a>
+        </div>
+        <div id="navbar">
+          <ul>
+            <li><a href="#home" class="lang lang-en">HOME</a></li>
+            <li><a href="#features" class="lang lang-en">TECHNOLOGIES</a></li>
+            <li><a href="#games" class="lang lang-en">GAMES</a></li>
+            <li><a href="#howto" class="lang lang-en">ABOUT US</a></li>
+            <li><a href="#contact" class="lang lang-en">CONTACT</a></li>
 
-  </footer>
+            <li><a href="#contact" class="lang lang-fa">تماس باما</a></li>
+            <li><a href="#howto" class="lang lang-fa">درباری‌ما</a></li>
+            <li><a href="#games" class="lang lang-fa">بازی‌ها</a></li>
+            <li><a href="#features" class="lang lang-fa">تکنولوژی‌ها</a></li>
+            <li><a href="#home" class="lang lang-fa">خانه</a></li>
+            <li>
+              <label class="switch">
+                <input type="checkbox" onclick="changelangfrombutt()">
+                <span class="slider"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div id="mobileNav">
+          <span onclick="openNav()">&#9776;</span>
+        </div>
+        <div id="myNav" class="mobileNavOverlay">
+          <div class="overlay-content">
+            <a href="javascript:void()" class="close-btn" onclick="closeNav()"
+              >&times;</a
+            >
+            <a href="#home" class="lang lang-en" onclick="closeNav()">HOME</a>
+            <a href="#features" class="lang lang-en" onclick="closeNav()">SCREENSHOTS</a>
+            <a href="#games" class="lang lang-en" onclick="closeNav()">GAMES</a>
+            <a href="#howto" class="lang lang-en" onclick="closeNav()">ABOUT US</a>
+            <a href="#contact" class="lang lang-en" onclick="closeNav()">CONTACT</a>
+
+
+            <a href="#home" class="lang lang-fa" onclick="closeNav()">خانه</a>
+            <a href="#features" class="lang lang-fa" onclick="closeNav()">تکنولوژی‌ها</a>
+            <a href="#games" class="lang lang-fa" onclick="closeNav()">بازی‌ها</a>
+            <a href="#howto" class="lang lang-fa" onclick="closeNav()">درباری‌ما</a>
+            <a href="#contact" class="lang lang-fa" onclick="closeNav()">تماس باما</a>
+
+              <label class="switch">
+                <input type="checkbox" onclick="changelangfrombutt()">
+                <span class="slider"></span>
+              </label>
+            
+          </div>
+        </div>
+      </nav>
+      <div id="hero">
+        <div class="row">
+          <div class="col span_1_of_2">
+            <div class="hero-description">
+              <h1 class="lang lang-en">
+                Pleasingly Graceful <br />
+                & Stylish
+              </h1>
+              <br>
+              <h1 class="lang lang-fa">
+                ساده، شیک<br />
+                و چشم‌نواز
+              </h1>
+              <br>
+
+              <p class="lang lang-en">
+                An elegant game studio 
+              </p>
+              <p class="lang lang-fa">
+                کارگاه بازی‌سازی سربالا
+              </p>
+              <br>
+              <br>
+              <a href="#games" class="btn lang lang-en"
+                ><span class="download-btn"> Let's see</span></a>
+              <a href="#games" class="btn lang lang-fa"
+                ><span class="download-btn"> بریم ببینیم</span></a>
+            </div>
+          </div>
+          <div class="col span_1_of_2">
+            <img class="hero-img" src="images/1080-2400.svg" alt="" style="scale: 0.8;" />
+          </div>
+        </div>
+      </div>
+      <div class="shape-divider">
+        <div class="custom-shape-divider-bottom-1603385849">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <button onclick="topFunction()" id="scrollUp" title="Go to top">
+        <svg
+          width="1.5rem"
+          height="1.5rem"
+          viewBox="0 0 16 16"
+          class="bi bi-arrow-up"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
+          />
+        </svg>
+      </button>
+    </header>
+    <!-- End: Header Section -->
+
+    <!-- Features Section -->
+    <section id="features">
+      <div class="row">
+        
+        <div class="col span_1_of_2">
+          <div class="section-description features-description col1">
+            <h2 class="stylish_heading lang lang-en">
+              The joy of depending on open source 
+            </h2>
+            <h2 class="stylish_heading lang lang-fa center_align">
+              تکنولوژی ها
+            </h2>
+            <p class="little-descriptionlang lang lang-en center_align" dir="rtl">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p class="lang lang-fa" dir="rtl">
+              سربالا برای ساخت بازی‌هاش از تکنولوژی‌ها و پروژه های متن‌باز استفاده میکنه.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="thumbnail">
+            <img src="https://godotengine.org/themes/godotengine/assets/press/icon_color.svg"></img>
+          </div>
+          <div class="thumbnail">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg"></img>
+          </div>
+          <div class="thumbnail">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg"></img>
+          </div>
+          <div class="thumbnail">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"></img>
+          </div>
+          <div class="thumbnail">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"></img>
+          </div>
+          <div class="thumbnail">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"></img>
+          </div>
+        </div>
+        <br>
+        <br>
+        <p class="lang lang-fa" dir="rtl">
+           این پروژه ها کارامد ترین ابزار جهان 🌍 برای رسیدن به هدف هستند. هر خط کد در پروژه‌های متن باز توسط میلیون‌ها نفر بررسی میشه تا هیچ شکی در بهینه بودن اونها باقی نمونه 👌
+        </p>
+      </div>
+    </section>
+    <!-- End: Features Section -->
+
+    <!-- GAMES Section -->
+    <section id="games">
+      <h2 class="stylish_heading lang lang-en">
+        Our games
+      </h2>
+      <h2 class="stylish_heading lang lang-fa">
+        بازی‌های سربالا
+      </h2>
+      <div class="row">
+        <div class="col span_1_of_3">
+          <div class="bubble" onclick="window.open('https://sarbala.studio/TaSoraya.html','mwindow');">&nbsp;
+            <img src="images/soraya logo.svg" alt="">
+            <span class="company-name lang lang-en">Ta Soraya</span>
+            <span class="company-name lang lang-fa">تا‌ثریا</span>
+          </div>
+          <div class="client-info">
+            <img class="avatar" src="images/sarbala-logo.png" alt="" />
+            <div class="name">
+              <h4 class="lang lang-en">Sarbala</h4>
+              <p class="role lang lang-en">Latest Sarbala artwork.</p>
+              <h4 class="lang lang-fa">سربالا</h4>
+              <p class="role lang lang-fa">آخرین اثر سربالا</p>
+            </div>
+          </div>
+        </div>
+        <div class="col span_1_of_3">
+          <div class="bubble" onclick="window.open('https://sarbala.studio/Panshta.html','mwindow');">&nbsp;
+            <img src="images/panshta-logo.png" alt="" >
+            <span class="company-name lang lang-en">Panshta</span>
+            <span class="company-name lang lang-fa">پنشتا</span>
+          </div>
+          <div class="client-info">
+            <img class="avatar" src="images/notes.svg" alt="" />
+            <div class="name">
+              <h4 class="lang lang-en">Comments</h4>
+              <p class="role lang lang-en">An example of open source commiunity power in game making field.</p>
+              <h4 class="lang lang-fa">کامنت‌ها</h4>
+              <p class="role lang lang-fa">یه شاهد زنده از قدرت بازی‌سازی اوپن سورس</p>
+            </div>
+          </div>
+        </div>
+        <div class="col span_1_of_3">
+          <div class="bubble" onclick="window.open('https://sarbala.studio/DooDol.html','mwindow');">&nbsp;
+            <img src="images/doodol-logo.png" alt="">
+            <span class="company-name lang lang-en">DooDol?</span>
+            <span class="company-name lang lang-fa">دودُل؟</span>
+          </div>
+          <div class="client-info">
+            <img class="avatar" src="images/aria-keoxer.png" alt="" />
+            <div class="name">
+              <h4 class="lang lang-en">Aria Keoxer</h4>
+              <p class="role lang lang-en">Great sound tracks and eye catching mono-chrome style.</p>
+              <h4 class="lang lang-fa">آریا کئوکسر</h4>
+              <p class="role lang lang-fa">مونوکرم بودن و موزیک متنش عالیه</p>
+            </div>
+          </div>
+        </div>
+        <div class="col span_1_of_3">
+          <div class="bubble" onclick="window.open('https://sarbala.studio/fazaei.html','mwindow');">&nbsp;
+            <img src="images/fazaei-logo.png" alt="">
+            <span class="company-name lang lang-en">Fazaei</span>
+            <span class="company-name lang lang-fa">هوش فضایی</span>
+          </div>
+          <div class="client-info">
+            <img class="avatar" src="images/reza-ghadiri.jpg" alt="" />
+            <div class="name">
+              <h4 class="lang lang-en">Reza Ghadiri (Baziato.com)</h4>
+              <p class="role lang lang-en">Iranian unique game with a brilliant idea.</p>
+              <h4 class="lang lang-fa">رضا قدیری (بازیاتو)</h4>
+              <p class="role lang lang-fa">یک بازی ایرانی با گیم پلی خلاقانه و ایده نو</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Games Section -->
+
+    <!-- How To Section -->
+    <section id="howto">
+      <div class="row">
+        <div class="col span_1_of_3 first-col">
+          <div class="first-item">
+            <div class="item-description">
+              <h4 class="lang lang-en">Sarbala Team?</h4>
+              <h4 class="lang lang-fa">تیم سربالا؟</h4>
+              <p class="lang lang-en">
+                Whole Sarbala team is a twosome! Me and my beloved wify. I do the calculations (scripting) and she design it to a game.
+              </p>
+              <p class="lang lang-fa">
+                کل تیم سربالا رو  دو نفر تشکیل میدن، من و همسرم! من ایده اصلی رو به کد تبدیل میکنم و ایشون به این کدها دیزاین و تصویر میده
+              </p>
+            </div>
+            <div class="item-icon1">
+              <h1>👥</h1>
+            </div>
+          </div>
+          <div class="first-item">
+            <div class="item-description">
+              <h4 class="lang lang-en">Any specific engine?</h4>
+              <h4 class="lang lang-fa">موتور بازی سازی؟</h4>
+              <p class="lang lang-en">
+                Yes, Godot open source game engine.
+              </p>
+              <p class="lang lang-fa">
+                بله! بازی ها ها با گودو ساخته میشن. گودو هم یه جامعه متن‌باز پشتش داره 
+              </p>
+            </div>
+            <div class="item-icon1">
+              <h1>🤖</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col span_1_of_3 second-col">
+          <img class="big_image" src="images/phone.svg" alt="" />
+        </div>
+        <div class="col span_1_of_3 third-col">
+          <div class="last-item">
+            <div class="item-icon2">
+              <h1>🙋‍♂️</h1>
+            </div>
+            <div class="item-description">
+              <h4 class="lang lang-en">Why Sarbala?</h4>
+              <h4 class="lang lang-fa">حالا چرا سربالا؟</h4>
+              <p class="lang lang-en">
+                Sarbala is a Farsi word and means kind of a road that goes up.
+              </p>
+              <p class="lang lang-fa">
+                چون این مسیر (بازی‌سازی) برای ما کاملا جدید و سخت بود و ما هم اینکاره نبودیم! ولی هرچه بیشتر پیش میرفتیم بیشتر عاشقش میشدیم. پس سربالا 
+              </p>
+            </div>
+          </div>
+          <div class="last-item">
+            <div class="item-icon2">
+              <h1>🥼</h1>
+            </div>
+            <div class="item-description">
+              <h4 class="lang lang-en">You guys are not programers?</h4>
+              <h4 class="lang lang-fa">پس چه کاره بودید؟</h4>
+              <p class="lang lang-en">
+                We are now! But mainly & technically we are medical doctors.
+              </p>
+              <p class="lang lang-fa">
+                ما هردو پزشکیم و این کار بیشتر یه هابی دلچسب پست کشیک محسوب میشه! البته اگه بعدش به اندازه خوابیده باشیم
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: About us Section -->
+
+    <!-- Contact  Section -->
+    <section id="contact">
+      <div class="row">
+        <img class="app-logo" src="images/app_logo.png" alt="" />
+        <h2 class="stylish_heading lang lang-en">
+          Many ways to contact us:
+        </h2>
+        <h2 class="stylish_heading lang lang-fa">
+          با ما ارتباط بگیرید
+        </h2>
+        <div class='buttons-container'>
+          <div class='button mail' onclick="location.href='mailto:info@sarbala.studio';">&nbsp;
+          </div>
+          <div class='button instagram' onclick="location.href='https://instagram.com/sarbala.studio';">&nbsp;
+          </div>
+          <div class='button telegram' onclick="location.href='https://t.me/sarbala_studio';">&nbsp;
+          </div>
+        </div>
+        <br>
+        <h4 class="lang lang-fa">همینطور میتونید با حامی‌باش از سربالا، پروژه‌های متن بازمون و بازی‌های ما حمایت کنید</h4>
+        <div class="buttons-container">
+          <div class='button hamibash'>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End:Contact Section -->
+
+    <!-- Footer Section -->
+    <section id="footer">
+      <div class="links">
+        <ul>
+          <li><a href="#home" class="lang lang-en">HOME</a></li>
+          <li><a href="#features" class="lang lang-en">TECHNOLOGIES</a></li>
+          <li><a href="#games" class="lang lang-en">GAMES</a></li>
+          <li><a href="#howto" class="lang lang-en">ABOUT US</a></li>
+          <li><a href="#contact" class="lang lang-en">CONTACT</a></li>
+          <li><a href="index.old.html" class="lang lang-en">OLD SITE</a></li>
+          <li><a href="#home" class="lang lang-fa">خانه</a></li>
+          <li><a href="#features" class="lang lang-fa">تکنولوژی‌ها</a></li>
+          <li><a href="#games" class="lang lang-fa">بازی‌ها</a></li>
+          <li><a href="#howto" class="lang lang-fa">درباری‌ما</a></li>
+          <li><a href="#contact" class="lang lang-fa">تماس باما</a></li>
+          <li><a href="index.old.html" class="lang lang-fa">سایت قدیمی</a></li>
+
+        </ul>
+      </div>
+
+      <select id="langSelector" style="display: none;">
+          <option value="en">English</option>
+          <option value="fa">فارسی</option>
+      </select>
+      
+      <!-- <div>
+      <p>Your browser language is: <b id="browserLang"></b></p>
+      <p>The selected language is: <b id="startLang"></b></p> 
+      </div> -->
+
+      
+    </section>
+    <h5 class="lang lang-en center_align" style="padding: 5%;">
+      Sarbala Studio - All Rights Reserved © 2022
+    </h5>
+    <h5 class="lang lang-fa center_align" style="padding: 5%;" dir="rtl">
+      ۱۴۰۱ © کارگاه بازی‌سازی سربالا – تمامی حقوق محفوظ است
+    </h5>
+    <!-- End: Footer Section -->
+
+    <!-- Required JavaScript Files & CDN -->
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Main JS Files -->
+    <script src="js/essential.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

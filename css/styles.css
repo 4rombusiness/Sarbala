@@ -1561,6 +1561,8 @@ nav {
 }
 .hamibash{
   background-image: url(/images/hamibash.svg);
+  background-repeat: no-repeat;
+
 }
 .instagram:hover {
   background-image: url(/images/insta.svg);

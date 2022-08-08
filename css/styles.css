@@ -1551,6 +1551,7 @@ nav {
 
 .instagram{
   background-image: url(/images/insta.svg);
+  background-repeat: no-repeat;
 }
 .mail{
   background-image: url(/images/mail.svg);
@@ -1562,6 +1563,7 @@ nav {
   background-image: url(/images/hamibash.svg);
 }
 .instagram:hover {
+  background-image: url(/images/insta.svg);
   background: linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
 

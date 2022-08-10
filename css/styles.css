@@ -3,7 +3,6 @@
   --dark-red:#6a0808;
   --bright-orange:#eb402c;
   --bright-red:#d90647;
-  --dark-blue:#08115b;
 }
 * {
   box-sizing: border-box;
@@ -169,20 +168,20 @@ section {
 /* Header Section Styling */
 #home {
     /* var(--bright-orange) 98% */
-  background: var(--dark-blue); /* Old browsers */ 
+  background: var(--dark-red); /* Old browsers */ 
   background: -moz-linear-gradient(
     top,
-    var(--dark-blue) 37%,
+    var(--dark-red) 37%,
     #000000 98%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    var(--dark-blue) 37%,
+    var(--dark-red) 37%,
     #000000 98%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    var(--dark-blue) 37%,
+    var(--dark-red) 37%,
     #000000 98%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--bright-red)', endColorstr='var(--bright-orange)',GradientType=0 ); /* IE6-9 */
@@ -371,8 +370,8 @@ nav {
 #scrollUp {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
+  bottom: 40px; /* Place the button at the bottom of the page */
+  right: 25px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
@@ -593,6 +592,7 @@ nav {
 #contact {
   text-align: center;
   padding: 100px;
+  background:linear-gradient(#ffffff,#e6e6e6);
 }
 
 #contact * {
@@ -800,13 +800,10 @@ nav {
     justify-content: center;
     text-align: center;
   }
-  .links ul li {
-    text-align: center;
-    display: inline-block;
-    margin: 8px 0;
-    margin-right: 20px;
-    font-size: 16px;
-  }
+
+  /* .links ul li {
+
+  } */
 
   #games .col {
     margin-bottom: 50px;
@@ -1291,11 +1288,11 @@ nav {
   display: grid;
   grid-auto-flow: column;
   width:calc(100% - 40px);
-  overflow-x:hidden;
+  overflow-x:auto;
  }
- .container:hover, .container:active, .container:focus {
+ /* .container:hover, .container:active, .container:focus {
   overflow-x: auto;
-}
+} */
  
  .thumbnail {
   display: grid;
@@ -1434,15 +1431,23 @@ fill: white;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: var(--bright-orange);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px var(--bright-orange);
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

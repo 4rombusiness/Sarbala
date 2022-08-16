@@ -239,7 +239,9 @@ nav {
 .sticky #navbar ul li a {
   color: var(--body-color);
 }
-
+.sticky img{
+  display: none;
+}
 .sticky #navbar ul li a:hover {
   color: var(--bright-red);
 }
@@ -261,6 +263,7 @@ nav {
 }
 #mobileNav {
   position: absolute;
+  align-self: center;
   right: 10%;
   display: none; /* Hide Mobile Nav on Desktop or big devices */
   cursor: pointer;

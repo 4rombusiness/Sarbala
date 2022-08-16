@@ -3,6 +3,8 @@
   --dark-red:#6a0808;
   --bright-orange:#eb402c;
   --bright-red:#d90647;
+  --body-color: #6a0808;
+  --paragraph-color: #6a0808ad;
 }
 * {
   box-sizing: border-box;
@@ -23,7 +25,7 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  color: #363636;
+  color: var(--body-color);
   font-size: 1.125rem;
   overflow-x: hidden;
 }
@@ -49,7 +51,7 @@ h2 {
 }
 
 p {
-  color: #808080;
+  color: var(--paragraph-color);
   line-height: 2;
 }
 
@@ -59,7 +61,7 @@ section {
 
 ::placeholder {
   font-size: 18px;
-  color: #808080;
+  color: var(--paragraph-color);
 }
 
 /* Preloader */
@@ -131,7 +133,7 @@ section {
 .btn {
   background: #fff;
   padding: 0.9375rem 2.5rem;
-  color: #363636;
+  color: var(--body-color);
   border-radius: 3.125rem;
   font-size: 1.125rem;
   font-weight: 700;
@@ -235,7 +237,7 @@ nav {
 }
 
 .sticky #navbar ul li a {
-  color: #363636;
+  color: var(--body-color);
 }
 
 .sticky #navbar ul li a:hover {
@@ -292,7 +294,7 @@ nav {
 }
 
 .overlay-content a {
-  color: #363636;
+  color: var(--body-color);
   font-size: 1.875rem;
   font-weight: 600;
   display: block;
@@ -439,7 +441,7 @@ nav {
 
 .bubble {
   background-color: #fff;
-  border: 1.5px solid #808080;
+  border: 1.5px solid var(--paragraph-color);
   border-radius: 5%;
   padding: 20px 30px;
   position: relative;
@@ -630,7 +632,7 @@ nav {
 }
 
 .links ul li a {
-  color: #363636;
+  color: var(--body-color);
 }
 /* End: Footer Section Styling */
 
@@ -643,6 +645,7 @@ nav {
   }
   h1 {
     font-size: 36px;
+    letter-spacing: -1px;
   }
 
   h2 {
@@ -794,7 +797,7 @@ nav {
 
   #footer {
     border-top: 1px solid #e0e0e0;
-    color: #363636;
+    color: var(--body-color);
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -968,7 +971,7 @@ nav {
 
   #footer {
     border-top: 1px solid #e0e0e0;
-    color: #363636;
+    color: var(--body-color);
     display: flex;
     flex-flow: column;
     justify-content: center;

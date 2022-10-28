@@ -150,7 +150,7 @@ section {
 
 .btn:hover {
   background: #fff;
-  color: #ffffff;
+  color: var(--darkest-red);
   transition: 0.3s;
   transform: scale(1.03);
 }

@@ -1342,7 +1342,7 @@ nav {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  box-shadow: 9px 9px 16px var(--body-color), -9px -9px 16px var(--body-color);
   margin-bottom: 1em;
 }
 .button:hover {
@@ -1480,4 +1480,25 @@ input:checked + .slider:before {
 .toxs:hover, .toxs:active{
 	-webkit-transform: rotate(0) scale(1);
 	transform: rotate(0) scale(1);
+}
+
+.land_port {
+  display: flex;
+}
+
+@media (orientation: landscape) {
+  .land_port {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  .land_port {
+    flex-direction: column;
+  }
+}
+
+#xonyagar{
+  margin-top: 3em;
+  border-bottom: 1px solid var(--paragraph-color);
 }

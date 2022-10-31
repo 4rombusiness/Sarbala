@@ -5,6 +5,8 @@ const title = $.getElementById("title")
 
 const artist = $.getElementById("artist")
 
+const download = $.getElementById("download")
+
 const music = $.querySelector("audio")
 
 const currentTimeEl = $.getElementById("current-time")
@@ -24,9 +26,12 @@ const nextBtn = $.getElementById("next")
 const background = $.getElementById("background")
 
 const songs = [
-	{path:"https://dls.music-fa.com/tagdl/1401/Mohsen%20Ebrahimzade%20-%20Rafti%20(128).mp3",musicName:"Rafti",artist:"Mohsen EbrahimZade",cover:"https://music-fa.com/wp-content/uploads/2022/05/IMG_28052022_204907_450_x_450_pixel.jpg"},
-	{path:"https://dls.music-fa.com/tagdl/1401/Ashvan%20-%20Ghasedak(320).mp3",musicName:"Ghasedak",artist:"Ashvan",cover:"https://music-fa.com/wp-content/uploads/2022/03/Ashvan-Music-fa.com_.jpg"},
-	{path:"https://dls.music-fa.com/tagdl/1401/Sadegh%20Zeyn%20-%20Leila%20Leila%20(Demo).mp3",musicName:"Leila Leila",artist:"Sadegh Zeyn",cover:"https://music-fa.com/wp-content/uploads/2022/06/Serial-Jadogar-leila-Music-fa.com_.jpg"}
+	{path:"https://cdn.glitch.global/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b/Anbeh.mp3?v=1667202060264",musicName:"Anbeh",artist:"Xonyagar",cover:"Anbeh.svg"},
+	{path:"https://cdn.glitch.global/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b/hadise-ma.mp3?v=1660230354292",musicName:"Hadise Ma",artist:"Xonyagar",cover:"Hadise Ma.svg"},
+	{path:"https://cdn.glitch.global/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b/pir.mp3?v=1660322909063",musicName:"Lotfe Sheykh",artist:"Xonyagar",cover:"Lotfe Sheykh.svg"},
+	{path:"https://cdn.glitch.global/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b/sang.mp3?v=1660230355160",musicName:"Sang Laàl Shavad",artist:"Xonyagar",cover:"Sang Laàl Shavad.svg"},
+	{path:"https://cdn.glitch.global/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b/Jari.mp3?v=1667201810639",musicName:"Jari",artist:"Xonyagar",cover:"Jari.svg"},
+	{path:"https://cdn.glitch.global/bf6ff2bc-dabf-410f-bdd1-bfe7a473fe1b/harifan.mp3?v=1660322911388",musicName:"Harifan",artist:"Xonyagar",cover:"Harifan.svg"}
 ]
 
 let isLoading = false
@@ -51,6 +56,14 @@ function playToggle(){
 		pauseSong()
 	} else {
 		playSong()
+	}
+}
+function download_me(){
+	if($.getElementById('notify').textContent != ''){
+		$.getElementById('notify').textContent = '';
+	}
+	else{
+		$.getElementById('notify').textContent = 'به زودی امکان دانلود فراهم خواهد شد. اگه نشد، ایمیل دهید!';
 	}
 }
 
@@ -125,7 +138,10 @@ function setProgressBar(e) {
 
 playBtn.addEventListener("click",playToggle)
 prevBtn.addEventListener("click",prevSong)
+download.addEventListener("click",download_me)
 nextBtn.addEventListener("click",nextSong)
 music.addEventListener("ended", nextSong);
 music.addEventListener("timeupdate", updateProgressBar);
 progressContainer.addEventListener("click", setProgressBar);
+
+

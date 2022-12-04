@@ -1,12 +1,10 @@
 /* CSS Global Rules */
 :root{
-  --dark-red:#6a0808;
-  --bright-orange:red;
-  --bright-red:red; /*in selections and */
-  --body-color: red;
-  --paragraph-color: red;
-  --darkest-red:rgb(50, 0, 0);
-  background-color:rgb(50, 0, 0);
+  --color-main:#6a0808;
+  --color-komaki:rgb(50, 0, 0);
+  --color-skape:red;
+  --color-text:white;
+  background-color:var(--color-komaki);
 }
 * {
   box-sizing: border-box;
@@ -21,13 +19,13 @@ html {
 }
 
 ::selection {
-  background-color: #ffffff;
-  color: var(--bright-red);
+  background-color: var(--color-text);
+  color: var(--color-komaki);
 }
 
 body {
   font-family: "Lato", sans-serif;
-  color: var(--body-color);
+  color: var(--color-text);
   font-size: 1.125rem;
   overflow-x: hidden;
 }
@@ -38,7 +36,7 @@ img {
 }
 
 a {
-  color: #ffffff;
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -50,13 +48,12 @@ h1 {
 h2 {
   font-size: 3.75rem;
   font-weight: 900;
-  text-shadow:1px 1px 10px red, 1px 1px 5px red;
+  text-shadow:1px 1px 10px var(--color-skape), 1px 1px 5px var(--color-skape);
 
 }
 
 p {
-  color: var(--paragraph-color);
-  text-shadow:1px 1px 10px red, 1px 1px 10px red;
+  text-shadow:1px 1px 10px var(--color-skape), 1px 1px 10px var(--color-skape);
   line-height: 2;
 }
 
@@ -66,12 +63,12 @@ section {
 
 ::placeholder {
   font-size: 18px;
-  color: var(--paragraph-color);
+  color: var(--color-komaki);
 }
 
 /* Preloader */
 .preloader {
-  background-color: #ffffff;
+  background-color: var(--color-text);
   position: fixed;
   left: 0;
   top: 0;
@@ -95,14 +92,21 @@ section {
 .preloader .loader {
   height: 2.5rem;
   width: 2.5rem;
-  border: 0.25rem solid var(--bright-red);
+  border: 0.25rem solid var(--color-komaki);
   border-radius: 50%;
   border-top: 0.25rem solid transparent;
   border-bottom: 0.25rem solid transparent;
   animation: spin 2s linear infinite;
   -webkit-animation: spin 0.8s linear infinite;
 }
-
+@keyframes buttwave {
+  0% {
+    background: var(--color-main);
+  }
+  100% {
+    background: var(--color-komaki);
+  }
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -136,21 +140,22 @@ section {
 }
 
 .btn {
-  background: #fff;
+  background: var(--color-text);
+  /* animation: buttwave 0.3s infinite; */
   padding: 0.9375rem 2.5rem;
-  color: var(--body-color);
+  color: var(--color-skape);
   border-radius: 3.125rem;
   font-size: 1.125rem;
   font-weight: 700;
   text-align: center;
-  box-shadow: 10px 0 40px rgba(255, 255, 255, 0.619);
+  box-shadow: 10px 0 40px var(--color-main);
   display: inline-block;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: #fff;
-  color: var(--darkest-red);
+  background: var(--color-text);
+  color: var(--color-skape);
   transition: 0.3s;
   transform: scale(1.03);
 }
@@ -174,25 +179,25 @@ section {
 
 /* Header Section Styling */
 #home {
-  background: var(--dark-red); /* Old browsers */ 
+  background: var(--color-main); /* Old browsers */ 
   background: -moz-linear-gradient(
     top,
-    var(--dark-red) 37%,
-    var(--darkest-red) 98%
+    var(--color-main) 37%,
+    var(--color-komaki) 98%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    var(--dark-red) 37%,
-    var(--darkest-red) 98%
+    var(--color-main) 37%,
+    var(--color-komaki) 98%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    var(--dark-red) 37%,
-    var(--darkest-red) 98%
+    var(--color-main) 37%,
+    var(--color-komaki) 98%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--bright-red)', endColorstr='var(--bright-orange)',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--color-komaki)', endColorstr='var(--color-komaki)',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
-  color: #ffffff;
+  color: var(--color-text);
   height: 100%;
   width: 100%;
   padding: 50px;
@@ -228,26 +233,26 @@ nav {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: var(--darkest-red);
+  background-color: var(--color-komaki);
   z-index: 500;
-  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.644);
-  color: var(--bright-red);
+  box-shadow: 0 10px 30px var(--color-skape);
+  color: var(--color-skape);
   padding: 10px 40px;
   transition: 0.3s;
 }
 
 .sticky .logo {
-  color: var(--bright-red);
+  color: var(--color-skape);
 }
 
 .sticky #navbar ul li a {
-  color: var(--body-color);
+  color: var(--color-komaki);
 }
 .sticky img{
   display: none;
 }
 .sticky #navbar ul li a:hover {
-  color: var(--bright-red);
+  color: var(--color-komaki);
 }
 
 .sticky .navbar {
@@ -284,10 +289,10 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: var(--color-text);
   z-index: 9999;
   overflow: hidden;
-  color: var(--bright-red);
+  color: var(--color-komaki);
   transition: 0.3s;
   text-align: center;
 }
@@ -301,7 +306,7 @@ nav {
 }
 
 .overlay-content a {
-  color: var(--body-color);
+  color: var(--color-komaki);
   font-size: 1.875rem;
   font-weight: 600;
   display: block;
@@ -309,7 +314,7 @@ nav {
 }
 
 .overlay-content a:hover {
-  color: var(--bright-red);
+  color: var(--color-komaki);
 }
 /* End: Mobile Menu Styling */
 
@@ -329,11 +334,10 @@ nav {
   font-size: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 5rem;
-  color: #fff;
 }
 
 .contact-btn {
-  background: linear-gradient(to bottom, var(--bright-red) 10%, var(--bright-orange) 100%);
+  background: linear-gradient(to bottom, var(--color-komaki) 10%, var(--color-komaki) 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -344,7 +348,7 @@ nav {
   float: right;
   z-index: 1;
   position: absolute;
-  box-shadow: 15px 0 50px var(--body-color);
+  box-shadow: 15px 0 50px var(--color-main);
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
@@ -376,7 +380,7 @@ nav {
 }
 
 .custom-shape-divider-bottom-1603385849 .shape-fill {
-  fill: #ffffff;
+  fill: var(--color-text);
 }
 
 #scrollUp {
@@ -387,25 +391,25 @@ nav {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background: var(--bright-red); /* Old browsers */
+  background: var(--color-komaki); /* Old browsers */
   background: -moz-linear-gradient(
     top,
-    var(--bright-red) 37%,
-    var(--bright-orange) 98%
+    var(--color-main) 37%,
+    var(--color-komaki) 98%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    var(--bright-red) 37%,
-    var(--bright-orange) 98%
+    var(--color-main) 37%,
+    var(--color-komaki) 98%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    var(--bright-red) 37%,
-    var(--bright-orange) 98%
+    var(--color-main) 37%,
+    var(--color-komaki) 98%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--bright-red)', endColorstr='var(--bright-orange)',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--color-komaki)', endColorstr='var(--color-komaki)',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
-  color: #ffffff; /* Text color */
+  color: var(--color-text); /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   width: 50px;
   height: 50px;
@@ -424,11 +428,11 @@ nav {
 
 /* Features Section Styling */
 #features {
-  background: linear-gradient(black,var(--darkest-red));
+  background: linear-gradient(var(--color-komaki),var(--color-main));
   height: 100%;
   padding-bottom: 200px;
   background-color: linear;
-  /* border-bottom: 1px solid red; */
+  /* border-bottom: 1px solid var(--color-skape); */
 }
 
 .features_3 {
@@ -443,7 +447,7 @@ nav {
 /* Games Section Styling */
 #games {
   margin-top: 50px;
-  border-bottom: 1px solid var(--paragraph-color);
+  border-bottom: 1px solid var(--color-komaki);
 }
 #games .stylish_heading {
   text-align: center;
@@ -453,7 +457,7 @@ nav {
 }
 
 .bubble {
-  border: 1.5px solid var(--paragraph-color);
+  border: 1.5px solid var(--color-main);
   border-radius: 5%;
   padding: 20px 30px;
   position: relative;
@@ -483,10 +487,7 @@ nav {
 }
 
 .company-name {
-  background: linear-gradient(to bottom, var(--bright-red) 10%, var(--bright-orange) 100%);
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-text);
   font-weight: 700;
 }
 
@@ -523,27 +524,27 @@ nav {
 
 /* How To Section Styling */
 #howto {
-  border-top: 1px solid var(--paragraph-color);
-  border-bottom: 1px solid var(--paragraph-color);
-  background: var(--dark-red); /* Old browsers */ 
+  border-top: 1px solid var(--color-skape);
+  border-bottom: 1px solid var(--color-skape);
+  background: var(--color-main); /* Old browsers */ 
   background: -moz-linear-gradient(
     top,
-    var(--dark-red) 37%,
-    #000000 98%
+    var(--color-main) 37%,
+    var(--color-komaki) 98%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    var(--dark-red) 37%,
-    #000000 98%
+    var(--color-main) 37%,
+    var(--color-komaki) 98%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    var(--dark-red) 37%,
-    #000000 98%
+    var(--color-main) 37%,
+    var(--color-komaki) 98%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--bright-red)', endColorstr='var(--bright-orange)',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--color-komaki)', endColorstr='var(--color-komaki)',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
-  color: #ffffff;
+  color: var(--color-text);
   height: 24.375rem;
   width: 100%;
   position: relative;
@@ -551,7 +552,7 @@ nav {
 }
 
 #howto p {
-  color: #ffffff;
+  color: var(--color-text);
   font-size: 16px;
   line-height: 1.75;
 }
@@ -622,7 +623,7 @@ nav {
 
 /* Footer Section Styling */
 #footer {
-  border-top: 1px solid red;
+  border-top: 1px solid var(--color-skape);
   bottom: 0px;
   width: 100%;
   text-align: center;
@@ -637,14 +638,14 @@ nav {
 }
 
 .links ul li:hover {
-  background: linear-gradient(to bottom, var(--bright-red) 10%, var(--bright-orange) 100%);
+  background: linear-gradient(to bottom, var(--color-komaki) 10%, var(--color-komaki) 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .links ul li a {
-  color: var(--body-color);
+  color: var(--color-text);
 }
 /* End: Footer Section Styling */
 
@@ -808,8 +809,8 @@ nav {
   }
 
   #footer {
-    border-top: 1px solid red;
-    color: var(--body-color);
+    border-top: 1px solid var(--color-skape);
+    color: var(--color-komaki);
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -982,8 +983,8 @@ nav {
   }
 
   #footer {
-    border-top: 1px solid red;
-    color: var(--body-color);
+    border-top: 1px solid var(--color-skape);
+    color: var(--color-komaki);
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1323,8 +1324,6 @@ nav {
    text-align: center;
  }
 
-
-
  .buttons-container {
   display: flex;
   flex-direction: row;
@@ -1342,12 +1341,12 @@ nav {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  box-shadow: 9px 9px 16px var(--body-color), -9px -9px 16px var(--body-color);
+  box-shadow: 9px 9px 16px var(--color-main), -9px -9px 16px var(--color-komaki);
   margin-bottom: 1em;
 }
 .button:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 6px var(--color-komaki);
   color: white;
 }
 
@@ -1370,41 +1369,6 @@ nav {
 .instagram:hover {
   background-image: url(/images/insta.svg);
   background: linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-}
-
-.sun, .moon{
-    font-size: 1rem;
-    width: fit-content;
-    height: fit-content;
-}
-.moon{
-  position: absolute;
-  inset: 0;
-}
-.moon-logo{
-  opacity: 0;
-  transform: translateY(20%) rotateZ(50deg);
-  transition: all 1s ease-out;
-}
-.sun-logo{
-  opacity: 1;
-  fill: white;
-  transform: translateY(0) rotateZ(0deg);
-  transition: all 1s ease-out;
-}
-.animate-sun{
-  opacity: 0;
-  transform: translateY(20%) rotateZ(100deg);
-}
-.animate-moon{
-  opacity: 1;
-  transform: translateY(0%) rotateZ(0deg);
-}
-.animate-moon path{
-fill: white;
-}
-.animate-sun path{
-fill: white;
 }
 
 .switch {
@@ -1440,17 +1404,17 @@ fill: white;
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--color-text);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: var(--bright-orange);
+  background-color: var(--color-komaki);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px var(--bright-orange);
+  box-shadow: 0 0 1px var(--color-komaki);
 }
 
 input:checked + .slider:before {
@@ -1500,5 +1464,8 @@ input:checked + .slider:before {
 
 #xonyagar{
   margin-top: 3em;
-  border-bottom: 1px solid var(--paragraph-color);
+  border-bottom: 1px solid var(--color-main);
+}
+.dlClouds{
+  fill: var(--color-text);
 }

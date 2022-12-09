@@ -246,7 +246,7 @@ nav {
 }
 
 .sticky #navbar ul li a {
-  color: var(--color-komaki);
+  color: var(--color-skape);
 }
 .sticky img{
   display: none;
@@ -415,11 +415,10 @@ nav {
   height: 50px;
   border-radius: 50%; /* Rounded corners */
   font-size: 18px; /* Increase font size */
-  box-shadow: 0 10px 30px rgba(54, 54, 54, 0.3);
+  box-shadow: 0 10px 30px var(--color-skape);
 }
 
 #scrollUp:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
   transform: scale(1.1);
   transition: 0.3s;
 }
@@ -447,7 +446,7 @@ nav {
 /* Games Section Styling */
 #games {
   margin-top: 50px;
-  border-bottom: 1px solid var(--color-komaki);
+  border-bottom: 1px solid var(--color-main);
 }
 #games .stylish_heading {
   text-align: center;
@@ -615,10 +614,6 @@ nav {
   margin: 25px auto;
 }
 
-.app-logo {
-  -webkit-filter: drop-shadow(0 10px 30px rgba(223, 27, 60, 0.3));
-  filter: drop-shadow(0 10px 30px rgba(223, 27, 60, 0.3));
-}
 /* End: Download The App Section Styling */
 
 /* Footer Section Styling */
@@ -638,7 +633,8 @@ nav {
 }
 
 .links ul li:hover {
-  background: linear-gradient(to bottom, var(--color-komaki) 10%, var(--color-komaki) 100%);
+text-shadow:1px 1px 10px var(--color-skape), 1px 1px 10px var(--color-skape);
+background-color: var(--color-skape);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

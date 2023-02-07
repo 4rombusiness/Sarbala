@@ -524,7 +524,7 @@ nav {
 /* How To Section Styling */
 #howto {
   border-top: 1px solid var(--color-skape);
-  border-bottom: 1px solid var(--color-skape);
+  /* border-bottom: 1px solid var(--color-skape); */
   background: var(--color-main); /* Old browsers */ 
   background: -moz-linear-gradient(
     top,

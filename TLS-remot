@@ -1,0 +1,71 @@
+(function () {
+    'use strict';
+
+    function beep(frequency = 440, duration = 500) {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+    
+        oscillator.type = "sine";
+        oscillator.frequency.value = frequency; // Hz
+        gainNode.gain.value = 0.6; // volume (0–1)
+    
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+    
+        oscillator.start();
+        setTimeout(() => {
+            oscillator.stop();
+            audioCtx.close();
+        }, duration);
+    }
+
+    // --- Booking Functionality ---
+    function tryBooking() {
+        const slots = Array.from(document.querySelectorAll('button[data-testid="btn-available-slot"]'));
+        if (slots.length === 0) {
+            return;
+        }
+
+        console.log("🎯 Slots detected:", slots.map(b => b.textContent.trim()));
+
+        beep();
+
+        // Pick a random slot
+        const chosen = slots[Math.floor(Math.random() * slots.length)];
+        console.log("👉 Choosing slot:", chosen.textContent.trim());
+        chosen.click();
+
+        // Small delay to let UI update
+        setTimeout(() => {
+            const bookBtn = document.querySelector('button[type="submit"].TlsButton_tls-button__syUS5');
+            if (bookBtn) {
+                console.log("🚀 Clicking 'Book your appointment'");
+                bookBtn.click();
+            } else {
+                console.warn("⚠️ Book button not found.");
+            }
+        }, 800);
+    }
+
+    // --- Mutation Observer to detect changes ---
+    const observer = new MutationObserver((mutations) => {
+        for (let mutation of mutations) {
+            if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+                beep(450,300);
+                if (document.querySelector('button[data-testid="btn-available-slot"]')) {
+                    tryBooking();
+                    break;
+                }
+            }
+        }
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: false
+    });
+
+    console.log("✅ ALEMAAN Booking Bot active.");
+})();

@@ -153,47 +153,30 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   overflow: hidden; text-align: center;
   padding: 6rem 1.5rem 3rem;
 }
-/* Hero canvas constellation */
-.hero__canvas {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  z-index: 0; pointer-events: none;
+.hero__glow {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; will-change: transform;
 }
-
-/* Hero background word sequence */
-.hero__words {
-  position: absolute; inset: 0; z-index: 0;
-  display: flex; align-items: center; justify-content: center;
-  pointer-events: none; overflow: hidden;
+.hero__glow--1 {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(230,57,70,0.13) 0%, transparent 65%);
+  top: -150px; left: 50%; transform: translateX(-50%);
+  animation: glow-pulse 6s ease-in-out infinite;
 }
-.hw {
-  position: absolute;
-  font-size: clamp(4rem, 18vw, 13rem);
-  font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255,255,255,0.06);
-  letter-spacing: 0.02em;
-  opacity: 0;
-  transform: scale(0.85) translateY(14px);
-  user-select: none; white-space: nowrap;
-  font-family: var(--font-en);
+.hero__glow--2 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(180,30,50,0.1) 0%, transparent 65%);
+  bottom: 0; right: -100px;
+  animation: glow-pulse 8s ease-in-out infinite reverse;
 }
-[data-lang="fa"] .hw.lang-fa { font-family: var(--font-fa); }
-.hw.hw-show {
-  animation: hw-cycle 1.5s cubic-bezier(0.4,0,0.2,1) forwards;
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.15); }
 }
-.hw.hw-lock {
-  animation: hw-settle 1.2s cubic-bezier(0.2,0,0.1,1) forwards;
-}
-@keyframes hw-cycle {
-  0%   { opacity: 0; transform: scale(0.85) translateY(14px); }
-  18%  { opacity: 1; transform: scale(1) translateY(0); }
-  70%  { opacity: 1; transform: scale(1) translateY(0); }
-  100% { opacity: 0; transform: scale(1.1) translateY(-12px); }
-}
-@keyframes hw-settle {
-  0%   { opacity: 0; transform: scale(0.88) translateY(10px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
+.hero__glow--2 { animation-name: glow-pulse-2; }
+@keyframes glow-pulse-2 {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
 }
 .hero__content { position: relative; z-index: 1; max-width: 680px; }
 .hero__logo-wrap {

@@ -1,579 +1,423 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#320000"/>
-    <title>Sarbala.Studio</title>
 
     <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="images/favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="images/favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta
-      name="msapplication-config"
-      content="images/favicon/browserconfig.xml"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="mini_icons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="mini_icons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="mini_icons/favicon-16x16.png"/>
+    <link rel="manifest" href="mini_icons/site.webmanifest"/>
+    <link rel="shortcut icon" href="mini_icons/favicon.ico"/>
+    <meta name="msapplication-TileColor" content="#320000"/>
     <!-- End: Favicon -->
 
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="Sarbala a game studio" />
-    <meta name="description" content="😏Sarbala,  Simple  but  naughty سربالا نوب ولی تخس!"/>
+    <!-- Primary SEO Meta Tags -->
+    <title>Sarbala Studio | Indie Game Studio — TaSoraya, Panshta, DooDol, Fazaei</title>
+    <meta name="description" content="Sarbala Studio is an independent game studio creating elegant, concept-driven mobile games using open-source tools. Explore our games: TaSoraya, Panshta, DooDol, and Fazaei."/>
+    <meta name="keywords" content="Sarbala, game studio, indie games, mobile games, TaSoraya, Panshta, DooDol, Fazaei, Godot, open source, Iranian game studio"/>
+    <meta name="author" content="Sarbala Studio"/>
+    <link rel="canonical" href="https://sarbala.studio/"/>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://sarbala.studio/"/>
+    <meta property="og:title" content="Sarbala Studio | Indie Game Studio"/>
+    <meta property="og:description" content="An independent game studio creating elegant, concept-driven mobile games. Simple to learn, hard to put down."/>
+    <meta property="og:image" content="https://sarbala.studio/images/sarbala.png"/>
+    <meta property="og:locale" content="fa_IR"/>
+    <meta property="og:locale:alternate" content="en_US"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="https://sarbala.studio/"/>
+    <meta name="twitter:title" content="Sarbala Studio | Indie Game Studio"/>
+    <meta name="twitter:description" content="An independent game studio creating elegant, concept-driven mobile games."/>
+    <meta name="twitter:image" content="https://sarbala.studio/images/sarbala.png"/>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Sarbala Studio",
+      "url": "https://sarbala.studio",
+      "logo": "https://sarbala.studio/images/sarbala-logo.png",
+      "description": "Independent game studio creating elegant mobile games with open-source tools.",
+      "email": "info@sarbala.studio",
+      "sameAs": [
+        "https://instagram.com/sarbala.studio",
+        "https://t.me/sarbala_studio"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet"/>
 
-    <!-- Main CSS File -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/grid.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/grid.css"/>
 
-
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK71V60ZFJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-FK71V60ZFJ');
     </script>
-
   </head>
   <body>
     <!-- Preloader -->
-    <div class="preloader">
+    <div class="preloader" aria-hidden="true">
       <div class="loader"></div>
     </div>
-    <!-- Preloader End -->
-    <!-- Header Section -->
-    <header id="home">
-      <nav>
-        <div style="display: flex;justify-content: center;align-items: center;">
-          <img src="images/sarbala-raw.svg" alt="Sarbala logo"/>
-          <a href="#" class="logo lang lang-fa">سربالا</a>
-          <a href="#" class="logo lang lang-en" style="font-size: 1.6rem;">Sarbala</a>
-        </div>
-        <div id="navbar">
-          <ul>
-            <li><a href="#home" class="lang lang-en">HOME</a></li>
-            <li><a href="#games" class="lang lang-en">GAMES</a></li>
-            <li><a href="#features" class="lang lang-en">TECHNOLOGIES</a></li>
-            <li><a href="#howto" class="lang lang-en">ABOUT US</a></li>
-            <li><a href="#contact" class="lang lang-en">CONTACT</a></li>
-            <li><a href="#xonyagar" class="lang lang-en">Xonyagar</a></li>
 
-            <li><a href="#contact" class="lang lang-fa">تماس باما</a></li>
-            <li><a href="#howto" class="lang lang-fa">درباری‌ما</a></li>
-            <li><a href="#features" class="lang lang-fa">فناوری‌ها</a></li>
-            <li><a href="#xonyagar" class="lang lang-fa">خُنیا‌گر</a></li>
-            <li><a href="#games" class="lang lang-fa">بازی‌ها</a></li>
+    <!-- Header / Hero -->
+    <header id="home">
+      <nav aria-label="Main navigation">
+        <div class="nav-brand">
+          <img src="images/sarbala-raw.svg" alt="Sarbala Studio logo" width="50" height="60"/>
+          <a href="#" class="logo lang lang-fa" aria-label="سربالا استودیو">سربالا</a>
+          <a href="#" class="logo lang lang-en" aria-label="Sarbala Studio">Sarbala</a>
+        </div>
+        <div id="navbar" role="navigation">
+          <ul>
+            <li><a href="#home" class="lang lang-en">Home</a></li>
+            <li><a href="#games" class="lang lang-en">Games</a></li>
+            <li><a href="#features" class="lang lang-en">Technologies</a></li>
+            <li><a href="#howto" class="lang lang-en">About</a></li>
+            <li><a href="#xonyagar" class="lang lang-en">Xonyagar</a></li>
+            <li><a href="#contact" class="lang lang-en">Contact</a></li>
+
             <li><a href="#home" class="lang lang-fa">خانه</a></li>
-            <li>
-              <label class="switch">
-                <input type="checkbox" onclick="changelangfrombutt()">
+            <li><a href="#games" class="lang lang-fa">بازی‌ها</a></li>
+            <li><a href="#features" class="lang lang-fa">فناوری‌ها</a></li>
+            <li><a href="#howto" class="lang lang-fa">درباره ما</a></li>
+            <li><a href="#xonyagar" class="lang lang-fa">خُنیا‌گر</a></li>
+            <li><a href="#contact" class="lang lang-fa">تماس</a></li>
+            <li class="lang-toggle">
+              <label class="switch" aria-label="Toggle language">
+                <input type="checkbox" onclick="changelangfrombutt()"/>
                 <span class="slider round"></span>
               </label>
-            <p class="lang lang-fa">فارسی</p>
-            <p class="lang lang-en">English</p>
+              <span class="lang lang-fa">فارسی</span>
+              <span class="lang lang-en">English</span>
             </li>
           </ul>
         </div>
-        <div id="mobileNav">
-          <span onclick="openNav()">&#9776;</span>
+        <div id="mobileNav" aria-label="Open mobile menu">
+          <span onclick="openNav()" aria-expanded="false">&#9776;</span>
         </div>
-        <div id="myNav" class="mobileNavOverlay">
+        <div id="myNav" class="mobileNavOverlay" role="dialog" aria-modal="true">
           <div class="overlay-content">
-            <a href="javascript:void()" class="close-btn" onclick="closeNav()"
-              >&times;</a
-            >
-            <a href="#home" class="lang lang-en" onclick="closeNav()">HOME</a>
-            <a href="#features" class="lang lang-en" onclick="closeNav()">SCREENSHOTS</a>
-            <a href="#games" class="lang lang-en" onclick="closeNav()">GAMES</a>
-            <a href="#howto" class="lang lang-en" onclick="closeNav()">ABOUT US</a>
-            <a href="#contact" class="lang lang-en" onclick="closeNav()">CONTACT</a>
-
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()" aria-label="Close menu">&times;</a>
+            <a href="#home" class="lang lang-en" onclick="closeNav()">Home</a>
+            <a href="#games" class="lang lang-en" onclick="closeNav()">Games</a>
+            <a href="#features" class="lang lang-en" onclick="closeNav()">Technologies</a>
+            <a href="#howto" class="lang lang-en" onclick="closeNav()">About</a>
+            <a href="#xonyagar" class="lang lang-en" onclick="closeNav()">Xonyagar</a>
+            <a href="#contact" class="lang lang-en" onclick="closeNav()">Contact</a>
 
             <a href="#home" class="lang lang-fa" onclick="closeNav()">خانه</a>
-            <a href="#features" class="lang lang-fa" onclick="closeNav()">فناوری‌ها</a>
             <a href="#games" class="lang lang-fa" onclick="closeNav()">بازی‌ها</a>
-            <a href="#howto" class="lang lang-fa" onclick="closeNav()">درباری‌ما</a>
-            <a href="#contact" class="lang lang-fa" onclick="closeNav()">تماس باما</a>
-            <label class="switch" style="margin-top: 1em;">
-              <input type="checkbox" onclick="changelangfrombutt()">
+            <a href="#features" class="lang lang-fa" onclick="closeNav()">فناوری‌ها</a>
+            <a href="#howto" class="lang lang-fa" onclick="closeNav()">درباره ما</a>
+            <a href="#xonyagar" class="lang lang-fa" onclick="closeNav()">خُنیا‌گر</a>
+            <a href="#contact" class="lang lang-fa" onclick="closeNav()">تماس</a>
+            <label class="switch" style="margin-top:1.5em;" aria-label="Toggle language">
+              <input type="checkbox" onclick="changelangfrombutt()"/>
               <span class="slider"></span>
             </label>
-            <p class="lang lang-fa">فارسی</p>
-            <p class="lang lang-en">English</p>
-
+            <span class="lang lang-fa" style="display:block;margin-top:.5em;">فارسی</span>
+            <span class="lang lang-en" style="display:block;margin-top:.5em;">English</span>
           </div>
         </div>
       </nav>
-      <div id="hero">
-        <div class="row">
-          <div class="col span_1_of_2">
-            <div class="hero-description">
-              <h1 class="lang lang-en">
-                Pleasingly Graceful <br />
-                & Stylish
-              </h1>
-              <br>
-              <h1 class="lang lang-fa">
-                نــــوب ولی<br/>
-              </h1>
-              <h1 class="lang lang-fa toxs">
-                تخس
-              </h1>
-              <br>
 
-              <p class="lang lang-en">
-                An elegant game studio 
-              </p>
-              <p class="lang lang-fa" style="text-align: center;">
-                کارگاه بازی‌سازی سربالا
-              </p>
-              <br>
-              <br>
-              <a href="#games" class="btn">
-                <span class="download-btn  lang lang-en"> Let's see</span>
-                <span class="download-btn lang lang-fa"> بریم ببینیم</span>
-              </a>
-            </div>
+      <div id="hero">
+        <div class="row hero-row">
+          <div class="hero-text">
+            <h1 class="lang lang-en">Simple games.<br/>Deep experiences.</h1>
+            <h1 class="lang lang-fa">نــوب ولی<br/><span class="toxs">تخس</span></h1>
+            <p class="lang lang-en">An independent game studio crafting elegant mobile games — easy to learn, hard to put down.</p>
+            <p class="lang lang-fa" dir="rtl">کارگاه بازی‌سازی سربالا — مفهومی، ساده و اعتیادآور</p>
+            <a href="#games" class="btn hero-btn">
+              <span class="lang lang-en">Explore our games</span>
+              <span class="lang lang-fa">بازی‌های ما</span>
+            </a>
           </div>
-          <div class="col span_1_of_2">
-            <img class="hero-img" src="images/1080-2400.svg" alt="" style="scale: 0.8;" />
+          <div class="hero-image-wrap">
+            <img class="hero-img" src="images/1080-2400.svg" alt="Sarbala Studio mobile game preview"/>
           </div>
         </div>
       </div>
-      <button onclick="topFunction()" id="scrollUp" title="Go to top">
-        <svg transform = "scale(-1,1)" height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 100 100" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs/>
-          <g id="Layer-1">
-          <g opacity="1">
-          <path d="M47.2425 9.98416C46.5605 9.99583 45.9525 10.0289 45.4668 10.0828C44.4954 10.1907 43.632 10.3256 42.8765 10.4875C42.1211 10.6494 41.3251 10.8653 40.4887 11.1351C39.6522 11.4049 38.7079 11.7827 37.6556 12.2683C36.6033 12.754 35.6859 13.2397 34.9034 13.7253C34.1209 14.211 33.352 14.7507 32.5965 15.3442C31.841 15.9378 30.9102 16.8417 29.8039 18.0559C28.6976 19.2701 27.9152 20.2145 27.4565 20.889C26.9978 21.5635 26.5256 22.3595 26.0399 23.2769C25.5543 24.1942 25.1226 25.1521 24.7448 26.1504C24.367 27.1487 24.0703 28.0526 23.8544 28.8621C23.6385 29.6716 23.4497 30.6291 23.2878 31.7357C23.1259 32.8422 23.0314 34.0693 23.0045 35.4187C22.9775 36.768 23.0719 38.225 23.2878 39.7897C23.5037 41.3544 23.706 42.5014 23.8949 43.2299C24.0837 43.9584 24.3941 44.903 24.8258 46.063C25.2574 47.2229 25.7162 48.2752 26.2018 49.2198C26.6875 50.1644 27.2001 51.0548 27.7398 51.891C28.2794 52.7272 28.873 53.5504 29.5206 54.3598C30.1681 55.1693 30.9102 55.9925 31.7466 56.8287C32.583 57.6648 33.352 58.3666 34.0535 58.9332C34.7551 59.4999 35.6589 60.1337 36.7652 60.8355C37.8715 61.5372 38.9372 62.1306 39.9625 62.6163C40.9878 63.1019 41.9322 63.4929 42.7956 63.79C43.659 64.087 44.5494 64.3428 45.4668 64.5589C46.3841 64.7751 47.423 64.9499 48.5832 65.0851C49.7434 65.2203 50.7687 65.2874 51.6591 65.2874C52.5495 65.2874 53.5748 65.2203 54.735 65.0851C55.8952 64.9499 56.9205 64.7751 57.8109 64.5589C58.7013 64.3428 59.6727 64.0328 60.725 63.6281C61.2511 63.4257 61.7772 63.2233 62.3034 63.021C62.3034 67.4325 62.3034 71.844 62.3034 76.2555C62.3034 85.0786 62.3574 89.571 62.4653 89.7329C62.5732 89.8948 62.7351 89.9895 62.951 90.0162C63.1668 90.0429 63.3557 89.962 63.5176 89.7734C63.6795 89.5848 63.7604 84.9571 63.7604 75.8913C63.7604 66.8254 64.3135 61.942 65.4198 61.2402C66.5261 60.5384 67.6727 59.635 68.86 58.5285C70.0472 57.422 71.0185 56.3697 71.774 55.3717C72.5294 54.3736 73.204 53.3343 73.7976 52.2553C74.3912 51.1763 74.9308 49.9621 75.4165 48.6127C75.9022 47.2634 76.28 45.8743 76.5498 44.4441C76.8195 43.0137 76.968 41.4491 76.9949 39.7492C77.0219 38.0494 76.941 36.5381 76.7521 35.2163C76.5633 33.8945 76.226 32.4374 75.7403 30.8453C75.2546 29.2531 74.6071 27.6617 73.7976 26.0695C72.9882 24.4775 72.1247 23.061 71.2074 21.8199C70.29 20.5787 69.4535 19.5669 68.6981 18.7844C67.9426 18.0019 67.2141 17.3139 66.5125 16.7203C65.811 16.1267 65.096 15.5736 64.3675 15.0609C63.639 14.5483 62.87 14.0627 62.0606 13.6039C61.2511 13.1452 60.0774 12.6056 58.5394 11.985C57.0015 11.3644 55.4635 10.8923 53.9256 10.5685C52.3876 10.2447 51.0284 10.0609 49.4635 10.0069C48.681 9.97993 47.9246 9.97248 47.2425 9.98416ZM48.9196 11.2312C49.7561 11.2312 51.0925 11.2565 51.6591 11.3375C52.2257 11.4184 53.2915 11.6882 54.8564 12.1469C56.4213 12.6056 57.703 13.0508 58.7013 13.4825C59.6996 13.9142 60.4821 14.292 61.0487 14.6157C61.6154 14.9395 62.6137 15.6276 64.0437 16.6798C65.4738 17.7321 66.7823 18.8789 67.9696 20.12C69.1568 21.3611 70.1551 22.5753 70.9645 23.7625C71.774 24.9498 72.5025 26.2044 73.1501 27.5265C73.7976 28.8483 74.3642 30.3053 74.8499 31.8975C75.3356 33.4897 75.6189 35.0811 75.6998 36.6733C75.7808 38.2655 75.7808 39.5469 75.6998 40.5182C75.6189 41.4895 75.511 42.3395 75.376 43.068C75.2411 43.7965 74.9983 44.7541 74.6475 45.9415C74.2968 47.129 73.9055 48.1942 73.4738 49.1389C73.0422 50.0835 72.6374 50.8792 72.2597 51.5268C71.8819 52.1743 71.3288 52.9838 70.6003 53.9551C69.8718 54.9265 68.8464 56.0192 67.5244 57.2334C66.2023 58.4476 64.8936 59.4456 63.5985 60.2284C62.3034 61.0111 61.2376 61.5777 60.4012 61.9282C59.5648 62.2787 58.7553 62.5758 57.9728 62.8186C57.1903 63.0615 56.4484 63.2233 55.7468 63.3043C55.0453 63.3852 54.2358 63.4257 53.3185 63.4257C52.4011 63.4257 51.4972 63.3852 50.6068 63.3043C49.7164 63.2233 48.8125 63.0882 47.8951 62.8996C46.9778 62.711 46.1818 62.5215 45.5073 62.3329C44.8327 62.1443 43.9963 61.8473 42.998 61.4425C41.9997 61.0378 40.9608 60.5384 39.8816 59.9451C38.8023 59.3517 37.9389 58.8256 37.2913 58.3666C36.6438 57.9077 35.8883 57.3143 35.0249 56.5858C34.1614 55.8573 33.5004 55.2502 33.0417 54.7646C32.583 54.2789 32.0704 53.6985 31.5037 53.0242C30.9371 52.35 30.3165 51.513 29.642 50.5149C28.9675 49.5169 28.4009 48.5723 27.9421 47.6819C27.4834 46.7915 27.0653 45.8743 26.6875 44.9297C26.3097 43.9851 25.9859 43.0542 25.7162 42.1371C25.4464 41.22 25.2574 40.3426 25.1495 39.5064C25.0416 38.6702 24.9607 38.225 24.9067 38.1708C24.8527 38.1166 24.7988 37.8065 24.7448 37.2399C24.6908 36.6733 24.7179 35.8096 24.8258 34.6497C24.9337 33.4897 25.0686 32.5046 25.2305 31.6952C25.3924 30.8857 25.6083 30.0358 25.878 29.1454C26.1478 28.255 26.6335 27.0544 27.3351 25.5433C28.0366 24.0323 28.5223 23.115 28.7921 22.7912C29.0619 22.4674 29.3047 22.1032 29.5206 21.6984C29.7365 21.2937 30.0198 20.9159 30.3705 20.5652C30.7212 20.2145 31.0181 19.8637 31.2609 19.5129C31.5037 19.1622 32.0704 18.5685 32.9608 17.7321C33.8511 16.8957 34.7551 16.1672 35.6724 15.5466C36.5898 14.926 37.4127 14.4269 38.1412 14.0491C38.8698 13.6714 40.003 13.2127 41.5409 12.6731C43.0789 12.1334 44.5899 11.7557 46.0739 11.5398C47.5578 11.3239 48.0832 11.2312 48.9196 11.2312Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
-          <path d="M55.4237 17.6905C54.884 17.9064 54.4928 18.1222 54.25 18.3381C54.0071 18.5539 53.8183 18.7697 53.6834 18.9856C53.5484 19.2015 53.4405 19.4039 53.3596 19.5927C53.2786 19.7816 53.2382 20.0919 53.2382 20.5236C53.2382 20.9553 53.2786 21.333 53.3596 21.6568C53.4405 21.9806 53.6024 22.3044 53.8452 22.6282C54.0881 22.9519 54.4119 23.2488 54.8166 23.5185C55.2213 23.7883 55.5586 23.9637 55.8284 24.0447C56.0982 24.1256 56.5029 24.1661 57.0426 24.1661C57.5822 24.1661 57.987 24.1256 58.2568 24.0447C58.5265 23.9637 58.8503 23.8019 59.2281 23.559C59.6059 23.3162 59.9296 22.9924 60.1994 22.5877C60.4692 22.183 60.6311 21.8457 60.6851 21.5759C60.7391 21.3061 60.7256 20.9148 60.6446 20.4022C60.5637 19.8895 60.4423 19.4982 60.2804 19.2285C60.1185 18.9587 59.8487 18.6618 59.4709 18.3381C59.0932 18.0143 58.7289 17.785 58.3782 17.65C58.0274 17.5151 57.5822 17.4341 57.0426 17.4072C56.5029 17.3802 55.9633 17.4746 55.4237 17.6905Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
-          <path d="M55.8689 18.9047C55.5181 19.0666 55.2618 19.242 55.0999 19.4308C54.938 19.6197 54.8166 19.7951 54.7356 19.957C54.6547 20.1188 54.6412 20.4291 54.6952 20.8878C54.7492 21.3465 54.884 21.7108 55.0999 21.9806C55.3158 22.2504 55.5451 22.4527 55.7879 22.5877C56.0308 22.7226 56.3815 22.8036 56.8402 22.8305C57.2989 22.8575 57.6227 22.844 57.8116 22.79C58.0004 22.7361 58.2298 22.6146 58.4996 22.4258C58.7694 22.2369 58.9717 22.0211 59.1067 21.7782C59.2416 21.5354 59.2955 21.1981 59.2686 20.7664C59.2416 20.3347 59.1741 20.0244 59.0662 19.8355C58.9583 19.6467 58.7559 19.4308 58.4591 19.188C58.1623 18.9451 57.7441 18.7968 57.2045 18.7428C56.6648 18.6888 56.2196 18.7428 55.8689 18.9047Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
-          </g>
-          </g>
-          </svg>          
+
+      <button onclick="topFunction()" id="scrollUp" title="Back to top" aria-label="Scroll to top">
+        <svg transform="scale(-1,1)" height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 100 100" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+          <path d="M47.2425 9.98416C46.5605 9.99583 45.9525 10.0289 45.4668 10.0828C44.4954 10.1907 43.632 10.3256 42.8765 10.4875C42.1211 10.6494 41.3251 10.8653 40.4887 11.1351C39.6522 11.4049 38.7079 11.7827 37.6556 12.2683C36.6033 12.754 35.6859 13.2397 34.9034 13.7253C34.1209 14.211 33.352 14.7507 32.5965 15.3442C31.841 15.9378 30.9102 16.8417 29.8039 18.0559C28.6976 19.2701 27.9152 20.2145 27.4565 20.889C26.9978 21.5635 26.5256 22.3595 26.0399 23.2769C25.5543 24.1942 25.1226 25.1521 24.7448 26.1504C24.367 27.1487 24.0703 28.0526 23.8544 28.8621C23.6385 29.6716 23.4497 30.6291 23.2878 31.7357C23.1259 32.8422 23.0314 34.0693 23.0045 35.4187C22.9775 36.768 23.0719 38.225 23.2878 39.7897C23.5037 41.3544 23.706 42.5014 23.8949 43.2299C24.0837 43.9584 24.3941 44.903 24.8258 46.063C25.2574 47.2229 25.7162 48.2752 26.2018 49.2198C26.6875 50.1644 27.2001 51.0548 27.7398 51.891C28.2794 52.7272 28.873 53.5504 29.5206 54.3598C30.1681 55.1693 30.9102 55.9925 31.7466 56.8287C32.583 57.6648 33.352 58.3666 34.0535 58.9332C34.7551 59.4999 35.6589 60.1337 36.7652 60.8355C37.8715 61.5372 38.9372 62.1306 39.9625 62.6163C40.9878 63.1019 41.9322 63.4929 42.7956 63.79C43.659 64.087 44.5494 64.3428 45.4668 64.5589C46.3841 64.7751 47.423 64.9499 48.5832 65.0851C49.7434 65.2203 50.7687 65.2874 51.6591 65.2874C52.5495 65.2874 53.5748 65.2203 54.735 65.0851C55.8952 64.9499 56.9205 64.7751 57.8109 64.5589C58.7013 64.3428 59.6727 64.0328 60.725 63.6281C61.2511 63.4257 61.7772 63.2233 62.3034 63.021C62.3034 67.4325 62.3034 71.844 62.3034 76.2555C62.3034 85.0786 62.3574 89.571 62.4653 89.7329C62.5732 89.8948 62.7351 89.9895 62.951 90.0162C63.1668 90.0429 63.3557 89.962 63.5176 89.7734C63.6795 89.5848 63.7604 84.9571 63.7604 75.8913C63.7604 66.8254 64.3135 61.942 65.4198 61.2402C66.5261 60.5384 67.6727 59.635 68.86 58.5285C70.0472 57.422 71.0185 56.3697 71.774 55.3717C72.5294 54.3736 73.204 53.3343 73.7976 52.2553C74.3912 51.1763 74.9308 49.9621 75.4165 48.6127C75.9022 47.2634 76.28 45.8743 76.5497 44.4453C76.8195 43.0162 76.9544 41.5467 76.9544 40.0367C76.9544 38.5266 76.8195 37.0436 76.5497 35.5876C76.28 34.1316 75.9022 32.7965 75.4165 31.5823C74.9308 30.3681 74.3912 29.2616 73.7976 28.2635C73.204 27.2654 72.5294 26.2944 71.774 25.3503C71.0185 24.4062 70.1282 23.4076 69.103 22.3545C68.0777 21.3015 67.1739 20.4925 66.3914 19.9277C65.609 19.3628 64.7321 18.8097 63.7604 18.2682C62.7888 17.7267 61.7367 17.2815 60.604 16.9327C59.4712 16.5839 58.4729 16.3411 57.6094 16.2062C56.7459 16.0712 55.7611 15.9903 54.655 15.9633C53.5488 15.9363 52.4964 15.9768 51.4981 16.0847C50.4998 16.1927 49.5148 16.3816 48.5432 16.6513C47.5716 16.9211 46.6273 17.2409 45.7099 17.6108C44.7926 17.9806 43.9832 18.4258 43.2817 18.9461L43.7944 19.6074C44.4149 19.1411 45.1434 18.7293 45.9799 18.372C46.8163 18.0146 47.7071 17.7113 48.6514 17.4621C49.5957 17.213 50.5535 17.0376 51.5248 16.9357C52.4961 16.8337 53.4674 16.7933 54.4387 16.8143C55.4099 16.8352 56.3407 16.9222 57.231 17.0751C58.1213 17.228 58.9982 17.4756 59.8617 17.8179C60.7251 18.1602 61.5346 18.5655 62.2901 19.0338C63.0455 19.5021 63.801 20.0469 64.5565 20.6682C65.312 21.2895 66.0944 22.0315 66.9038 22.8941C67.7133 23.7567 68.4552 24.6597 69.1298 25.6031C69.8043 26.5466 70.4114 27.5583 70.9511 28.6383C71.4907 29.7182 71.9629 30.8927 72.3677 32.1617C72.7724 33.4308 73.0421 34.7133 73.1771 36.0091C73.312 37.3049 73.3525 38.6412 73.2985 40.0178C73.2446 41.3944 73.0556 42.7036 72.7319 43.9457C72.4082 45.1877 71.9764 46.3754 71.4367 47.509C70.8971 48.6425 70.2765 49.6946 69.5749 50.665C68.8734 51.6355 68.0909 52.5664 67.2274 53.4575C66.364 54.3487 65.4061 55.2127 64.354 56.0495C63.3018 56.8863 62.2361 57.6284 61.1568 58.2758C61.1568 53.8643 61.1568 49.4528 61.1568 45.0413C64.5875 43.5718 66.3434 41.0521 66.3434 37.9435C66.3434 32.8462 62.0416 28.8348 55.8149 28.8348C49.5881 28.8348 45.2864 32.8462 45.2864 37.9435C45.2864 41.0521 47.0422 43.5718 50.473 45.0413C50.473 54.4017 50.473 63.762 50.473 73.1224C49.1101 71.8401 47.8147 70.4971 46.5858 69.0934C43.9157 66.0657 41.246 63.038 38.5762 60.0103L37.9381 60.5771C40.6079 63.6048 43.2776 66.6325 45.9474 69.6602C47.5042 71.4254 49.0341 73.1636 50.5371 74.8747C50.473 74.8747 50.473 74.8747 50.473 74.8747L50.473 75.8913C50.473 84.9571 50.5539 89.5848 50.7158 89.7734C50.8777 89.962 51.0666 90.0429 51.2824 90.0162C51.4983 89.9895 51.6602 89.8948 51.7681 89.7329C51.876 89.571 51.93 85.0786 51.93 76.2555L51.93 45.0413C55.3608 43.5718 57.1166 41.0521 57.1166 37.9435C57.1166 33.5997 54.0622 30.2129 49.8279 29.1868C50.5159 29.0923 51.1579 29.0384 51.7538 29.0249C58.3027 28.8753 63.1816 32.9136 63.1816 37.9435C63.1816 40.7471 61.6013 43.0162 58.8372 44.3183L58.8372 63.021C60.0379 62.2654 61.1298 61.4693 62.1129 60.6328C63.2057 59.6952 64.2311 58.7171 65.189 57.6983C66.147 56.6795 67.0238 55.6338 67.8197 54.5612C68.6157 53.4885 69.3307 52.3755 69.9651 51.2219C70.5994 50.0684 71.1661 48.8407 71.6652 47.539C72.1643 46.2373 72.5476 44.8622 72.8149 43.4136C73.0823 41.965 73.2026 40.4955 73.1756 38.9051C73.1487 37.3148 72.9463 35.7514 72.5686 34.2148C72.1908 32.6783 71.6517 31.2897 70.9511 30.0487C70.2505 28.8077 69.4546 27.6677 68.5632 26.6287C67.6718 25.5898 66.7669 24.6792 65.8485 23.8971C64.9301 23.115 64.012 22.4264 63.0943 21.8311C62.1766 21.2359 61.2454 20.7271 60.3008 20.3048C59.3562 19.8824 58.4116 19.5606 57.4669 19.3393C56.5223 19.118 55.5777 18.9966 54.6331 18.9752C53.6884 18.9537 52.7573 19.0217 51.8397 19.179C50.9221 19.3362 50.0449 19.5741 49.2084 19.8924C48.3719 20.2107 47.5894 20.6019 46.861 21.0661L47.2425 9.98416Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
+        </svg>
       </button>
     </header>
-    <!-- End: Header Section -->
 
-    <!-- GAMES Section -->
-    <section id="games">
-      <h2 class="stylish_heading lang lang-en">
-        Our games
-      </h2>
-      <h2 class="stylish_heading lang lang-fa">
-        بازی‌های سربالا
-      </h2>
+    <!-- Games Section -->
+    <section id="games" aria-labelledby="games-heading">
       <div class="row">
-        <div class="col span_1_of_3">
-          <div class="bubble" onclick="window.open('https://sarbala.studio/TaSoraya.html','mwindow');">&nbsp;
-            <img src="images/soraya logo.svg" alt="" style="border-radius: 25px;">
-            <span class="company-name lang lang-en">Ta Soraya</span>
-            <span class="company-name lang lang-fa">تا‌ثریا</span>
-            <span><svg height="10%" width="10%" style="vertical-align: middle;" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 100 100"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs>
-              <clipPath id="TextBounds">
-              <rect height="67.0413" width="73.3627" x="13.3187" y="16.4793"/>
-              </clipPath>
-              </defs>
-              <g id="Layer-1">
-              <path class="dlClouds" clip-path="url(#TextBounds)" d="M59.0462 57.2585L59.0462 66.104L70.4903 66.104C78.4863 66.104 83.9585 61.6063 83.9585 54.36C83.9585 48.2881 81.06 43.6155 76.0375 41.7914C75.9875 30.4222 67.6668 22.2513 56.6974 22.2513C50.9253 22.2513 45.5031 24.6501 41.9049 29.6476C35.0834 28.5231 28.9365 33.1958 28.2118 40.0423C22.4898 41.4416 19.0415 46.539 19.0415 52.7608C19.0415 60.1321 24.9635 66.104 33.3592 66.104L42.5296 66.104L42.5296 57.2585L33.4092 57.2585C30.3608 57.2585 28.2118 54.9097 28.2118 52.2611C28.2118 48.2631 31.3852 46.3641 35.3332 46.3641C35.758 46.3641 35.9829 46.1142 35.9079 45.6894C35.0584 39.7424 39.2312 36.2692 45.3781 37.9433C45.7029 38.0433 46.0278 37.9433 46.1777 37.6435C48.2766 33.3957 51.7749 31.1218 56.5224 31.1218C62.5444 31.1218 67.3419 35.7944 67.6168 42.0163C67.7168 44.0652 67.5169 45.9143 67.3419 47.2136C67.292 47.6384 67.4669 47.8383 67.8917 47.8883C72.3644 48.1881 74.7882 49.8373 74.7882 53.1356C74.7882 55.7343 73.4388 57.2585 69.9156 57.2585L59.0462 57.2585ZM50.8004 82.5207C51.8248 82.5207 52.8993 82.1459 53.8988 81.1714L61.5949 73.8001C62.1946 73.2004 62.5444 72.5507 62.5444 71.6512C62.5444 69.8521 60.9452 68.6277 59.396 68.6277C58.4465 68.6277 57.6469 69.0275 57.0222 69.6772L55.0482 71.7761L53.8988 73.8501L54.5235 70.4768L54.5235 50.3121C54.5235 48.3381 52.9243 46.5889 50.8004 46.5889C48.6514 46.5889 47.0523 48.3381 47.0523 50.3121L47.0523 70.4768L47.6769 73.8501L46.5525 71.7761L44.5535 69.6772C43.9289 69.0275 43.1293 68.6277 42.1797 68.6277C40.6305 68.6277 39.0313 69.8521 39.0313 71.6512C39.0313 72.5507 39.3812 73.2004 39.9809 73.8001L47.6769 81.1714C48.6764 82.1459 49.7509 82.5207 50.8004 82.5207Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="none"/>
-              </g>
-              </svg>
-              33K
-            </span>
-          </div>
-          <div class="client-info">
-            <img class="avatar" src="images/sarbala-logo.png" alt="" />
-            <div class="name">
-              <h4 class="lang lang-en">Sarbala</h4>
-              <p class="role lang lang-en">Latest Sarbala artwork.</p>
-              <h4 class="lang lang-fa">سربالا</h4>
-              <p class="role lang lang-fa">آخرین اثر سربالا</p>
+        <h2 id="games-heading" class="section-title lang lang-en">Our Games</h2>
+        <h2 id="games-heading-fa" class="section-title lang lang-fa">بازی‌های سربالا</h2>
+        <p class="section-subtitle lang lang-en">Click any game to explore it</p>
+        <p class="section-subtitle lang lang-fa" dir="rtl">روی هر بازی کلیک کنید تا بیشتر بدانید</p>
+
+        <div class="games-grid">
+
+          <article class="game-card" onclick="window.open('TaSoraya.html','mwindow');" tabindex="0" role="button" aria-label="TaSoraya game">
+            <div class="game-card-logo">
+              <img src="images/soraya%20logo.svg" alt="TaSoraya game logo"/>
             </div>
-          </div>
-        </div>
-        <div class="col span_1_of_3">
-          <div class="bubble" onclick="window.open('https://sarbala.studio/Panshta.html','mwindow');">&nbsp;
-            <img src="images/panshta-logo.png" alt="" >
-            <span class="company-name lang lang-en">Panshta</span>
-            <span class="company-name lang lang-fa">پنشتا</span>
-            <span><svg height="10%" width="10%" style="vertical-align: middle;" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 100 100"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs>
-              <clipPath id="TextBounds">
-              <rect height="67.0413" width="73.3627" x="13.3187" y="16.4793"/>
-              </clipPath>
-              </defs>
-              <g id="Layer-1">
-              <path class="dlClouds" clip-path="url(#TextBounds)" d="M59.0462 57.2585L59.0462 66.104L70.4903 66.104C78.4863 66.104 83.9585 61.6063 83.9585 54.36C83.9585 48.2881 81.06 43.6155 76.0375 41.7914C75.9875 30.4222 67.6668 22.2513 56.6974 22.2513C50.9253 22.2513 45.5031 24.6501 41.9049 29.6476C35.0834 28.5231 28.9365 33.1958 28.2118 40.0423C22.4898 41.4416 19.0415 46.539 19.0415 52.7608C19.0415 60.1321 24.9635 66.104 33.3592 66.104L42.5296 66.104L42.5296 57.2585L33.4092 57.2585C30.3608 57.2585 28.2118 54.9097 28.2118 52.2611C28.2118 48.2631 31.3852 46.3641 35.3332 46.3641C35.758 46.3641 35.9829 46.1142 35.9079 45.6894C35.0584 39.7424 39.2312 36.2692 45.3781 37.9433C45.7029 38.0433 46.0278 37.9433 46.1777 37.6435C48.2766 33.3957 51.7749 31.1218 56.5224 31.1218C62.5444 31.1218 67.3419 35.7944 67.6168 42.0163C67.7168 44.0652 67.5169 45.9143 67.3419 47.2136C67.292 47.6384 67.4669 47.8383 67.8917 47.8883C72.3644 48.1881 74.7882 49.8373 74.7882 53.1356C74.7882 55.7343 73.4388 57.2585 69.9156 57.2585L59.0462 57.2585ZM50.8004 82.5207C51.8248 82.5207 52.8993 82.1459 53.8988 81.1714L61.5949 73.8001C62.1946 73.2004 62.5444 72.5507 62.5444 71.6512C62.5444 69.8521 60.9452 68.6277 59.396 68.6277C58.4465 68.6277 57.6469 69.0275 57.0222 69.6772L55.0482 71.7761L53.8988 73.8501L54.5235 70.4768L54.5235 50.3121C54.5235 48.3381 52.9243 46.5889 50.8004 46.5889C48.6514 46.5889 47.0523 48.3381 47.0523 50.3121L47.0523 70.4768L47.6769 73.8501L46.5525 71.7761L44.5535 69.6772C43.9289 69.0275 43.1293 68.6277 42.1797 68.6277C40.6305 68.6277 39.0313 69.8521 39.0313 71.6512C39.0313 72.5507 39.3812 73.2004 39.9809 73.8001L47.6769 81.1714C48.6764 82.1459 49.7509 82.5207 50.8004 82.5207Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="none"/>
-              </g>
-              </svg>
-              62K
-            </span>
-          </div>
-          <div class="client-info">
-            <img class="avatar" src="images/newnote.svg" alt="" />
-            <div class="name">
-              <h4 class="lang lang-en">Comments</h4>
-              <p class="role lang lang-en">An example of open source commiunity power in game making field.</p>
-              <h4 class="lang lang-fa">کاربران</h4>
-              <p class="role lang lang-fa">یه شاهد زنده از قدرت بازی‌سازی اوپن سورس</p>
+            <div class="game-card-body">
+              <h3 class="game-card-title lang lang-en">Ta Soraya</h3>
+              <h3 class="game-card-title lang lang-fa">تا ثریا</h3>
+              <p class="game-card-desc lang lang-en">The latest Sarbala artwork — a journey upward.</p>
+              <p class="game-card-desc lang lang-fa" dir="rtl">آخرین اثر سربالا — سفری به سمت بالا</p>
+              <div class="game-card-footer">
+                <span class="game-badge">33K</span>
+                <span class="game-card-link lang lang-en">Learn more &rarr;</span>
+                <span class="game-card-link lang lang-fa">بیشتر بخوانید &larr;</span>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col span_1_of_3">
-          <div class="bubble" onclick="window.open('https://sarbala.studio/DooDol.html','mwindow');">&nbsp;
-            <img src="images/doodol-logo.png" alt="">
-            <span class="company-name lang lang-en">DooDol?</span>
-            <span class="company-name lang lang-fa">دودُل؟</span>
-            <span><svg height="10%" width="10%" style="vertical-align: middle;" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 100 100"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs>
-              <clipPath id="TextBounds">
-              <rect height="67.0413" width="73.3627" x="13.3187" y="16.4793"/>
-              </clipPath>
-              </defs>
-              <g id="Layer-1">
-              <path class="dlClouds" clip-path="url(#TextBounds)" d="M59.0462 57.2585L59.0462 66.104L70.4903 66.104C78.4863 66.104 83.9585 61.6063 83.9585 54.36C83.9585 48.2881 81.06 43.6155 76.0375 41.7914C75.9875 30.4222 67.6668 22.2513 56.6974 22.2513C50.9253 22.2513 45.5031 24.6501 41.9049 29.6476C35.0834 28.5231 28.9365 33.1958 28.2118 40.0423C22.4898 41.4416 19.0415 46.539 19.0415 52.7608C19.0415 60.1321 24.9635 66.104 33.3592 66.104L42.5296 66.104L42.5296 57.2585L33.4092 57.2585C30.3608 57.2585 28.2118 54.9097 28.2118 52.2611C28.2118 48.2631 31.3852 46.3641 35.3332 46.3641C35.758 46.3641 35.9829 46.1142 35.9079 45.6894C35.0584 39.7424 39.2312 36.2692 45.3781 37.9433C45.7029 38.0433 46.0278 37.9433 46.1777 37.6435C48.2766 33.3957 51.7749 31.1218 56.5224 31.1218C62.5444 31.1218 67.3419 35.7944 67.6168 42.0163C67.7168 44.0652 67.5169 45.9143 67.3419 47.2136C67.292 47.6384 67.4669 47.8383 67.8917 47.8883C72.3644 48.1881 74.7882 49.8373 74.7882 53.1356C74.7882 55.7343 73.4388 57.2585 69.9156 57.2585L59.0462 57.2585ZM50.8004 82.5207C51.8248 82.5207 52.8993 82.1459 53.8988 81.1714L61.5949 73.8001C62.1946 73.2004 62.5444 72.5507 62.5444 71.6512C62.5444 69.8521 60.9452 68.6277 59.396 68.6277C58.4465 68.6277 57.6469 69.0275 57.0222 69.6772L55.0482 71.7761L53.8988 73.8501L54.5235 70.4768L54.5235 50.3121C54.5235 48.3381 52.9243 46.5889 50.8004 46.5889C48.6514 46.5889 47.0523 48.3381 47.0523 50.3121L47.0523 70.4768L47.6769 73.8501L46.5525 71.7761L44.5535 69.6772C43.9289 69.0275 43.1293 68.6277 42.1797 68.6277C40.6305 68.6277 39.0313 69.8521 39.0313 71.6512C39.0313 72.5507 39.3812 73.2004 39.9809 73.8001L47.6769 81.1714C48.6764 82.1459 49.7509 82.5207 50.8004 82.5207Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="none"/>
-              </g>
-              </svg>
-              61K
-            </span>
-          </div>
-          <div class="client-info">
-            <img class="avatar" src="images/aria-keoxer.png" alt="" />
-            <div class="name">
-              <h4 class="lang lang-en">Aria Keoxer</h4>
-              <p class="role lang lang-en">Great sound tracks and eye catching mono-chrome style.</p>
-              <h4 class="lang lang-fa">آریا کئوکسر</h4>
-              <p class="role lang lang-fa">مونوکرم بودن و موزیک متنش عالیه</p>
+          </article>
+
+          <article class="game-card" onclick="window.open('Panshta.html','mwindow');" tabindex="0" role="button" aria-label="Panshta game">
+            <div class="game-card-logo">
+              <img src="images/panshta-logo.png" alt="Panshta game logo"/>
             </div>
-          </div>
-        </div>
-        <div class="col span_1_of_3">
-          <div class="bubble" onclick="window.open('https://sarbala.studio/fazaei.html','mwindow');">&nbsp;
-            <img src="images/fazaei-logo.png" alt="">
-            <span class="company-name lang lang-en">Fazaei</span>
-            <span class="company-name lang lang-fa">هوش فضایی</span>
-            <span><svg height="10%" width="10%" style="vertical-align: middle;" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 100 100"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs>
-              <clipPath id="TextBounds">
-              <rect height="67.0413" width="73.3627" x="13.3187" y="16.4793"/>
-              </clipPath>
-              </defs>
-              <g id="Layer-1">
-              <path class="dlClouds" clip-path="url(#TextBounds)" d="M59.0462 57.2585L59.0462 66.104L70.4903 66.104C78.4863 66.104 83.9585 61.6063 83.9585 54.36C83.9585 48.2881 81.06 43.6155 76.0375 41.7914C75.9875 30.4222 67.6668 22.2513 56.6974 22.2513C50.9253 22.2513 45.5031 24.6501 41.9049 29.6476C35.0834 28.5231 28.9365 33.1958 28.2118 40.0423C22.4898 41.4416 19.0415 46.539 19.0415 52.7608C19.0415 60.1321 24.9635 66.104 33.3592 66.104L42.5296 66.104L42.5296 57.2585L33.4092 57.2585C30.3608 57.2585 28.2118 54.9097 28.2118 52.2611C28.2118 48.2631 31.3852 46.3641 35.3332 46.3641C35.758 46.3641 35.9829 46.1142 35.9079 45.6894C35.0584 39.7424 39.2312 36.2692 45.3781 37.9433C45.7029 38.0433 46.0278 37.9433 46.1777 37.6435C48.2766 33.3957 51.7749 31.1218 56.5224 31.1218C62.5444 31.1218 67.3419 35.7944 67.6168 42.0163C67.7168 44.0652 67.5169 45.9143 67.3419 47.2136C67.292 47.6384 67.4669 47.8383 67.8917 47.8883C72.3644 48.1881 74.7882 49.8373 74.7882 53.1356C74.7882 55.7343 73.4388 57.2585 69.9156 57.2585L59.0462 57.2585ZM50.8004 82.5207C51.8248 82.5207 52.8993 82.1459 53.8988 81.1714L61.5949 73.8001C62.1946 73.2004 62.5444 72.5507 62.5444 71.6512C62.5444 69.8521 60.9452 68.6277 59.396 68.6277C58.4465 68.6277 57.6469 69.0275 57.0222 69.6772L55.0482 71.7761L53.8988 73.8501L54.5235 70.4768L54.5235 50.3121C54.5235 48.3381 52.9243 46.5889 50.8004 46.5889C48.6514 46.5889 47.0523 48.3381 47.0523 50.3121L47.0523 70.4768L47.6769 73.8501L46.5525 71.7761L44.5535 69.6772C43.9289 69.0275 43.1293 68.6277 42.1797 68.6277C40.6305 68.6277 39.0313 69.8521 39.0313 71.6512C39.0313 72.5507 39.3812 73.2004 39.9809 73.8001L47.6769 81.1714C48.6764 82.1459 49.7509 82.5207 50.8004 82.5207Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="none"/>
-              </g>
-              </svg>
-              24K
-            </span>
-          </div>
-          <div class="client-info">
-            <img class="avatar" src="images/reza-ghadiri.jpg" alt="" />
-            <div class="name">
-              <h4 class="lang lang-en">Reza Ghadiri (Baziato.com)</h4>
-              <p class="role lang lang-en">Iranian unique game with a brilliant idea.</p>
-              <h4 class="lang lang-fa">رضا قدیری - بازیاتو</h4>
-              <p class="role lang lang-fa">یک بازی ایرانی با گیم پلی خلاقانه و ایده نو</p>
+            <div class="game-card-body">
+              <h3 class="game-card-title lang lang-en">Panshta</h3>
+              <h3 class="game-card-title lang lang-fa">پنشتا</h3>
+              <p class="game-card-desc lang lang-en">A living example of open-source community power in game making.</p>
+              <p class="game-card-desc lang lang-fa" dir="rtl">شاهدی زنده از قدرت بازی‌سازی متن‌باز</p>
+              <div class="game-card-footer">
+                <span class="game-badge">62K</span>
+                <span class="game-card-link lang lang-en">Learn more &rarr;</span>
+                <span class="game-card-link lang lang-fa">بیشتر بخوانید &larr;</span>
+              </div>
             </div>
-          </div>
+          </article>
+
+          <article class="game-card" onclick="window.open('DooDol.html','mwindow');" tabindex="0" role="button" aria-label="DooDol game">
+            <div class="game-card-logo">
+              <img src="images/doodol-logo.png" alt="DooDol game logo"/>
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-card-title lang lang-en">DooDol?</h3>
+              <h3 class="game-card-title lang lang-fa">دودُل؟</h3>
+              <p class="game-card-desc lang lang-en">Captivating monochrome style with great sound design.</p>
+              <p class="game-card-desc lang lang-fa" dir="rtl">سبک مونوکرم چشم‌نواز با موزیک متن فوق‌العاده</p>
+              <div class="game-card-footer">
+                <span class="game-badge">61K</span>
+                <span class="game-card-link lang lang-en">Learn more &rarr;</span>
+                <span class="game-card-link lang lang-fa">بیشتر بخوانید &larr;</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="game-card" onclick="window.open('fazaei.html','mwindow');" tabindex="0" role="button" aria-label="Fazaei game">
+            <div class="game-card-logo">
+              <img src="images/fazaei-logo.png" alt="Fazaei game logo"/>
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-card-title lang lang-en">Fazaei</h3>
+              <h3 class="game-card-title lang lang-fa">هوش فضایی</h3>
+              <p class="game-card-desc lang lang-en">An Iranian game with a brilliantly unique idea and creative gameplay.</p>
+              <p class="game-card-desc lang lang-fa" dir="rtl">یک بازی ایرانی با ایده نو و گیم‌پلی خلاقانه</p>
+              <div class="game-card-footer">
+                <span class="game-badge">24K</span>
+                <span class="game-card-link lang lang-en">Learn more &rarr;</span>
+                <span class="game-card-link lang lang-fa">بیشتر بخوانید &larr;</span>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
-    <!-- End: Games Section -->
-    
-    <!-- Xonya Section -->
-    <section id="xonyagar">
+
+    <!-- Xonyagar Section -->
+    <section id="xonyagar" aria-labelledby="xonyagar-heading">
       <div class="land_port">
-        <div>
-          <h2 class="stylish_heading lang lang-fa center_align">خُنیا‌گر</h2>
+        <div class="xonyagar-text">
+          <h2 id="xonyagar-heading" class="stylish_heading lang lang-fa center_align">خُنیا‌گر</h2>
           <h2 class="stylish_heading lang lang-en center_align">Xonyagar</h2>
           <p class="lang lang-fa center_align" dir="rtl">
-            شما هم حسش کردید؟ موزیک متن بازی‌های سربالا متفاوتند؟
-<br>
-            خب معلومه! چون خنیاگر ما متفاوته!
-            خنیاگر سربالا برای بازی‌ها فضاسازی میکنه تا تجربه کاربر از بازی کردن یه حس متمایز باشه.
-<br>
-            آثار خنیاگر رو یکجا اینجا ببینید.</p>
-          <p class="lang lang-en center_align">Xonya is a song and Xonyagar is the singer! These are both pure persian words. Sarbala's Xonyagar pruduces songs and we use'em in the games to enhance your experience. Listen to some of these Xonyas here.</p>
+            موزیک متن بازی‌های سربالا متفاوتند؟ بله، چون خنیاگر ما متفاوته!
+            خنیاگر سربالا برای بازی‌ها فضاسازی می‌کنه تا تجربه کاربر از بازی کردن یه حس متمایز باشه.
+          </p>
+          <p class="lang lang-en">
+            Sarbala games feel different because our composer, Xonyagar, crafts unique soundscapes for each game — turning gameplay into an experience.
+          </p>
         </div>
-        <div style="display:grid;margin:1.5rem; justify-content: center; align-content: center;">
-          <img style="min-width: 200px; margin:1.5rem;border-radius: 50%; box-shadow: 15px 0 50px var(--color-main);" src="images/Xonyagar_black.svg" alt="" style="max-width: 400px;">
-          <a href="songs/Xonyagar.html" class="btn" target="_blank">
-            <span class="lang lang-en"> Let'em play</span>
-            <span class="lang lang-fa"> بریم به خنیاگر</span>
+        <div class="xonyagar-cta">
+          <img src="images/Xonyagar_black.svg" alt="Xonyagar music composer logo" style="min-width:200px;margin:1.5rem;border-radius:50%;box-shadow:15px 0 50px var(--color-main);"/>
+          <a href="songs/Xonyagar.html" class="btn" target="_blank" rel="noopener">
+            <span class="lang lang-en">Listen now</span>
+            <span class="lang lang-fa">گوش بده</span>
           </a>
         </div>
       </div>
     </section>
-    <!-- End: Xonya Section -->
-    
-    <!-- Features Section -->
-    <section id="features">
+
+    <!-- Technologies Section -->
+    <section id="features" aria-labelledby="features-heading">
       <div class="row">
-        
         <div>
           <div class="section-description features-description col1">
-            <h2 class="stylish_heading lang lang-en">
-              The joy of depending on open source 
-            </h2>
-            <h2 class="stylish_heading lang lang-fa center_align">
-              فناوری‌ها
-            </h2>
-            <p class="little-descriptionlang lang lang-en center_align" dir="ltr">
-              Sarbala uses open-source technologies to build games.
-            </p>
-            <p class="lang lang-fa center_align" dir="rtl">
-              سربالا برای ساخت بازی‌ها از فناوری‌ها و پروژه های متن‌باز استفاده میکنه.
-            </p>
+            <h2 id="features-heading" class="stylish_heading lang lang-en">Open Source at Heart</h2>
+            <h2 class="stylish_heading lang lang-fa center_align">فناوری‌ها</h2>
+            <p class="lang lang-en">Sarbala builds games entirely with open-source tools — reviewed, trusted, and always up to date.</p>
+            <p class="lang lang-fa center_align" dir="rtl">سربالا برای ساخت بازی‌ها از فناوری‌ها و پروژه‌های متن‌باز استفاده می‌کنه.</p>
           </div>
         </div>
-        <div class="container">
-          <div class="thumbnail">
-            <img src="https://godotengine.org/assets/press/icon_color.svg"></img>
-          </div>
-          <div class="thumbnail">
-            <img src="https://download.blender.org/branding/community/blender_community_badge_white.png"></img>
-          </div>
-          <div class="thumbnail">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gnome.svg"></img>
-          </div>
-          <div class="thumbnail">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg"></img>
-          </div>
-          <div class="thumbnail">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"></img>
-          </div>
-          <div class="thumbnail">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"></img>
-          </div>
-          <div class="thumbnail">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"></img>
-          </div>
-          <div class="thumbnail">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/285px-Logo-ubuntu_cof-orange-hex.svg.png"></img>
-          </div>
+        <div class="container" role="list" aria-label="Technologies used">
+          <div class="thumbnail" role="listitem"><img src="https://godotengine.org/assets/press/icon_color.svg" alt="Godot Engine" loading="lazy"/></div>
+          <div class="thumbnail" role="listitem"><img src="https://download.blender.org/branding/community/blender_community_badge_white.png" alt="Blender 3D" loading="lazy"/></div>
+          <div class="thumbnail" role="listitem"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gnome.svg" alt="GIMP" loading="lazy"/></div>
+          <div class="thumbnail" role="listitem"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg" alt="Nginx" loading="lazy"/></div>
+          <div class="thumbnail" role="listitem"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" loading="lazy"/></div>
+          <div class="thumbnail" role="listitem"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy"/></div>
+          <div class="thumbnail" role="listitem"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript" loading="lazy"/></div>
+          <div class="thumbnail" role="listitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/285px-Logo-ubuntu_cof-orange-hex.svg.png" alt="Ubuntu Linux" loading="lazy"/></div>
         </div>
-        <br>
-        <br>
-        <p class="lang lang-fa" dir="rtl">
-           این پروژه ها کارامد ترین ابزار جهان 🌍 برای رسیدن به مقصد هستند. هر خط کد در پروژه‌های متن باز توسط میلیون‌ها نفر بررسی میشه تا هیچ شکی در بهینه بودن اونها باقی نمونه 🔎.  پروژه‌های متن باز مدام با آخرین فناوری روز به‌روزرسانی میشن تا شما دیگه دغدغه امنیت کتابخانه‌هایی که استفاده میکنید (لایبری‌ها📚) رو نداشته باشید🐛.
+        <p class="lang lang-fa" dir="rtl" style="margin-top:2rem;">
+          این پروژه‌ها کارامدترین ابزار جهان برای رسیدن به مقصدند. هر خط کد در پروژه‌های متن‌باز توسط میلیون‌ها نفر بررسی می‌شه تا هیچ شکی در بهینه بودن اونها باقی نمونه. پروژه‌های متن‌باز مدام با آخرین فناوری روز به‌روزرسانی می‌شن.
         </p>
-        <p class="lang lang-en">Open-source softwares are developed in a collaborative public manner, codes are reviewed by millions of people around the world so they are efficient and always trustworthy.</p>
+        <p class="lang lang-en" style="margin-top:2rem;">Open-source software is developed in a collaborative public manner — code reviewed by millions worldwide, always efficient and trustworthy.</p>
       </div>
     </section>
-    <!-- End: Features Section -->
-  
-    <!-- How To Section -->
-    <section id="howto">
+
+    <!-- About Section -->
+    <section id="howto" aria-labelledby="howto-heading">
       <div class="row">
         <div class="col span_1_of_3 first-col">
           <div class="first-item">
             <div class="item-description">
-              <h4 class="lang lang-en">Game Genre?</h4>
+              <h4 class="lang lang-en">Game Style?</h4>
               <h4 class="lang lang-fa">سبک سربالا؟</h4>
-              <p class="lang lang-en">
-                Sarbala loves complexity of simple things! The games we made are easy to learn, easy to master but hard to finish! Simple concepts come to a perfect game in Sarbala Studio.
-              </p>
-              <p class="lang lang-fa">
-                مفهومی. سربالا شیفته‌ی سادگی پیچیدگی‌ها و پیچیدگی سادگی‌هاست! فیزیک، موزیک، اشکال و منحنی‌های بازی در کمال سادگی شما رو از قید حال رها میکنند
-              </p>
+              <p class="lang lang-en">Sarbala loves the complexity of simple things. Our games are easy to learn, but captivating to master.</p>
+              <p class="lang lang-fa" dir="rtl">مفهومی. سربالا شیفته‌ی سادگی پیچیدگی‌هاست! فیزیک، موزیک و اشکال بازی در کمال سادگی شما رو از قید حال رها می‌کنند.</p>
             </div>
-            <div class="item-icon1">
-              <h1>🎬</h1>
-            </div>
+            <div class="item-icon1"><h1>🎬</h1></div>
           </div>
           <div class="first-item">
             <div class="item-description">
-              <h4 class="lang lang-en">Sarbala Team?</h4>
+              <h4 class="lang lang-en">The Team?</h4>
               <h4 class="lang lang-fa">تیم سربالا؟</h4>
-              <p class="lang lang-en">
-                Whole Sarbala team is a twosome! Me and my beloved wifey. I do the calculations (scripting) and she designs it to a game.
-              </p>
-              <p class="lang lang-fa">
-                کل تیم سربالا رو  دو نفر تشکیل میدن، من و همسرم! من ایده اصلی رو به کد تبدیل میکنم و ایشون به این کدها دیزاین و تصویر میده
-              </p>
+              <p class="lang lang-en">Just two people — me and my wife. I handle the code and logic; she brings it to life with design and art.</p>
+              <p class="lang lang-fa" dir="rtl">کل تیم سربالا رو دو نفر تشکیل می‌دن، من و همسرم! من کد می‌نویسم و ایشون دیزاین و تصویر می‌ده.</p>
             </div>
-            <div class="item-icon1">
-              <h1>👥</h1>
-            </div>
+            <div class="item-icon1"><h1>👥</h1></div>
           </div>
           <div class="first-item">
             <div class="item-description">
-              <h4 class="lang lang-en">Any specific engine?</h4>
-              <h4 class="lang lang-fa">موتور بازی سازی؟</h4>
-              <p class="lang lang-en">
-                Yes, Godot open source game engine.
-              </p>
-              <p class="lang lang-fa">
-                بله! بازی ها ها با گودو ساخته میشن. گودو هم یه جامعه متن‌باز پشتش داره 
-              </p>
+              <h4 class="lang lang-en">Game Engine?</h4>
+              <h4 class="lang lang-fa">موتور بازی‌سازی؟</h4>
+              <p class="lang lang-en">Yes — Godot, the open-source game engine.</p>
+              <p class="lang lang-fa" dir="rtl">بله! بازی‌ها با گودو ساخته می‌شن. گودو هم یه جامعه متن‌باز پشتش داره.</p>
             </div>
-            <div class="item-icon1">
-              <h1>🤖</h1>
-            </div>
+            <div class="item-icon1"><h1>🤖</h1></div>
           </div>
         </div>
         <div class="col span_1_of_3 second-col">
-          <img class="big_image" src="images/phone.svg" alt="" />
+          <img class="big_image" src="images/phone.svg" alt="Mobile game illustration"/>
         </div>
         <div class="col span_1_of_3 third-col">
           <div class="last-item">
-            <div class="item-icon2">
-              <h1>🙋‍♂️</h1>
-            </div>
+            <div class="item-icon2"><h1>🙋‍♂️</h1></div>
             <div class="item-description">
               <h4 class="lang lang-en">Why Sarbala?</h4>
-              <h4 class="lang lang-fa">حالا چرا سربالا؟</h4>
-              <p class="lang lang-en">
-                Sarbala is a Farsi word and means kind of a road that goes up.
-              </p>
-              <p class="lang lang-fa">
-                 چون این مسیر (بازی‌سازی) برای ما کاملا جدید و سخت بود و ما هم اینکاره نبودیم! ولی هرچه بیشتر پیش میرفتیم بیشتر عاشقش میشدیم، بنابراین اسمش شد <b>سربالا</b>
-              </p>
+              <h4 class="lang lang-fa">چرا سربالا؟</h4>
+              <p class="lang lang-en">Sarbala means "uphill" in Farsi. The path of game making was new and hard for us, but the more we climbed, the more we loved it.</p>
+              <p class="lang lang-fa" dir="rtl">چون این مسیر برای ما کاملاً جدید و سخت بود، ولی هرچه بیشتر پیش می‌رفتیم بیشتر عاشقش می‌شدیم — <b>سربالا</b>.</p>
             </div>
           </div>
           <div class="last-item">
-            <div class="item-icon2">
-              <h1>🥼</h1>
-            </div>
+            <div class="item-icon2"><h1>🥼</h1></div>
             <div class="item-description">
-              <h4 class="lang lang-en">You guys are not programers?</h4>
+              <h4 class="lang lang-en">Not programmers?</h4>
               <h4 class="lang lang-fa">پس چه کاره بودید؟</h4>
-              <p class="lang lang-en">
-                We are now! But mainly & technically we are medical doctors.
-              </p>
-              <p class="lang lang-fa">
-                ما هردو پزشکیم و این کار بیشتر یه هابی دلچسب پست کشیک محسوب میشه! البته اگه بعدش به اندازه خوابیده باشیم
-              </p>
+              <p class="lang lang-en">We are now! But technically, we are both medical doctors. Game dev is our very addictive hobby.</p>
+              <p class="lang lang-fa" dir="rtl">ما هردو پزشکیم و این کار بیشتر یه هابی دلچسب پست‌کشیک محسوب می‌شه!</p>
             </div>
           </div>
           <div class="last-item">
-            <div class="item-icon2">
-              <h1>🥗</h1>
-            </div>
+            <div class="item-icon2"><h1>🥗</h1></div>
             <div class="item-description">
-              <h4 class="lang lang-en">Are you guys vegan?</h4>
-              <h4 class="lang lang-fa">گیاه خوارید؟</h4>
-              <p class="lang lang-en">
-                Idon't think if it's related, but nope! We do need cobalamin!
-              </p>
-              <p class="lang lang-fa">
-                فکر نمیکنم زیاد مربوط باشه! ولی نه. ما به کوبالامین نیاز داریم
-              </p>
+              <h4 class="lang lang-en">Vegan?</h4>
+              <h4 class="lang lang-fa">گیاه‌خوارید؟</h4>
+              <p class="lang lang-en">Not sure why you'd ask, but no — we need our cobalamin!</p>
+              <p class="lang lang-fa" dir="rtl">نه. ما به کوبالامین نیاز داریم!</p>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
-    <!-- End: About us Section -->
 
-    <!-- Contact  Section -->
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-heading">
       <div class="row">
-        <h2 class="stylish_heading lang lang-en">
-          📞 Many ways to contact us:
-        </h2>
-        <h2 class="stylish_heading lang lang-fa">
-          با ما ارتباط بگیرید 📞
-        </h2>
-        <div class='buttons-container'>
-          <div class='button mail' onclick="location.href='mailto:info@sarbala.studio';">&nbsp;
-          </div>
-          <div class='button instagram' onclick="location.href='https://instagram.com/sarbala.studio';">&nbsp;
-          </div>
-          <div class='button telegram' onclick="location.href='https://t.me/sarbala_studio';">&nbsp;
-          </div>
-        </div>
-<!--         <br>
-        <h4 class="lang lang-fa">و برای حمایت  از ما هم ⬇️</h4>
-        <h4 class="lang lang-en">And also you can support us here ⬇️</h4>
-
+        <h2 id="contact-heading" class="stylish_heading lang lang-en">Get in Touch</h2>
+        <h2 class="stylish_heading lang lang-fa">با ما ارتباط بگیرید</h2>
         <div class="buttons-container">
-          <div class='button hamibash' onclick="location.href='https://hamibash.com/sarbala_studio';">&nbsp;
-          </div>
-        </div> -->
+          <a class="button mail" href="mailto:info@sarbala.studio" aria-label="Send us an email">&nbsp;</a>
+          <a class="button instagram" href="https://instagram.com/sarbala.studio" target="_blank" rel="noopener noreferrer" aria-label="Sarbala on Instagram">&nbsp;</a>
+          <a class="button telegram" href="https://t.me/sarbala_studio" target="_blank" rel="noopener noreferrer" aria-label="Sarbala on Telegram">&nbsp;</a>
+        </div>
       </div>
     </section>
-    <!-- End:Contact Section -->
 
-    <!-- Footer Section -->
-    <section id="footer">
-      <div class="links">
+    <!-- Footer -->
+    <footer id="footer">
+      <nav class="links" aria-label="Footer navigation">
         <ul>
-          <li><a href="#home" class="lang lang-en">HOME</a></li>
-          <li><a href="#features" class="lang lang-en">TECHNOLOGIES</a></li>
-          <li><a href="#games" class="lang lang-en">GAMES</a></li>
-          <li><a href="#howto" class="lang lang-en">ABOUT US</a></li>
-          <li><a href="#contact" class="lang lang-en">CONTACT</a></li>
-          <li><a href="index.old.html" class="lang lang-en">OLD SITE</a></li>
+          <li><a href="#home" class="lang lang-en">Home</a></li>
+          <li><a href="#games" class="lang lang-en">Games</a></li>
+          <li><a href="#features" class="lang lang-en">Technologies</a></li>
+          <li><a href="#howto" class="lang lang-en">About</a></li>
+          <li><a href="#contact" class="lang lang-en">Contact</a></li>
+
           <li><a href="#home" class="lang lang-fa">خانه</a></li>
-          <li><a href="#features" class="lang lang-fa">فناوری‌ها</a></li>
           <li><a href="#games" class="lang lang-fa">بازی‌ها</a></li>
-          <li><a href="#howto" class="lang lang-fa">درباری‌ما</a></li>
-          <li><a href="#contact" class="lang lang-fa">تماس باما</a></li>
-          <li><a href="index.old.html" class="lang lang-fa">سایت قدیمی</a></li>
-
+          <li><a href="#features" class="lang lang-fa">فناوری‌ها</a></li>
+          <li><a href="#howto" class="lang lang-fa">درباره ما</a></li>
+          <li><a href="#contact" class="lang lang-fa">تماس</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <select id="langSelector" style="display: none;">
-          <option value="en">English</option>
-          <option value="fa">فارسی</option>
+      <select id="langSelector" style="display:none;">
+        <option value="en">English</option>
+        <option value="fa">فارسی</option>
       </select>
-      
-      <!-- <div>
-      <p>Your browser language is: <b id="browserLang"></b></p>
-      <p>The selected language is: <b id="startLang"></b></p> 
-      </div> -->
+    </footer>
 
-      
-    </section>
-    <h5 class="lang lang-en center_align" style="padding: 5%;">
-      Sarbala Studio - All Rights Reserved © Since 2021
-      <br>info@sarbala.studio
-    </h5>
-    <h5 class="lang lang-fa center_align" style="padding: 5%;" dir="rtl">
-      از ۱۴۰۰  © کارگاه بازی‌سازی سربالا – تمامی حقوق محفوظ است
-      <br>info@sarbala.studio
-    </h5>
-    <!-- End: Footer Section -->
+    <p class="lang lang-en center_align footer-copy">Sarbala Studio &mdash; All Rights Reserved &copy; Since 2021 &nbsp;|&nbsp; info@sarbala.studio</p>
+    <p class="lang lang-fa center_align footer-copy" dir="rtl">از ۱۴۰۰ &copy; کارگاه بازی‌سازی سربالا &mdash; تمامی حقوق محفوظ است &nbsp;|&nbsp; info@sarbala.studio</p>
 
-    <!-- Required JavaScript Files & CDN -->
-    <!-- JQuery CDN -->
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Main JS Files -->
     <script src="js/essential.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      document.querySelectorAll('.game-card').forEach(function(card) {
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') { card.click(); }
+        });
+      });
+    </script>
   </body>
 </html>

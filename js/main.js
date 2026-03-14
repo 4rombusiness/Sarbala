@@ -1,95 +1,155 @@
-//Get the button:
-mybutton = document.getElementById("scrollUp");
+/* ============================================================
+   Sarbala Studio — Main JS
+   ============================================================ */
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > sticky ||
-    document.documentElement.scrollTop > sticky
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+// ── Language ───────────────────────────────────────────────
+const html = document.documentElement;
+const langToggle = document.getElementById('langToggle');
+
+function setLang(lang) {
+  html.setAttribute('data-lang', lang);
+  html.setAttribute('lang', lang);
+  try { localStorage.setItem('sarbala-lang', lang); } catch(e) {}
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+function toggleLang() {
+  const current = html.getAttribute('data-lang') || 'fa';
+  setLang(current === 'fa' ? 'en' : 'fa');
 }
 
-// Functional Sticky Navbar
-window.onscroll = function () {
-  myFunction();
-  scrollFunction();
-};
+(function initLang() {
+  let saved = 'fa';
+  try { saved = localStorage.getItem('sarbala-lang') || 'fa'; } catch(e) {}
+  setLang(saved);
+})();
 
-var navbar = document.querySelector("nav");
-var services = document.querySelector("#features");
-var sticky = services.offsetTop;
+if (langToggle) langToggle.addEventListener('click', toggleLang);
 
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
+// ── Navigation ──────────────────────────────────────────────
+const nav = document.getElementById('nav');
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mmLinks = document.querySelectorAll('.mm-link');
+
+function handleScroll() {
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+
+  // Scroll-to-top button
+  const scrollTop = document.getElementById('scrollTop');
+  if (scrollTop) scrollTop.classList.toggle('visible', window.scrollY > 400);
 }
 
-$(document).ready(function () {
-  // Preloader
-  document.querySelector(".preloader").classList.add("opacity-0");
-  setTimeout(function () {
-    document.querySelector(".preloader").style.display = "none";
-  }, 1000);
+window.addEventListener('scroll', handleScroll, { passive: true });
+handleScroll();
 
-  //   Nice Select Initialization
-  // $("select").niceSelect();
+function openMenu() {
+  mobileMenu.classList.add('open');
+  hamburger.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  mobileMenu.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+if (hamburger) hamburger.addEventListener('click', function() {
+  mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
 });
 
-// Navbar Open Function on Mobile Menu
-function openNav() {
-  $("#myNav").css("width", "100%");
-}
+mmLinks.forEach(function(link) {
+  link.addEventListener('click', closeMenu);
+});
 
-// Navbar Close Function on Mobile Menu
-function closeNav() {
-  $("#myNav").css("width", "0");
-}
+// ── Scroll Reveal ───────────────────────────────────────────
+const revealEls = document.querySelectorAll('.reveal, .reveal-hero');
 
-function changelangfrombutt(){
-  var x = document.getElementsByClassName("lang-en")[0];
-  if (x.style.display === "none") {
-    changeLanguage('en');
-  } else {
-    changeLanguage('fa');
-  }
-}
-function changeLanguage(languageCode) {
-  Array.from(document.getElementsByClassName('lang')).forEach(function (elem) {
-      if (elem.classList.contains('lang-' + languageCode)) {
-           elem.style.display  = 'inherit';
-      }
-      else {
-           elem.style.display = 'none';
-      }
+const revealObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+revealEls.forEach(function(el) { revealObserver.observe(el); });
+
+// Hero elements use the same in-view class but via reveal-hero class
+// Trigger hero immediately after preloader
+function triggerHero() {
+  document.querySelectorAll('.reveal-hero').forEach(function(el, i) {
+    setTimeout(function() { el.classList.add('in-view'); }, 200 + i * 120);
   });
 }
 
-// select handler
-const selector = document.getElementById('langSelector');
-selector.addEventListener('change', function (evt) {
-  changeLanguage(this.value);
+// ── Preloader ───────────────────────────────────────────────
+window.addEventListener('load', function() {
+  const preloader = document.getElementById('preloader');
+  setTimeout(function() {
+    if (preloader) preloader.classList.add('done');
+    triggerHero();
+  }, 400);
 });
 
-// detect initial browser language
-const lang = navigator.userLanguage || navigator.language || 'fa-FA';
-const startLang = 'fa';//Array.from(selector.options).map(opt => opt.value).find(val => lang.includes(val)) || 'fa';
-changeLanguage(startLang);
+// Fallback if load fires very late
+setTimeout(function() {
+  const preloader = document.getElementById('preloader');
+  if (preloader && !preloader.classList.contains('done')) {
+    preloader.classList.add('done');
+    triggerHero();
+  }
+}, 2500);
 
-// updating select with start value
-// selector.selectedIndex = Array.from(selector.options).map(opt => opt.value).indexOf(startLang)
+// ── Scroll Top ──────────────────────────────────────────────
+const scrollTopBtn = document.getElementById('scrollTop');
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
-// fill "The selected language is:"
-// document.getElementById('browserLang').innerText = lang;
-// document.getElementById('startLang').innerText = startLang;
+// ── Game card keyboard support ──────────────────────────────
+document.querySelectorAll('.game-card').forEach(function(card) {
+  card.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      card.click();
+    }
+  });
+});
+
+// ── Stat counter animation ──────────────────────────────────
+function animateCounter(el, target, suffix) {
+  let current = 0;
+  const increment = target / 45;
+  const timer = setInterval(function() {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    el.textContent = Math.floor(current) + suffix;
+  }, 28);
+}
+
+const counterObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const raw = el.dataset.count;
+    if (raw) {
+      animateCounter(el, parseInt(raw, 10), 'K');
+    }
+    counterObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-count]').forEach(function(el) {
+  counterObserver.observe(el);
+});

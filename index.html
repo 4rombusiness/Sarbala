@@ -1,438 +1,866 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" data-lang="fa">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="theme-color" content="#090912"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090912" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="mini_icons/apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="mini_icons/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="mini_icons/favicon-16x16.png"/>
-  <link rel="manifest" href="mini_icons/site.webmanifest"/>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="mini_icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="mini_icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="mini_icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="mini_icons/site.webmanifest" />
 
-  <title>Sarbala Studio | بازی‌های موبایل | TaSoraya · Panshta · DooDol · Fazaei</title>
-  <meta name="description" content="Sarbala Studio is an independent game studio crafting elegant, concept-driven mobile games — TaSoraya, Panshta, DooDol, and Fazaei. Built with open-source tools."/>
-  <meta name="keywords" content="Sarbala, game studio, indie games, mobile games, TaSoraya, Panshta, DooDol, Fazaei, Godot, Iranian game studio"/>
-  <meta name="author" content="Sarbala Studio"/>
-  <link rel="canonical" href="https://sarbala.studio/"/>
+    <title>
+      Sarbala Studio | بازی‌های موبایل | TaSoraya · Panshta · DooDol · Fazaei
+    </title>
+    <meta
+      name="description"
+      content="Sarbala Studio is an independent game studio crafting elegant, concept-driven mobile games — TaSoraya, Panshta, DooDol, and Fazaei. Built with open-source tools."
+    />
+    <meta
+      name="keywords"
+      content="Sarbala, game studio, indie games, mobile games, TaSoraya, Panshta, DooDol, Fazaei, Godot, Iranian game studio"
+    />
+    <meta name="author" content="Sarbala Studio" />
+    <link rel="canonical" href="https://sarbala.studio/" />
 
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://sarbala.studio/"/>
-  <meta property="og:title" content="Sarbala Studio | Indie Game Studio"/>
-  <meta property="og:description" content="Independent game studio creating elegant mobile games."/>
-  <meta property="og:image" content="https://sarbala.studio/images/sarbala.png"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Sarbala Studio"/>
-  <meta name="twitter:description" content="Independent game studio creating elegant mobile games."/>
-  <meta name="twitter:image" content="https://sarbala.studio/images/sarbala.png"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sarbala.studio/" />
+    <meta property="og:title" content="Sarbala Studio | Indie Game Studio" />
+    <meta
+      property="og:description"
+      content="Independent game studio creating elegant mobile games."
+    />
+    <meta
+      property="og:image"
+      content="https://sarbala.studio/images/sarbala.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sarbala Studio" />
+    <meta
+      name="twitter:description"
+      content="Independent game studio creating elegant mobile games."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sarbala.studio/images/sarbala.png"
+    />
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Sarbala Studio","url":"https://sarbala.studio","logo":"https://sarbala.studio/images/sarbala-logo.png","description":"Independent game studio creating elegant mobile games.","email":"info@sarbala.studio","sameAs":["https://instagram.com/sarbala.studio","https://t.me/sarbala_studio"]}</script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sarbala Studio",
+        "url": "https://sarbala.studio",
+        "logo": "https://sarbala.studio/images/sarbala-logo.png",
+        "description": "Independent game studio creating elegant mobile games.",
+        "email": "info@sarbala.studio",
+        "sameAs": [
+          "https://instagram.com/sarbala.studio",
+          "https://t.me/sarbala_studio"
+        ]
+      }
+    </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Vazirmatn:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK71V60ZFJ"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FK71V60ZFJ');</script>
-</head>
-<body>
-
-  <!-- Preloader -->
-  <div class="preloader" id="preloader">
-    <div class="preloader__ring"></div>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a class="nav__brand" href="#home">
-        <img src="images/sarbala-raw.svg" alt="Sarbala logo" width="32" height="38"/>
-        <span class="lang-fa">سربالا</span>
-        <span class="lang-en">Sarbala</span>
-      </a>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#home"><span class="lang-fa">خانه</span><span class="lang-en">Home</span></a></li>
-        <li><a href="#games"><span class="lang-fa">بازی‌ها</span><span class="lang-en">Games</span></a></li>
-        <li><a href="#xonyagar"><span class="lang-fa">خنیاگر</span><span class="lang-en">Xonyagar</span></a></li>
-        <li><a href="#about"><span class="lang-fa">درباره ما</span><span class="lang-en">About</span></a></li>
-        <li><a href="#contact"><span class="lang-fa">تماس</span><span class="lang-en">Contact</span></a></li>
-      </ul>
-      <div class="nav__actions">
-        <button class="lang-btn" id="langToggle" aria-label="Switch language">
-          <span class="lang-fa">EN</span>
-          <span class="lang-en">FA</span>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FK71V60ZFJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-FK71V60ZFJ");
+    </script>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader__ring"></div>
     </div>
-  </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <ul>
-      <li><a href="#home" class="mm-link"><span class="lang-fa">خانه</span><span class="lang-en">Home</span></a></li>
-      <li><a href="#games" class="mm-link"><span class="lang-fa">بازی‌ها</span><span class="lang-en">Games</span></a></li>
-      <li><a href="#xonyagar" class="mm-link"><span class="lang-fa">خنیاگر</span><span class="lang-en">Xonyagar</span></a></li>
-      <li><a href="#about" class="mm-link"><span class="lang-fa">درباره ما</span><span class="lang-en">About</span></a></li>
-      <li><a href="#contact" class="mm-link"><span class="lang-fa">تماس</span><span class="lang-en">Contact</span></a></li>
-    </ul>
-  </div>
-
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="hero__glow hero__glow--1"></div>
-    <div class="hero__glow hero__glow--2"></div>
-    <div class="hero__content">
-      <div class="hero__logo-wrap reveal-hero">
-        <img src="images/sarbala-raw.svg" alt="Sarbala Studio" class="hero__logo-img"/>
-      </div>
-      <h1 class="hero__title reveal-hero" style="--d:.15s">
-        <span class="lang-fa">کارگاه بازی‌سازی سربالا</span>
-        <span class="lang-en">Sarbala Game Studio</span>
-      </h1>
-      <p class="hero__tagline reveal-hero lang-fa" dir="rtl" style="--d:.3s">ساده شروع می‌شه — تموم نمی‌شه</p>
-      <p class="hero__tagline reveal-hero lang-en" style="--d:.3s">Simple to start. Impossible to stop.</p>
-      <a class="hero__cta reveal-hero" href="#games" style="--d:.45s">
-        <span class="lang-fa">بازی‌های ما</span>
-        <span class="lang-en">Explore Games</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-    <div class="hero__scroll">
-      <span class="lang-fa">اسکرول کن</span>
-      <span class="lang-en">Scroll</span>
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- Games -->
-  <section class="section games" id="games">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-label lang-fa">بازی‌ها</p>
-        <p class="section-label lang-en">Games</p>
-        <h2 class="section-title lang-fa">بازی‌های سربالا</h2>
-        <h2 class="section-title lang-en">Our Games</h2>
-        <p class="section-sub lang-fa" dir="rtl">روی هر کارت کلیک کنید تا بیشتر بدانید</p>
-        <p class="section-sub lang-en">Click any card to learn more</p>
-      </div>
-      <div class="games__grid">
-
-        <article class="game-card reveal" style="--d:.05s" onclick="window.open('TaSoraya.html','_blank')" tabindex="0" role="link" aria-label="TaSoraya game">
-          <div class="game-card__art">
-            <img src="images/soraya%20logo.svg" alt="TaSoraya logo"/>
-          </div>
-          <div class="game-card__body">
-            <div class="game-card__meta">
-              <span class="game-card__badge">33K</span>
-            </div>
-            <h3 class="game-card__name lang-fa">تا ثریا</h3>
-            <h3 class="game-card__name lang-en">Ta Soraya</h3>
-            <p class="game-card__desc lang-fa" dir="rtl">آخرین اثر سربالا — سفری رو به بالا</p>
-            <p class="game-card__desc lang-en">The latest Sarbala artwork. A journey upward.</p>
-            <div class="game-card__cta">
-              <span class="lang-fa">بیشتر بدان</span>
-              <span class="lang-en">Learn more</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-        </article>
-
-        <article class="game-card reveal" style="--d:.15s" onclick="window.open('Panshta.html','_blank')" tabindex="0" role="link" aria-label="Panshta game">
-          <div class="game-card__art">
-            <img src="images/panshta-logo.png" alt="Panshta logo"/>
-          </div>
-          <div class="game-card__body">
-            <div class="game-card__meta">
-              <span class="game-card__badge">62K</span>
-            </div>
-            <h3 class="game-card__name lang-fa">پنشتا</h3>
-            <h3 class="game-card__name lang-en">Panshta</h3>
-            <p class="game-card__desc lang-fa" dir="rtl">شاهد زنده‌ای از قدرت بازی‌سازی متن‌باز</p>
-            <p class="game-card__desc lang-en">Open-source community power in game making.</p>
-            <div class="game-card__cta">
-              <span class="lang-fa">بیشتر بدان</span>
-              <span class="lang-en">Learn more</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-        </article>
-
-        <article class="game-card reveal" style="--d:.25s" onclick="window.open('DooDol.html','_blank')" tabindex="0" role="link" aria-label="DooDol game">
-          <div class="game-card__art">
-            <img src="images/doodol-logo.png" alt="DooDol logo"/>
-          </div>
-          <div class="game-card__body">
-            <div class="game-card__meta">
-              <span class="game-card__badge">61K</span>
-            </div>
-            <h3 class="game-card__name lang-fa">دودُل؟</h3>
-            <h3 class="game-card__name lang-en">DooDol?</h3>
-            <p class="game-card__desc lang-fa" dir="rtl">مونوکرم چشم‌نواز با موزیک متن فوق‌العاده</p>
-            <p class="game-card__desc lang-en">Captivating monochrome with brilliant sound design.</p>
-            <div class="game-card__cta">
-              <span class="lang-fa">بیشتر بدان</span>
-              <span class="lang-en">Learn more</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-        </article>
-
-        <article class="game-card reveal" style="--d:.35s" onclick="window.open('fazaei.html','_blank')" tabindex="0" role="link" aria-label="Fazaei game">
-          <div class="game-card__art">
-            <img src="images/fazaei-logo.png" alt="Fazaei logo"/>
-          </div>
-          <div class="game-card__body">
-            <div class="game-card__meta">
-              <span class="game-card__badge">24K</span>
-            </div>
-            <h3 class="game-card__name lang-fa">هوش فضایی</h3>
-            <h3 class="game-card__name lang-en">Fazaei</h3>
-            <p class="game-card__desc lang-fa" dir="rtl">بازی ایرانی با ایده‌ای خلاقانه و منحصربه‌فرد</p>
-            <p class="game-card__desc lang-en">An Iranian game with a uniquely creative idea.</p>
-            <div class="game-card__cta">
-              <span class="lang-fa">بیشتر بدان</span>
-              <span class="lang-en">Learn more</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Xonyagar -->
-  <section class="section xonyagar" id="xonyagar">
-    <div class="xonyagar__bg"></div>
-    <div class="container">
-      <div class="xonyagar__inner">
-        <div class="xonyagar__visual reveal">
-          <div class="xonyagar__ring xonyagar__ring--3"></div>
-          <div class="xonyagar__ring xonyagar__ring--2"></div>
-          <div class="xonyagar__ring xonyagar__ring--1"></div>
-          <img src="images/Xonyagar_black.svg" alt="Xonyagar" class="xonyagar__logo"/>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a class="nav__brand" href="#home">
+          <img
+            src="images/sarbala-raw.svg"
+            alt="Sarbala logo"
+            width="32"
+            height="38"
+          />
+          <span class="lang-fa">سربالا</span>
+          <span class="lang-en">Sarbala</span>
+        </a>
+        <ul class="nav__links" id="navLinks">
+          <li>
+            <a href="#home"
+              ><span class="lang-fa">خانه</span
+              ><span class="lang-en">Home</span></a
+            >
+          </li>
+          <li>
+            <a href="#games"
+              ><span class="lang-fa">بازی‌ها</span
+              ><span class="lang-en">Games</span></a
+            >
+          </li>
+          <li>
+            <a href="#xonyagar"
+              ><span class="lang-fa">خنیاگر</span
+              ><span class="lang-en">Xonyagar</span></a
+            >
+          </li>
+          <li>
+            <a href="#about"
+              ><span class="lang-fa">درباره ما</span
+              ><span class="lang-en">About</span></a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><span class="lang-fa">تماس</span
+              ><span class="lang-en">Contact</span></a
+            >
+          </li>
+        </ul>
+        <div class="nav__actions">
+          <button class="lang-btn" id="langToggle" aria-label="Switch language">
+            <span class="lang-fa">EN</span>
+            <span class="lang-en">FA</span>
+          </button>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
         </div>
-        <div class="xonyagar__text reveal" style="--d:.15s">
-          <p class="section-label lang-fa">موزیک</p>
-          <p class="section-label lang-en">Music</p>
-          <h2 class="section-title lang-fa">خُنیاگر</h2>
-          <h2 class="section-title lang-en">Xonyagar</h2>
-          <p class="xonyagar__desc lang-fa" dir="rtl">
-            موزیک متن بازی‌های سربالا تصادفی نیست. خنیاگر برای هر بازی فضاسازی می‌کنه تا بازی‌کردن یه تجربه کاملاً متمایز باشه.
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul>
+        <li>
+          <a href="#home" class="mm-link"
+            ><span class="lang-fa">خانه</span
+            ><span class="lang-en">Home</span></a
+          >
+        </li>
+        <li>
+          <a href="#games" class="mm-link"
+            ><span class="lang-fa">بازی‌ها</span
+            ><span class="lang-en">Games</span></a
+          >
+        </li>
+        <li>
+          <a href="#xonyagar" class="mm-link"
+            ><span class="lang-fa">خنیاگر</span
+            ><span class="lang-en">Xonyagar</span></a
+          >
+        </li>
+        <li>
+          <a href="#about" class="mm-link"
+            ><span class="lang-fa">درباره ما</span
+            ><span class="lang-en">About</span></a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="mm-link"
+            ><span class="lang-fa">تماس</span
+            ><span class="lang-en">Contact</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__content">
+        <div class="hero__logo-wrap reveal-hero">
+          <img
+            src="images/sarbala-raw.svg"
+            alt="Sarbala Studio"
+            class="hero__logo-img"
+          />
+        </div>
+        <h1 class="hero__title reveal-hero" style="--d: 0.15s">
+          <span class="lang-fa">کارگاه بازی‌سازی سربالا</span>
+          <span class="lang-en">Sarbala Game Studio</span>
+        </h1>
+        <p
+          class="hero__tagline reveal-hero lang-fa"
+          dir="rtl"
+          style="--d: 0.3s"
+        >
+          ساده شروع می‌شه — تموم نمی‌شه
+        </p>
+        <p class="hero__tagline reveal-hero lang-en" style="--d: 0.3s">
+          Simple to start. Impossible to stop.
+        </p>
+        <a class="hero__cta reveal-hero" href="#games" style="--d: 0.45s">
+          <span class="lang-fa">بازی‌های ما</span>
+          <span class="lang-en">Explore Games</span>
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="hero__scroll">
+        <span class="lang-fa">اسکرول کن</span>
+        <span class="lang-en">Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Games -->
+    <section class="section games" id="games">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label lang-fa">بازی‌ها</p>
+          <p class="section-label lang-en">Games</p>
+          <h2 class="section-title lang-fa">بازی‌های سربالا</h2>
+          <h2 class="section-title lang-en">Our Games</h2>
+          <p class="section-sub lang-fa" dir="rtl">
+            روی هر کارت کلیک کنید تا بیشتر بدانید
           </p>
-          <p class="xonyagar__desc lang-en">
-            Sarbala's soundtracks aren't random. Xonyagar composes unique atmospheres for each game — turning gameplay into a complete sensory experience.
-          </p>
-          <a class="btn-outline" href="songs/Xonyagar.html" target="_blank" rel="noopener">
-            <span class="lang-fa">شنیدن آثار</span>
-            <span class="lang-en">Listen Now</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <p class="section-sub lang-en">Click any card to learn more</p>
+        </div>
+        <div class="games__grid">
+          <article
+            class="game-card reveal"
+            style="--d: 0.05s"
+            onclick="window.open('TaSoraya.html','_blank')"
+            tabindex="0"
+            role="link"
+            aria-label="TaSoraya game"
+          >
+            <div class="game-card__art">
+              <img src="images/soraya%20logo.svg" alt="TaSoraya logo" />
+            </div>
+            <div class="game-card__body">
+              <div class="game-card__meta">
+                <span class="game-card__badge">45K</span>
+              </div>
+              <h3 class="game-card__name lang-fa">تا ثریا</h3>
+              <h3 class="game-card__name lang-en">Ta Soraya</h3>
+              <p class="game-card__desc lang-fa" dir="rtl">
+                آخرین اثر سربالا — سفری رو به بالا
+              </p>
+              <p class="game-card__desc lang-en">
+                The latest Sarbala artwork. A journey upward.
+              </p>
+              <div class="game-card__cta">
+                <span class="lang-fa">بلندتر</span>
+                <span class="lang-en">Learn more</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="game-card reveal"
+            style="--d: 0.15s"
+            onclick="window.open('Panshta.html','_blank')"
+            tabindex="0"
+            role="link"
+            aria-label="Panshta game"
+          >
+            <div class="game-card__art">
+              <img src="images/panshta-logo.png" alt="Panshta logo" />
+            </div>
+            <div class="game-card__body">
+              <div class="game-card__meta">
+                <span class="game-card__badge">70K</span>
+              </div>
+              <h3 class="game-card__name lang-fa">پنشتا</h3>
+              <h3 class="game-card__name lang-en">Panshta</h3>
+              <p class="game-card__desc lang-fa" dir="rtl">
+                شاهد زنده‌ای از قدرت بازی‌سازی متن‌باز
+              </p>
+              <p class="game-card__desc lang-en">
+                Open-source community power in game making.
+              </p>
+              <div class="game-card__cta">
+                <span class="lang-fa">بیشتر</span>
+                <span class="lang-en">Learn more</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="game-card reveal"
+            style="--d: 0.25s"
+            onclick="window.open('DooDol.html','_blank')"
+            tabindex="0"
+            role="link"
+            aria-label="DooDol game"
+          >
+            <div class="game-card__art">
+              <img src="images/doodol-logo.png" alt="DooDol logo" />
+            </div>
+            <div class="game-card__body">
+              <div class="game-card__meta">
+                <span class="game-card__badge">71K</span>
+              </div>
+              <h3 class="game-card__name lang-fa">دودُل؟</h3>
+              <h3 class="game-card__name lang-en">DooDol?</h3>
+              <p class="game-card__desc lang-fa" dir="rtl">
+                مونوکرم چشم‌نواز با موزیک متن فوق‌العاده
+              </p>
+              <p class="game-card__desc lang-en">
+                Captivating monochrome with brilliant sound design.
+              </p>
+              <div class="game-card__cta">
+                <span class="lang-fa">😉بالاتر</span>
+                <span class="lang-en">Learn more</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="game-card reveal"
+            style="--d: 0.35s"
+            onclick="window.open('fazaei.html','_blank')"
+            tabindex="0"
+            role="link"
+            aria-label="Fazaei game"
+          >
+            <div class="game-card__art">
+              <img src="images/fazaei-logo.png" alt="Fazaei logo" />
+            </div>
+            <div class="game-card__body">
+              <div class="game-card__meta">
+                <span class="game-card__badge">30K</span>
+              </div>
+              <h3 class="game-card__name lang-fa">هوش فضایی</h3>
+              <h3 class="game-card__name lang-en">Fazaei</h3>
+              <p class="game-card__desc lang-fa" dir="rtl">
+                بازی ایرانی با ایده‌ای خلاقانه و منحصربه‌فرد
+              </p>
+              <p class="game-card__desc lang-en">
+                An Iranian game with a uniquely creative idea.
+              </p>
+              <div class="game-card__cta">
+                <span class="lang-fa">بیشتر</span>
+                <span class="lang-en">Learn more</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Xonyagar -->
+    <section class="section xonyagar" id="xonyagar">
+      <div class="xonyagar__bg"></div>
+      <div class="container">
+        <div class="xonyagar__inner">
+          <div class="xonyagar__visual reveal">
+            <div class="xonyagar__ring xonyagar__ring--3"></div>
+            <div class="xonyagar__ring xonyagar__ring--2"></div>
+            <div class="xonyagar__ring xonyagar__ring--1"></div>
+            <img
+              src="images/Xonyagar_black.svg"
+              alt="Xonyagar"
+              class="xonyagar__logo"
+            />
+          </div>
+          <div class="xonyagar__text reveal" style="--d: 0.15s">
+            <p class="section-label lang-fa">موزیک</p>
+            <p class="section-label lang-en">Music</p>
+            <h2 class="section-title lang-fa">خُنیاگر</h2>
+            <h2 class="section-title lang-en">Xonyagar</h2>
+            <p class="xonyagar__desc lang-fa" dir="rtl">
+              موزیک متن بازی‌های سربالا تصادفی نیست. خنیاگر برای هر بازی فضاسازی
+              می‌کنه تا بازی‌کردن یه تجربه کاملاً متمایز باشه.
+            </p>
+            <p class="xonyagar__desc lang-en">
+              Sarbala's soundtracks aren't random. Xonyagar composes unique
+              atmospheres for each game — turning gameplay into a complete
+              sensory experience.
+            </p>
+            <a
+              class="btn-outline"
+              href="songs/Xonyagar.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="lang-fa">شنیدن آثار</span>
+              <span class="lang-en">Listen Now</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              >
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section stats">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat-card reveal" style="--d: 0.05s">
+            <span class="stat-card__number" data-count="250">0K</span>
+            <span class="stat-card__label lang-fa">دانلود کل</span>
+            <span class="stat-card__label lang-en">Total Downloads</span>
+          </div>
+          <div class="stat-card reveal" style="--d: 0.15s">
+            <span class="stat-card__number">4</span>
+            <span class="stat-card__label lang-fa">بازی منتشرشده</span>
+            <span class="stat-card__label lang-en">Games Released</span>
+          </div>
+          <div class="stat-card reveal" style="--d: 0.25s">
+            <span class="stat-card__number">2</span>
+            <span class="stat-card__label lang-fa">نفر تیم</span>
+            <span class="stat-card__label lang-en">Team Members</span>
+          </div>
+          <div class="stat-card reveal" style="--d: 0.35s">
+            <span class="stat-card__number">2021</span>
+            <span class="stat-card__label lang-fa">سال تاسیس</span>
+            <span class="stat-card__label lang-en">Founded</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label lang-fa">درباره ما</p>
+          <p class="section-label lang-en">About Us</p>
+          <h2 class="section-title lang-fa">پشت سربالا</h2>
+          <h2 class="section-title lang-en">Behind Sarbala</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about-card reveal" style="--d: 0.05s">
+            <div class="about-card__icon">🎬</div>
+            <h4 class="about-card__q lang-fa">سبک بازی‌ها؟</h4>
+            <h4 class="about-card__q lang-en">Game Style?</h4>
+            <p class="about-card__a lang-fa" dir="rtl">
+              مفهومی. سربالا شیفته سادگی پیچیدگی‌هاست — بازی‌هایی که آسون شروع
+              می‌شن ولی ولت نمی‌کنن.
+            </p>
+            <p class="about-card__a lang-en">
+              Conceptual. Sarbala loves the complexity of simple things — games
+              that are easy to start but impossible to stop.
+            </p>
+          </div>
+
+          <div class="about-card reveal" style="--d: 0.15s">
+            <div class="about-card__icon">👥</div>
+            <h4 class="about-card__q lang-fa">تیم سربالا؟</h4>
+            <h4 class="about-card__q lang-en">The Team?</h4>
+            <p class="about-card__a lang-fa" dir="rtl">
+              فقط دو نفر — من و همسرم. کد به عهده منه و دیزاین و هنر به عهده
+              اون.
+            </p>
+            <p class="about-card__a lang-en">
+              Just two people — me and my wife. I handle the code; she handles
+              the art and design.
+            </p>
+          </div>
+
+          <div class="about-card reveal" style="--d: 0.25s">
+            <div class="about-card__icon">🤖</div>
+            <h4 class="about-card__q lang-fa">موتور بازی؟</h4>
+            <h4 class="about-card__q lang-en">Game Engine?</h4>
+            <p class="about-card__a lang-fa" dir="rtl">
+              گودو — موتور بازی‌سازی متن‌باز. بهترین انتخاب برای بازی‌های مستقل.
+            </p>
+            <p class="about-card__a lang-en">
+              Godot — the open-source game engine. The best choice for indie
+              studios.
+            </p>
+          </div>
+
+          <div class="about-card reveal" style="--d: 0.05s">
+            <div class="about-card__icon">🙋‍♂️</div>
+            <h4 class="about-card__q lang-fa">چرا سربالا؟</h4>
+            <h4 class="about-card__q lang-en">Why Sarbala?</h4>
+            <p class="about-card__a lang-fa" dir="rtl">
+              سربالا یعنی سربالایی — مسیری که سخته ولی هرچی بالاتر بری بیشتر
+              عاشقش می‌شی.
+            </p>
+            <p class="about-card__a lang-en">
+              Sarbala means "uphill" — a path that's hard, but the higher you
+              climb, the more you love it.
+            </p>
+          </div>
+
+          <div class="about-card reveal" style="--d: 0.15s">
+            <div class="about-card__icon">🥼</div>
+            <h4 class="about-card__q lang-fa">پس چه کاره‌اید؟</h4>
+            <h4 class="about-card__q lang-en">Not programmers?</h4>
+            <p class="about-card__a lang-fa" dir="rtl">
+              هردومون پزشکیم! بازی‌سازی برامون یه هابی اعتیادآوره — مخصوصاً بعد
+              از کشیک.
+            </p>
+            <p class="about-card__a lang-en">
+              We're both medical doctors! Game dev is our very addictive hobby —
+              especially post-shift.
+            </p>
+          </div>
+
+          <div class="about-card reveal" style="--d: 0.25s">
+            <div class="about-card__icon">⚙️</div>
+            <h4 class="about-card__q lang-fa">متن‌باز؟</h4>
+            <h4 class="about-card__q lang-en">Open Source?</h4>
+            <p class="about-card__a lang-fa" dir="rtl">
+              آره، همه چیز! گودو، بلندر، گیمپ، نجینکس — ابزارهای متن‌باز،
+              میلیون‌ها نفر پشتشون.
+            </p>
+            <p class="about-card__a lang-en">
+              All of it! Godot, Blender, GIMP, Nginx — open-source tools,
+              millions of contributors behind them.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="section tech" id="tech">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label lang-fa">فناوری‌ها</p>
+          <p class="section-label lang-en">Technologies</p>
+          <h2 class="section-title lang-fa">ابزارهای ما</h2>
+          <h2 class="section-title lang-en">Our Stack</h2>
+        </div>
+      </div>
+      <div class="tech__track-wrap">
+        <div class="tech__track">
+          <div class="tech__item">
+            <img
+              src="https://godotengine.org/assets/press/icon_color.svg"
+              alt="Godot Engine"
+              loading="lazy"
+            /><span>Godot</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://download.blender.org/branding/community/blender_community_badge_white.png"
+              alt="Blender"
+              loading="lazy"
+            /><span>Blender</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gnome.svg"
+              alt="GIMP"
+              loading="lazy"
+            /><span>GIMP</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg"
+              alt="Nginx"
+              loading="lazy"
+            /><span>Nginx</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+              alt="HTML5"
+              loading="lazy"
+            /><span>HTML5</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+              alt="CSS3"
+              loading="lazy"
+            /><span>CSS3</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+              alt="JavaScript"
+              loading="lazy"
+            /><span>JavaScript</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/285px-Logo-ubuntu_cof-orange-hex.svg.png"
+              alt="Ubuntu"
+              loading="lazy"
+            /><span>Ubuntu</span>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="tech__item">
+            <img
+              src="https://godotengine.org/assets/press/icon_color.svg"
+              alt="Godot Engine"
+              loading="lazy"
+            /><span>Godot</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://download.blender.org/branding/community/blender_community_badge_white.png"
+              alt="Blender"
+              loading="lazy"
+            /><span>Blender</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gnome.svg"
+              alt="GIMP"
+              loading="lazy"
+            /><span>GIMP</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg"
+              alt="Nginx"
+              loading="lazy"
+            /><span>Nginx</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+              alt="HTML5"
+              loading="lazy"
+            /><span>HTML5</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+              alt="CSS3"
+              loading="lazy"
+            /><span>CSS3</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+              alt="JavaScript"
+              loading="lazy"
+            /><span>JavaScript</span>
+          </div>
+          <div class="tech__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/285px-Logo-ubuntu_cof-orange-hex.svg.png"
+              alt="Ubuntu"
+              loading="lazy"
+            /><span>Ubuntu</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label lang-fa">ارتباط</p>
+          <p class="section-label lang-en">Contact</p>
+          <h2 class="section-title lang-fa">با ما در تماس باش</h2>
+          <h2 class="section-title lang-en">Get In Touch</h2>
+          <p class="section-sub lang-fa" dir="rtl">دوست داریم ازت بشنویم</p>
+          <p class="section-sub lang-en">We'd love to hear from you</p>
+        </div>
+        <div class="contact__links">
+          <a
+            class="contact-btn reveal"
+            style="--d: 0.05s"
+            href="mailto:info@sarbala.studio"
+            aria-label="Email us"
+          >
+            <div class="contact-btn__icon">
+              <img src="images/mail.svg" alt="Email" />
+            </div>
+            <div class="contact-btn__label">
+              <span class="lang-fa">ایمیل</span>
+              <span class="lang-en">Email</span>
+              <small>info@sarbala.studio</small>
+            </div>
+          </a>
+          <a
+            class="contact-btn reveal"
+            style="--d: 0.15s"
+            href="https://instagram.com/sarbala.studio"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <div class="contact-btn__icon contact-btn__icon--insta">
+              <img src="images/insta.svg" alt="Instagram" />
+            </div>
+            <div class="contact-btn__label">
+              <span class="lang-fa">اینستاگرام</span>
+              <span class="lang-en">Instagram</span>
+              <small>@sarbala.studio</small>
+            </div>
+          </a>
+          <a
+            class="contact-btn reveal"
+            style="--d: 0.25s"
+            href="https://t.me/sarbala_studio"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram"
+          >
+            <div class="contact-btn__icon contact-btn__icon--tg">
+              <img src="images/telegram.svg" alt="Telegram" />
+            </div>
+            <div class="contact-btn__label">
+              <span class="lang-fa">تلگرام</span>
+              <span class="lang-en">Telegram</span>
+              <small>@sarbala_studio</small>
+            </div>
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Stats -->
-  <section class="section stats">
-    <div class="container">
-      <div class="stats__grid">
-        <div class="stat-card reveal" style="--d:.05s">
-          <span class="stat-card__number" data-count="180">0K</span>
-          <span class="stat-card__label lang-fa">دانلود کل</span>
-          <span class="stat-card__label lang-en">Total Downloads</span>
-        </div>
-        <div class="stat-card reveal" style="--d:.15s">
-          <span class="stat-card__number">4</span>
-          <span class="stat-card__label lang-fa">بازی منتشرشده</span>
-          <span class="stat-card__label lang-en">Games Released</span>
-        </div>
-        <div class="stat-card reveal" style="--d:.25s">
-          <span class="stat-card__number">2</span>
-          <span class="stat-card__label lang-fa">نفر تیم</span>
-          <span class="stat-card__label lang-en">Team Members</span>
-        </div>
-        <div class="stat-card reveal" style="--d:.35s">
-          <span class="stat-card__number">2021</span>
-          <span class="stat-card__label lang-fa">سال تاسیس</span>
-          <span class="stat-card__label lang-en">Founded</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-label lang-fa">درباره ما</p>
-        <p class="section-label lang-en">About Us</p>
-        <h2 class="section-title lang-fa">پشت سربالا</h2>
-        <h2 class="section-title lang-en">Behind Sarbala</h2>
-      </div>
-      <div class="about__grid">
-
-        <div class="about-card reveal" style="--d:.05s">
-          <div class="about-card__icon">🎬</div>
-          <h4 class="about-card__q lang-fa">سبک بازی‌ها؟</h4>
-          <h4 class="about-card__q lang-en">Game Style?</h4>
-          <p class="about-card__a lang-fa" dir="rtl">مفهومی. سربالا شیفته سادگی پیچیدگی‌هاست — بازی‌هایی که آسون شروع می‌شن ولی ولت نمی‌کنن.</p>
-          <p class="about-card__a lang-en">Conceptual. Sarbala loves the complexity of simple things — games that are easy to start but impossible to stop.</p>
-        </div>
-
-        <div class="about-card reveal" style="--d:.15s">
-          <div class="about-card__icon">👥</div>
-          <h4 class="about-card__q lang-fa">تیم سربالا؟</h4>
-          <h4 class="about-card__q lang-en">The Team?</h4>
-          <p class="about-card__a lang-fa" dir="rtl">فقط دو نفر — من و همسرم. کد به عهده منه و دیزاین و هنر به عهده اون.</p>
-          <p class="about-card__a lang-en">Just two people — me and my wife. I handle the code; she handles the art and design.</p>
-        </div>
-
-        <div class="about-card reveal" style="--d:.25s">
-          <div class="about-card__icon">🤖</div>
-          <h4 class="about-card__q lang-fa">موتور بازی؟</h4>
-          <h4 class="about-card__q lang-en">Game Engine?</h4>
-          <p class="about-card__a lang-fa" dir="rtl">گودو — موتور بازی‌سازی متن‌باز. بهترین انتخاب برای بازی‌های مستقل.</p>
-          <p class="about-card__a lang-en">Godot — the open-source game engine. The best choice for indie studios.</p>
-        </div>
-
-        <div class="about-card reveal" style="--d:.05s">
-          <div class="about-card__icon">🙋‍♂️</div>
-          <h4 class="about-card__q lang-fa">چرا سربالا؟</h4>
-          <h4 class="about-card__q lang-en">Why Sarbala?</h4>
-          <p class="about-card__a lang-fa" dir="rtl">سربالا یعنی سربالایی — مسیری که سخته ولی هرچی بالاتر بری بیشتر عاشقش می‌شی.</p>
-          <p class="about-card__a lang-en">Sarbala means "uphill" — a path that's hard, but the higher you climb, the more you love it.</p>
-        </div>
-
-        <div class="about-card reveal" style="--d:.15s">
-          <div class="about-card__icon">🥼</div>
-          <h4 class="about-card__q lang-fa">پس چه کاره‌اید؟</h4>
-          <h4 class="about-card__q lang-en">Not programmers?</h4>
-          <p class="about-card__a lang-fa" dir="rtl">هردومون پزشکیم! بازی‌سازی برامون یه هابی اعتیادآوره — مخصوصاً بعد از کشیک.</p>
-          <p class="about-card__a lang-en">We're both medical doctors! Game dev is our very addictive hobby — especially post-shift.</p>
-        </div>
-
-        <div class="about-card reveal" style="--d:.25s">
-          <div class="about-card__icon">⚙️</div>
-          <h4 class="about-card__q lang-fa">متن‌باز؟</h4>
-          <h4 class="about-card__q lang-en">Open Source?</h4>
-          <p class="about-card__a lang-fa" dir="rtl">آره، همه چیز! گودو، بلندر، گیمپ، نجینکس — ابزارهای متن‌باز، میلیون‌ها نفر پشتشون.</p>
-          <p class="about-card__a lang-en">All of it! Godot, Blender, GIMP, Nginx — open-source tools, millions of contributors behind them.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Technologies -->
-  <section class="section tech" id="tech">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-label lang-fa">فناوری‌ها</p>
-        <p class="section-label lang-en">Technologies</p>
-        <h2 class="section-title lang-fa">ابزارهای ما</h2>
-        <h2 class="section-title lang-en">Our Stack</h2>
-      </div>
-    </div>
-    <div class="tech__track-wrap">
-      <div class="tech__track">
-        <div class="tech__item"><img src="https://godotengine.org/assets/press/icon_color.svg" alt="Godot Engine" loading="lazy"/><span>Godot</span></div>
-        <div class="tech__item"><img src="https://download.blender.org/branding/community/blender_community_badge_white.png" alt="Blender" loading="lazy"/><span>Blender</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gnome.svg" alt="GIMP" loading="lazy"/><span>GIMP</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg" alt="Nginx" loading="lazy"/><span>Nginx</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" loading="lazy"/><span>HTML5</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy"/><span>CSS3</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript" loading="lazy"/><span>JavaScript</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/285px-Logo-ubuntu_cof-orange-hex.svg.png" alt="Ubuntu" loading="lazy"/><span>Ubuntu</span></div>
-        <!-- Duplicate for seamless loop -->
-        <div class="tech__item"><img src="https://godotengine.org/assets/press/icon_color.svg" alt="Godot Engine" loading="lazy"/><span>Godot</span></div>
-        <div class="tech__item"><img src="https://download.blender.org/branding/community/blender_community_badge_white.png" alt="Blender" loading="lazy"/><span>Blender</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gnome.svg" alt="GIMP" loading="lazy"/><span>GIMP</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg" alt="Nginx" loading="lazy"/><span>Nginx</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" loading="lazy"/><span>HTML5</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3" loading="lazy"/><span>CSS3</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript" loading="lazy"/><span>JavaScript</span></div>
-        <div class="tech__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/285px-Logo-ubuntu_cof-orange-hex.svg.png" alt="Ubuntu" loading="lazy"/><span>Ubuntu</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-label lang-fa">ارتباط</p>
-        <p class="section-label lang-en">Contact</p>
-        <h2 class="section-title lang-fa">با ما در تماس باش</h2>
-        <h2 class="section-title lang-en">Get In Touch</h2>
-        <p class="section-sub lang-fa" dir="rtl">دوست داریم ازت بشنویم</p>
-        <p class="section-sub lang-en">We'd love to hear from you</p>
-      </div>
-      <div class="contact__links">
-        <a class="contact-btn reveal" style="--d:.05s" href="mailto:info@sarbala.studio" aria-label="Email us">
-          <div class="contact-btn__icon">
-            <img src="images/mail.svg" alt="Email"/>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <img
+              src="images/sarbala-raw.svg"
+              alt="Sarbala"
+              width="28"
+              height="34"
+            />
+            <span class="lang-fa">سربالا استودیو</span>
+            <span class="lang-en">Sarbala Studio</span>
           </div>
-          <div class="contact-btn__label">
-            <span class="lang-fa">ایمیل</span>
-            <span class="lang-en">Email</span>
-            <small>info@sarbala.studio</small>
-          </div>
-        </a>
-        <a class="contact-btn reveal" style="--d:.15s" href="https://instagram.com/sarbala.studio" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <div class="contact-btn__icon contact-btn__icon--insta">
-            <img src="images/insta.svg" alt="Instagram"/>
-          </div>
-          <div class="contact-btn__label">
-            <span class="lang-fa">اینستاگرام</span>
-            <span class="lang-en">Instagram</span>
-            <small>@sarbala.studio</small>
-          </div>
-        </a>
-        <a class="contact-btn reveal" style="--d:.25s" href="https://t.me/sarbala_studio" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-          <div class="contact-btn__icon contact-btn__icon--tg">
-            <img src="images/telegram.svg" alt="Telegram"/>
-          </div>
-          <div class="contact-btn__label">
-            <span class="lang-fa">تلگرام</span>
-            <span class="lang-en">Telegram</span>
-            <small>@sarbala_studio</small>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <img src="images/sarbala-raw.svg" alt="Sarbala" width="28" height="34"/>
-          <span class="lang-fa">سربالا استودیو</span>
-          <span class="lang-en">Sarbala Studio</span>
+          <nav class="footer__links" aria-label="Footer navigation">
+            <a href="#games"
+              ><span class="lang-fa">بازی‌ها</span
+              ><span class="lang-en">Games</span></a
+            >
+            <a href="#xonyagar"
+              ><span class="lang-fa">خنیاگر</span
+              ><span class="lang-en">Xonyagar</span></a
+            >
+            <a href="#about"
+              ><span class="lang-fa">درباره ما</span
+              ><span class="lang-en">About</span></a
+            >
+            <a href="#contact"
+              ><span class="lang-fa">تماس</span
+              ><span class="lang-en">Contact</span></a
+            >
+          </nav>
+          <p class="footer__copy lang-fa" dir="rtl">
+            © از ۱۴۰۰ — تمامی حقوق محفوظ است
+          </p>
+          <p class="footer__copy lang-en">
+            © Since 2021 — All Rights Reserved
+          </p>
         </div>
-        <nav class="footer__links" aria-label="Footer navigation">
-          <a href="#games"><span class="lang-fa">بازی‌ها</span><span class="lang-en">Games</span></a>
-          <a href="#xonyagar"><span class="lang-fa">خنیاگر</span><span class="lang-en">Xonyagar</span></a>
-          <a href="#about"><span class="lang-fa">درباره ما</span><span class="lang-en">About</span></a>
-          <a href="#contact"><span class="lang-fa">تماس</span><span class="lang-en">Contact</span></a>
-        </nav>
-        <p class="footer__copy lang-fa" dir="rtl">© از ۱۴۰۰ — تمامی حقوق محفوظ است</p>
-        <p class="footer__copy lang-en">© Since 2021 — All Rights Reserved</p>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <button class="scroll-top" id="scrollTop" aria-label="Back to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
-  </button>
+    <button class="scroll-top" id="scrollTop" aria-label="Back to top">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
 
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

@@ -1017,14 +1017,6 @@ button {
   object-fit: contain;
 }
 
-.contact-btn__icon--insta {
-  background: linear-gradient(135deg, #405de6, #833ab4, #e1306c, #fd1d1d);
-}
-
-.contact-btn__icon--tg {
-  background: #2aabee;
-}
-
 .contact-btn__label {
   display: flex;
   flex-direction: column;

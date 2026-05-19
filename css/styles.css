@@ -193,6 +193,18 @@ button {
   gap: 0.75rem;
 }
 
+@property --lang-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes lang-glow-orbit {
+  0%   { --lang-angle: 0deg;   opacity: 1; }
+  85%  { opacity: 1; }
+  100% { --lang-angle: 360deg; opacity: 0; }
+}
+
 .lang-btn {
   padding: 0.35rem 0.9rem;
   border-radius: 8px;
@@ -202,6 +214,34 @@ button {
   border: 1.5px solid var(--border-light);
   color: var(--muted);
   transition: color var(--trans), border-color var(--trans), background var(--trans);
+  position: relative;
+}
+
+.lang-btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 10px;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--lang-angle),
+    transparent 0deg,
+    transparent 295deg,
+    rgba(230, 57, 70, 0.08) 310deg,
+    rgba(230, 57, 70, 0.30) 328deg,
+    rgba(230, 57, 70, 0.70) 344deg,
+    #ff8a92 354deg,
+    #ffffff 358deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: lang-glow-orbit 3s linear 0.4s 1 forwards;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .lang-btn:hover {

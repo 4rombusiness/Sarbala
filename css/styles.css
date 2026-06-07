@@ -16,7 +16,7 @@
   --r: 14px;
   --r-lg: 22px;
   --trans: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --font: 'Lato', sans-serif;
+  --font: 'Chiron GoRound TC', sans-serif;
   --font-fa: 'Vazirmatn', sans-serif;
   --max-w: 1140px;
 }
@@ -201,8 +201,8 @@ button {
 
 @keyframes lang-glow-orbit {
   0%   { --lang-angle: 0deg;   opacity: 1; }
-  85%  { opacity: 1; }
-  100% { --lang-angle: 360deg; opacity: 0; }
+  90%  { opacity: 1; }
+  100% { --lang-angle: 2000deg; opacity: 0; }
 }
 
 .lang-btn {
@@ -239,7 +239,7 @@ button {
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
-  animation: lang-glow-orbit 3s linear 0.4s 1 forwards;
+  animation: lang-glow-orbit 5s 1.0s 1 forwards;
   opacity: 0;
   pointer-events: none;
 }

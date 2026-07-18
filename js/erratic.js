@@ -16,6 +16,8 @@
     '.stat-card__label',
     '.hero__cta',
     '.contact__heading',
+    '.contact__links',
+    '.footer__copy',
   ];
 
   function seededRand(seed) {

@@ -1,162 +1,180 @@
 /* ============================================================
-   ERRATIC TEST LAYER — safe to remove, does not touch styles.css
-   Toggle by adding/removing the <link> for this file in index.html
+   ERRATIC TEST LAYER — remove the <link> in index.html to revert
    ============================================================ */
 
 /* ── Nav ───────────────────────────────────────────────────── */
 .nav__brand {
-  transform: rotate(-1deg) translateY(1px);
+  transform: rotate(-2deg) translateY(2px) translateX(-3px);
   display: inline-flex;
 }
-
-.nav__links li:nth-child(odd) a {
-  transform: translateY(-2px);
-  display: inline-block;
-}
-.nav__links li:nth-child(even) a {
-  transform: translateY(2px) rotate(0.4deg);
-  display: inline-block;
-}
-
+.nav__links li:nth-child(1) a { transform: translateY(-4px) rotate(-0.8deg); display: inline-block; }
+.nav__links li:nth-child(2) a { transform: translateY(3px)  rotate(1.2deg)  translateX(3px); display: inline-block; }
+.nav__links li:nth-child(3) a { transform: translateY(-3px) rotate(-1.5deg) translateX(-2px); display: inline-block; }
+.nav__links li:nth-child(4) a { transform: translateY(5px)  rotate(0.9deg)  translateX(4px); display: inline-block; }
+.nav__links li:nth-child(5) a { transform: translateY(-2px) rotate(-1.1deg) translateX(-3px); display: inline-block; }
 .lang-btn {
-  transform: rotate(1.2deg) translateX(2px);
+  transform: rotate(2deg) translateX(4px) translateY(-2px);
 }
 
 /* ── Hero ──────────────────────────────────────────────────── */
 .hero__logo-wrap {
-  transform: rotate(-1.5deg) translateX(-4px);
+  transform: rotate(-2.5deg) translateX(-10px) translateY(3px);
+  margin-left: -16px;
 }
-
 .hero__title {
-  transform: rotate(0.8deg) translateX(5px);
+  transform: rotate(1.6deg) translateX(12px) skewX(-1deg);
+  text-align: left;
+  margin-left: 8px;
 }
-
 .hero__tagline {
-  transform: rotate(-0.6deg) translateX(-3px);
+  transform: rotate(-1.2deg) translateX(-8px);
+  text-align: right;
+  margin-right: 14px;
 }
-
 .hero__cta {
-  transform: rotate(1deg) translateX(4px) translateY(2px);
+  transform: rotate(1.8deg) translateX(10px) translateY(4px);
   display: inline-flex;
+  margin-left: 18px;
 }
-
 .hero__scroll {
-  transform: translateX(6px) rotate(0.5deg);
+  transform: translateX(12px) rotate(1.2deg);
 }
 
-/* ── Section headers ───────────────────────────────────────── */
+/* ── Centered section headers — shoved off-axis ───────────── */
+.section-header {
+  text-align: left;
+  padding-left: 8px;
+}
 .section-label {
-  transform: rotate(-0.7deg) translateX(3px);
+  transform: rotate(-1.4deg) translateX(6px);
   display: inline-block;
+  margin-left: 5px;
 }
-
 .section-title {
-  transform: rotate(0.5deg) translateX(-4px);
+  transform: rotate(1deg) translateX(-8px) skewX(0.8deg);
+  display: block;
+  text-align: left;
+  margin-left: -6px;
+}
+.section-sub {
+  transform: translateX(10px) rotate(-0.9deg);
+  display: block;
+  text-align: right;
+  margin-right: 8px;
+}
+
+/* ── Paragraph text — each line deviates ─────────────────────*/
+.about-card__a,
+.xonyagar__desc,
+.game-card__desc {
   display: block;
 }
 
-.section-sub {
-  transform: translateX(5px) rotate(-0.4deg);
-  display: block;
+.about-card:nth-child(1) .about-card__a {
+  transform: rotate(-0.9deg) translateX(-5px);
+  text-align: right;
+  margin-right: 6px;
+}
+.about-card:nth-child(2) .about-card__a {
+  transform: rotate(1.1deg) translateX(7px);
+  text-align: left;
+  margin-left: 4px;
+}
+.about-card:nth-child(3) .about-card__a {
+  transform: rotate(-1.4deg) translateX(-4px) translateY(2px);
+  text-align: right;
+  margin-right: 10px;
+}
+.about-card:nth-child(4) .about-card__a {
+  transform: rotate(0.8deg) translateX(6px);
+  text-align: left;
+  margin-left: 7px;
+}
+.xonyagar__desc {
+  transform: rotate(-0.8deg) translateX(-6px);
+  text-align: right;
+  margin-right: 8px;
+}
+.game-card__desc {
+  transform: rotate(0.7deg) translateX(4px);
+}
+
+/* ── Word-level spans (injected by erratic.js) ────────────── */
+.erratic-word {
+  display: inline-block;
+  will-change: transform;
 }
 
 /* ── Game cards ────────────────────────────────────────────── */
-.game-card:nth-child(1) {
-  transform: rotate(-1.2deg) translateY(-3px);
-}
-.game-card:nth-child(2) {
-  transform: rotate(0.9deg) translateX(4px) translateY(2px);
-}
-.game-card:nth-child(3) {
-  transform: rotate(-0.7deg) translateX(-3px) translateY(4px);
-}
-.game-card:nth-child(4) {
-  transform: rotate(1.4deg) translateY(-2px) translateX(3px);
-}
+.game-card:nth-child(1) { transform: rotate(-2deg)   translateY(-6px)  translateX(-4px); }
+.game-card:nth-child(2) { transform: rotate(1.8deg)  translateX(8px)   translateY(5px);  }
+.game-card:nth-child(3) { transform: rotate(-1.5deg) translateX(-6px)  translateY(8px);  }
+.game-card:nth-child(4) { transform: rotate(2.2deg)  translateY(-4px)  translateX(7px);  }
 
 .game-card__name {
-  transform: rotate(0.6deg) translateX(2px);
+  transform: rotate(1.2deg) translateX(4px) skewX(-0.8deg);
   display: block;
 }
 .game-card__badge {
-  transform: rotate(-2deg) translateY(-2px);
+  transform: rotate(-3deg) translateY(-3px) translateX(2px);
   display: inline-block;
+}
+.game-card__cta {
+  transform: rotate(-1deg) translateX(-4px);
+  display: flex;
 }
 
 /* ── Xonyagar ──────────────────────────────────────────────── */
 .xonyagar__visual {
-  transform: rotate(-1.3deg) translateX(-5px);
+  transform: rotate(-2.5deg) translateX(-10px) translateY(4px);
 }
 .xonyagar__text {
-  transform: rotate(0.7deg) translateX(4px) translateY(3px);
+  transform: rotate(1.4deg) translateX(8px) translateY(6px);
+}
+.xonyagar__text .section-title {
+  transform: rotate(-1.5deg) translateX(5px) skewX(1deg);
 }
 .btn-outline {
-  transform: rotate(-1deg) translateX(-3px);
+  transform: rotate(-1.8deg) translateX(-6px) translateY(3px);
   display: inline-flex;
 }
 
 /* ── Stats ─────────────────────────────────────────────────── */
-.stat-card:nth-child(1) {
-  transform: rotate(-1.1deg) translateY(-4px);
-}
-.stat-card:nth-child(2) {
-  transform: rotate(0.9deg) translateX(3px);
-}
-.stat-card:nth-child(3) {
-  transform: rotate(-0.6deg) translateY(3px) translateX(-2px);
-}
-.stat-card:nth-child(4) {
-  transform: rotate(1.3deg) translateY(-2px) translateX(4px);
-}
+.stat-card:nth-child(1) { transform: rotate(-2deg)   translateY(-6px)  translateX(-3px); }
+.stat-card:nth-child(2) { transform: rotate(1.7deg)  translateX(6px)   translateY(4px);  }
+.stat-card:nth-child(3) { transform: rotate(-1.3deg) translateY(6px)   translateX(-5px); }
+.stat-card:nth-child(4) { transform: rotate(2.4deg)  translateY(-3px)  translateX(7px);  }
 
 .stat-card__number {
-  transform: rotate(-0.8deg);
+  transform: rotate(-1.5deg) translateX(3px) skewX(1deg);
+  display: block;
+}
+.stat-card__label {
+  transform: rotate(0.8deg) translateX(-3px);
   display: block;
 }
 
 /* ── About cards ───────────────────────────────────────────── */
-.about-card:nth-child(1) {
-  transform: rotate(-1deg) translateX(-4px);
-}
-.about-card:nth-child(2) {
-  transform: rotate(0.8deg) translateY(3px) translateX(3px);
-}
-.about-card:nth-child(3) {
-  transform: rotate(-1.3deg) translateX(2px) translateY(-3px);
-}
-.about-card:nth-child(4) {
-  transform: rotate(0.6deg) translateX(-3px) translateY(4px);
-}
+.about-card:nth-child(1) { transform: rotate(-1.8deg) translateX(-8px);  }
+.about-card:nth-child(2) { transform: rotate(1.5deg)  translateY(6px)   translateX(6px);  }
+.about-card:nth-child(3) { transform: rotate(-2.1deg) translateX(5px)   translateY(-5px); }
+.about-card:nth-child(4) { transform: rotate(1.2deg)  translateX(-6px)  translateY(7px);  }
 
 .about-card__icon {
-  transform: rotate(-2.5deg) translateX(3px);
+  transform: rotate(-4deg) translateX(5px) translateY(-2px);
   display: inline-block;
 }
 .about-card__q {
-  transform: rotate(0.5deg) translateX(-2px);
+  transform: rotate(1deg) translateX(-4px) skewX(-0.6deg);
   display: block;
 }
 
-/* ── Tech strip items ──────────────────────────────────────── */
-.tech__item:nth-child(odd) {
-  transform: translateY(-3px) rotate(-0.8deg);
-}
-.tech__item:nth-child(even) {
-  transform: translateY(3px) rotate(0.8deg);
-}
+/* ── Tech strip ────────────────────────────────────────────── */
+.tech__item:nth-child(odd)  { transform: translateY(-5px) rotate(-1.4deg); }
+.tech__item:nth-child(even) { transform: translateY(5px)  rotate(1.4deg);  }
 
 /* ── Contact / footer ──────────────────────────────────────── */
-.contact__form {
-  transform: rotate(-0.5deg) translateX(-3px);
-}
-.contact__info {
-  transform: rotate(0.7deg) translateX(4px);
-}
-
-.footer__brand {
-  transform: rotate(-0.9deg) translateX(-2px);
-  display: inline-flex;
-}
-.footer__links {
-  transform: rotate(0.5deg) translateX(3px);
-}
+.contact__form  { transform: rotate(-1deg)  translateX(-6px); }
+.contact__info  { transform: rotate(1.4deg) translateX(8px) translateY(4px); }
+.footer__brand  { transform: rotate(-1.8deg) translateX(-4px); display: inline-flex; }
+.footer__links  { transform: rotate(0.9deg)  translateX(5px); }

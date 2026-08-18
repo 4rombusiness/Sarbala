@@ -89,21 +89,21 @@ body::after {
 }
 
 /* ── Xonyagar logo ─────────────────────────────────────────── */
-.xonyagar__logo {
+/* .xonyagar__logo {
   filter: brightness(1.4) drop-shadow(0 0  4px rgba(255,255,255,0.85))
                            drop-shadow(0 0 14px rgba(255,255,255,0.45))
                            drop-shadow(0 0 32px rgba(255,255,255,0.18));
-}
+} */
 
 /* ── Xonyagar rings — glowing halos ────────────────────────── */
-.xonyagar__ring {
+/* .xonyagar__ring {
   box-shadow:
     0 0  6px 1px rgba(230, 57, 70, 0.4),
     0 0 18px 4px rgba(230, 57, 70, 0.2),
     0 0 40px 8px rgba(230, 57, 70, 0.08),
     inset 0 0 10px rgba(230, 57, 70, 0.15);
   filter: brightness(1.2);
-}
+} */
 
 /* ── Nav top border — accent stripe glow ───────────────────── */
 .nav {

@@ -200,9 +200,19 @@ button {
 }
 
 @keyframes lang-glow-orbit {
-  0%   { --lang-angle: 0deg;   opacity: 1; }
-  90%  { opacity: 1; }
-  100% { --lang-angle: 2000deg; opacity: 0; }
+  0% {
+    --lang-angle: 0deg;
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    --lang-angle: 2000deg;
+    opacity: 0;
+  }
 }
 
 .lang-btn {
@@ -223,17 +233,15 @@ button {
   inset: -2px;
   border-radius: 10px;
   padding: 2px;
-  background: conic-gradient(
-    from var(--lang-angle),
-    transparent 0deg,
-    transparent 295deg,
-    rgba(230, 57, 70, 0.08) 310deg,
-    rgba(230, 57, 70, 0.30) 328deg,
-    rgba(230, 57, 70, 0.70) 344deg,
-    #ff8a92 354deg,
-    #ffffff 358deg,
-    transparent 360deg
-  );
+  background: conic-gradient(from var(--lang-angle),
+      transparent 0deg,
+      transparent 295deg,
+      rgba(230, 57, 70, 0.08) 310deg,
+      rgba(230, 57, 70, 0.30) 328deg,
+      rgba(230, 57, 70, 0.70) 344deg,
+      #ff8a92 354deg,
+      #ffffff 358deg,
+      transparent 360deg);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -880,6 +888,7 @@ button {
 }
 
 .stat-card {
+  border-radius: 10% 30% 50% 70%;
   background: var(--card);
   padding: 2rem 1.5rem;
   text-align: center;

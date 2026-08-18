@@ -14,7 +14,7 @@
   --border: rgba(230, 57, 70, 0.14);
   --border-light: rgba(255, 255, 255, 0.07);
   --r: 14px;
-  --r-lg: 22px;
+  --r-lg: 60px;
   --trans: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --font: 'Chiron GoRound TC', sans-serif;
   --font-fa: 'Vazirmatn', sans-serif;
@@ -651,10 +651,9 @@ button {
 }
 
 .game-card {
-  --card-radius: var(--r-lg);
   background: var(--card);
   border: 1px solid var(--border-light);
-  border-radius: var(--card-radius);
+  border-radius: var(--r-lg);
   overflow: hidden;
   cursor: pointer;
   display: flex;
@@ -864,12 +863,11 @@ button {
 }
 
 .btn-outline {
-  --card-radius: 50px;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.85rem 1.75rem;
-  border-radius: var(--card-radius);
+  border-radius: 50px;
   border: 1.5px solid var(--border-light);
   font-size: 0.95rem;
   font-weight: 700;
@@ -902,8 +900,7 @@ button {
 }
 
 .stat-card {
-  --card-radius: 10% 30% 50% 70%;
-  border-radius: var(--card-radius);
+  border-radius: 10% 30% 50% 70%;
   background: var(--card);
   padding: 2rem 1.5rem;
   text-align: center;
@@ -938,10 +935,9 @@ button {
 }
 
 .about-card {
-  --card-radius: var(--r-lg);
   background: var(--card);
   border: 1px solid var(--border-light);
-  border-radius: var(--card-radius);
+  border-radius: var(--r-lg);
   padding: 1.75rem;
   transition: border-color var(--trans), background var(--trans), transform var(--trans);
 }
@@ -999,14 +995,13 @@ button {
 }
 
 .tech__item {
-  --card-radius: var(--r);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
   background: var(--card);
   border: 1px solid var(--border-light);
-  border-radius: var(--card-radius);
+  border-radius: var(--r);
   padding: 1.25rem 1.5rem;
   min-width: 100px;
   text-align: center;
@@ -1044,13 +1039,12 @@ button {
 }
 
 .contact-btn {
-  --card-radius: var(--r-lg);
   display: flex;
   align-items: center;
   gap: 1rem;
   background: var(--card);
   border: 1px solid var(--border-light);
-  border-radius: var(--card-radius);
+  border-radius: var(--r-lg);
   padding: 1.25rem 1.75rem;
   min-width: 240px;
   flex: 1 1 240px;
@@ -1176,40 +1170,41 @@ button {
   border-color: var(--accent);
 }
 
-/* ── Varied card silhouettes ────────────────────────────────── */
-.games__grid > .game-card:nth-child(4n + 1),
-.about__grid > .about-card:nth-child(4n + 1),
-.stats__grid > .stat-card:nth-child(4n + 1),
-.tech__track > .tech__item:nth-child(4n + 1),
-.contact__links > .contact-btn:nth-child(4n + 1) {
-  --card-radius: 24px 10px 28px 14px;
-}
-
-.games__grid > .game-card:nth-child(4n + 2),
-.about__grid > .about-card:nth-child(4n + 2),
-.stats__grid > .stat-card:nth-child(4n + 2),
-.tech__track > .tech__item:nth-child(4n + 2),
-.contact__links > .contact-btn:nth-child(4n + 2) {
-  --card-radius: 10px 28px 14px 24px;
-}
-
-.games__grid > .game-card:nth-child(4n + 3),
-.about__grid > .about-card:nth-child(4n + 3),
-.stats__grid > .stat-card:nth-child(4n + 3),
-.tech__track > .tech__item:nth-child(4n + 3),
-.contact__links > .contact-btn:nth-child(4n + 3) {
-  --card-radius: 30px 16px 10px 26px;
-}
-
-.games__grid > .game-card:nth-child(4n + 4),
-.about__grid > .about-card:nth-child(4n + 4),
-.stats__grid > .stat-card:nth-child(4n + 4),
-.tech__track > .tech__item:nth-child(4n + 4),
-.contact__links > .contact-btn:nth-child(4n + 4) {
-  --card-radius: 14px 24px 30px 10px;
-}
-
 /* ── Fluorescent tube interaction ───────────────────────────── */
+@keyframes fluorescent-start {
+  0%,
+  12%,
+  28%,
+  46%,
+  64% {
+    border-color: rgba(230, 57, 70, 0.18);
+    box-shadow: none;
+  }
+
+  6%,
+  20%,
+  37%,
+  55%,
+  75% {
+    border-color: #ff8a92;
+    box-shadow:
+      0 0 0 1px rgba(230, 57, 70, 0.72),
+      0 0 5px 1px rgba(255, 115, 125, 0.95),
+      0 0 18px 4px rgba(230, 57, 70, 0.68),
+      0 0 42px 10px rgba(230, 57, 70, 0.32);
+  }
+
+  88%,
+  100% {
+    border-color: var(--accent);
+    box-shadow:
+      0 0 0 1px rgba(230, 57, 70, 0.72),
+      0 0 5px 1px rgba(255, 115, 125, 0.9),
+      0 0 16px 3px rgba(230, 57, 70, 0.62),
+      0 0 38px 8px rgba(230, 57, 70, 0.3);
+  }
+}
+
 .game-card:hover,
 .game-card:focus-visible,
 .game-card:active,
@@ -1235,11 +1230,7 @@ button {
 .scroll-top:active,
 .scroll-top.is-powered {
   border-color: var(--accent);
-  box-shadow:
-    0 0 0 1px rgba(230, 57, 70, 0.72),
-    0 0 5px 1px rgba(255, 115, 125, 0.9),
-    0 0 16px 3px rgba(230, 57, 70, 0.62),
-    0 0 38px 8px rgba(230, 57, 70, 0.3);
+  animation: fluorescent-start 1.7s linear both;
 }
 
 .game-card.game-card:hover,
@@ -1273,12 +1264,11 @@ button {
 .tech__item:active,
 .tech__item.is-powered {
   border-color: var(--accent);
-  box-shadow:
-    0 0 0 1px rgba(230, 57, 70, 0.62),
-    0 0 14px 3px rgba(230, 57, 70, 0.45);
+  animation: fluorescent-start 1.7s linear both;
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .game-card,
   .hero__cta,
   .btn-outline,

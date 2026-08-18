@@ -128,13 +128,31 @@ document.querySelectorAll('.game-card').forEach(function(card) {
 document.querySelectorAll(
   '.game-card, .hero__cta, .btn-outline, .contact-btn, .lang-btn, .scroll-top, .tech__item'
 ).forEach(function(clickable) {
-  clickable.addEventListener('pointerdown', function() {
+  clickable.addEventListener('click', function() {
     clickable.classList.add('is-powered');
-    window.setTimeout(function() {
-      clickable.classList.remove('is-powered');
-    }, 700);
   });
 });
+
+// ── Random card corner radii ─────────────────────────────────
+(function randomizeCardRadii() {
+  var cards = document.querySelectorAll(
+    '.game-card, .stat-card, .about-card, .tech__item, .contact-btn'
+  );
+  var maximums = [10, 30, 50, 70];
+
+  cards.forEach(function(card) {
+    // Read the authored radius first so this enhancement respects
+    // elements that intentionally do not have a rounded border.
+    var authoredRadius = window.getComputedStyle(card).borderRadius;
+    if (!authoredRadius) return;
+
+    var randomRadii = maximums.map(function(maximum) {
+      return (Math.random() * maximum).toFixed(1) + '%';
+    });
+
+    card.style.borderRadius = randomRadii.join(' ');
+  });
+})();
 
 // ── Stat counter animation ──────────────────────────────────
 function animateCounter(el, target, suffix) {

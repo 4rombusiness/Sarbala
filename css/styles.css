@@ -81,6 +81,20 @@ button {
   font-family: var(--font-fa);
 }
 
+[data-lang="fa"] body {
+  direction: rtl;
+}
+
+[data-lang="en"] body {
+  direction: ltr;
+}
+
+/* Keep every Persian text node in right-to-left reading order. */
+[data-lang="fa"] .lang-fa {
+  direction: rtl;
+  text-align: right;
+}
+
 /* ── Container ──────────────────────────────────────────────── */
 .container {
   width: min(var(--max-w), 92vw);
@@ -637,9 +651,10 @@ button {
 }
 
 .game-card {
+  --card-radius: var(--r-lg);
   background: var(--card);
   border: 1px solid var(--border-light);
-  border-radius: var(--r-lg);
+  border-radius: var(--card-radius);
   overflow: hidden;
   cursor: pointer;
   display: flex;
@@ -652,7 +667,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: var(--r-lg);
+  border-radius: inherit;
   background: linear-gradient(135deg, rgba(230, 57, 70, 0.06), transparent);
   opacity: 0;
   transition: opacity var(--trans);
@@ -662,7 +677,6 @@ button {
   transform: translateY(-6px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
   border-color: rgba(230, 57, 70, 0.45);
-  background: var(--card-hover);
 }
 
 .game-card:hover::after {
@@ -850,11 +864,12 @@ button {
 }
 
 .btn-outline {
+  --card-radius: 50px;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.85rem 1.75rem;
-  border-radius: 50px;
+  border-radius: var(--card-radius);
   border: 1.5px solid var(--border-light);
   font-size: 0.95rem;
   font-weight: 700;
@@ -864,8 +879,7 @@ button {
 
 .btn-outline:hover {
   border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-dim);
+  color: var(--text);
   box-shadow: 0 0 24px rgba(230, 57, 70, 0.15);
 }
 
@@ -888,7 +902,8 @@ button {
 }
 
 .stat-card {
-  border-radius: 10% 30% 50% 70%;
+  --card-radius: 10% 30% 50% 70%;
+  border-radius: var(--card-radius);
   background: var(--card);
   padding: 2rem 1.5rem;
   text-align: center;
@@ -923,16 +938,16 @@ button {
 }
 
 .about-card {
+  --card-radius: var(--r-lg);
   background: var(--card);
   border: 1px solid var(--border-light);
-  border-radius: var(--r-lg);
+  border-radius: var(--card-radius);
   padding: 1.75rem;
   transition: border-color var(--trans), background var(--trans), transform var(--trans);
 }
 
 .about-card:hover {
   border-color: rgba(230, 57, 70, 0.3);
-  background: var(--card-hover);
   transform: translateY(-3px);
 }
 
@@ -984,13 +999,14 @@ button {
 }
 
 .tech__item {
+  --card-radius: var(--r);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
   background: var(--card);
   border: 1px solid var(--border-light);
-  border-radius: var(--r);
+  border-radius: var(--card-radius);
   padding: 1.25rem 1.5rem;
   min-width: 100px;
   text-align: center;
@@ -999,7 +1015,6 @@ button {
 
 .tech__item:hover {
   border-color: rgba(230, 57, 70, 0.3);
-  background: var(--card-hover);
 }
 
 .tech__item img {
@@ -1029,12 +1044,13 @@ button {
 }
 
 .contact-btn {
+  --card-radius: var(--r-lg);
   display: flex;
   align-items: center;
   gap: 1rem;
   background: var(--card);
   border: 1px solid var(--border-light);
-  border-radius: var(--r-lg);
+  border-radius: var(--card-radius);
   padding: 1.25rem 1.75rem;
   min-width: 240px;
   flex: 1 1 240px;
@@ -1044,9 +1060,7 @@ button {
 
 .contact-btn:hover {
   border-color: rgba(230, 57, 70, 0.4);
-  background: var(--card-hover);
   transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
 }
 
 .contact-btn__icon {
@@ -1160,6 +1174,120 @@ button {
 .scroll-top:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
+}
+
+/* ── Varied card silhouettes ────────────────────────────────── */
+.games__grid > .game-card:nth-child(4n + 1),
+.about__grid > .about-card:nth-child(4n + 1),
+.stats__grid > .stat-card:nth-child(4n + 1),
+.tech__track > .tech__item:nth-child(4n + 1),
+.contact__links > .contact-btn:nth-child(4n + 1) {
+  --card-radius: 24px 10px 28px 14px;
+}
+
+.games__grid > .game-card:nth-child(4n + 2),
+.about__grid > .about-card:nth-child(4n + 2),
+.stats__grid > .stat-card:nth-child(4n + 2),
+.tech__track > .tech__item:nth-child(4n + 2),
+.contact__links > .contact-btn:nth-child(4n + 2) {
+  --card-radius: 10px 28px 14px 24px;
+}
+
+.games__grid > .game-card:nth-child(4n + 3),
+.about__grid > .about-card:nth-child(4n + 3),
+.stats__grid > .stat-card:nth-child(4n + 3),
+.tech__track > .tech__item:nth-child(4n + 3),
+.contact__links > .contact-btn:nth-child(4n + 3) {
+  --card-radius: 30px 16px 10px 26px;
+}
+
+.games__grid > .game-card:nth-child(4n + 4),
+.about__grid > .about-card:nth-child(4n + 4),
+.stats__grid > .stat-card:nth-child(4n + 4),
+.tech__track > .tech__item:nth-child(4n + 4),
+.contact__links > .contact-btn:nth-child(4n + 4) {
+  --card-radius: 14px 24px 30px 10px;
+}
+
+/* ── Fluorescent tube interaction ───────────────────────────── */
+.game-card:hover,
+.game-card:focus-visible,
+.game-card:active,
+.game-card.is-powered,
+.hero__cta:hover,
+.hero__cta:focus-visible,
+.hero__cta:active,
+.hero__cta.is-powered,
+.btn-outline:hover,
+.btn-outline:focus-visible,
+.btn-outline:active,
+.btn-outline.is-powered,
+.contact-btn:hover,
+.contact-btn:focus-visible,
+.contact-btn:active,
+.contact-btn.is-powered,
+.lang-btn:hover,
+.lang-btn:focus-visible,
+.lang-btn:active,
+.lang-btn.is-powered,
+.scroll-top:hover,
+.scroll-top:focus-visible,
+.scroll-top:active,
+.scroll-top.is-powered {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 1px rgba(230, 57, 70, 0.72),
+    0 0 5px 1px rgba(255, 115, 125, 0.9),
+    0 0 16px 3px rgba(230, 57, 70, 0.62),
+    0 0 38px 8px rgba(230, 57, 70, 0.3);
+}
+
+.game-card.game-card:hover,
+.game-card.game-card:focus-visible,
+.game-card.game-card:active,
+.game-card.game-card.is-powered,
+.contact-btn.contact-btn:hover,
+.contact-btn.contact-btn:focus-visible,
+.contact-btn.contact-btn:active,
+.contact-btn.contact-btn.is-powered {
+  background: var(--card);
+}
+
+.hero__cta:hover,
+.hero__cta:focus-visible,
+.hero__cta:active,
+.hero__cta.is-powered {
+  background: var(--accent);
+}
+
+.btn-outline.btn-outline:hover,
+.btn-outline.btn-outline:focus-visible,
+.btn-outline.btn-outline:active,
+.btn-outline.btn-outline.is-powered {
+  background: transparent;
+  color: var(--text);
+}
+
+.tech__item:hover,
+.tech__item:focus-visible,
+.tech__item:active,
+.tech__item.is-powered {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 1px rgba(230, 57, 70, 0.62),
+    0 0 14px 3px rgba(230, 57, 70, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-card,
+  .hero__cta,
+  .btn-outline,
+  .contact-btn,
+  .lang-btn,
+  .scroll-top,
+  .tech__item {
+    transition-duration: 0.01ms;
+  }
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */

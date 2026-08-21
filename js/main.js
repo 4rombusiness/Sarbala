@@ -138,7 +138,7 @@ document.querySelectorAll(
   var cards = document.querySelectorAll(
     '.game-card, .stat-card, .about-card, .tech__item, .contact-btn'
   );
-  var maximums = [10, 30, 50, 70];
+  var maximums = [40, 40, 40,40];
 
   cards.forEach(function(card) {
     // Read the authored radius first so this enhancement respects

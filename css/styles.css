@@ -1172,6 +1172,7 @@ button {
 
 /* ── Fluorescent tube interaction ───────────────────────────── */
 @keyframes fluorescent-start {
+
   0%,
   12%,
   28%,
@@ -1230,7 +1231,7 @@ button {
 .scroll-top:active,
 .scroll-top.is-powered {
   border-color: var(--accent);
-  animation: fluorescent-start 1.7s linear both;
+  animation: fluorescent-start 1s linear both;
 }
 
 .game-card.game-card:hover,
